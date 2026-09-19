@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Gameplay;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour
         _customers = new List<Customer>();
         dialogueGenerator = new DialogueGenerator();
         GenerateCustomers();
+
+        MixingCupArea.OnAnyItemDropped += HandleDrop;
     }
 
     public void NextLoop()
@@ -56,6 +59,15 @@ public class GameManager : MonoBehaviour
             curCustomer.Dialogue = DialogueGenerator.GenerateDialogue(curCustomer);
             _customers.Add(curCustomer);
         }
-        Debug.Log("Generated Customers!");
+    }
+
+    private void HandleDrop(MixingCupArea area, Ingredient ingredient)
+    {
+        if (ingredient == _poisonedIngredient)
+        {
+            Debug.Log("This is poisoned!");
+            return;
+        } 
+        Debug.Log($"The ingredient is: {ingredient.ToString()}");
     }
 }
