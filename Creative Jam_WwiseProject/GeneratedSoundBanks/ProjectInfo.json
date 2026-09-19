@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Creative Jam_WwiseProject",
+   "GUID": "{2B4D4769-B1F2-4B47-9D28-ADF4D86ECD7C}",
+   "Generator": "2025.1.6.9117"
+  },
+  "CacheRoot": "../.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{90710B2A-EC2F-47CD-B50B-3459C67A0F73}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{79D8A8D4-94AA-4D5E-8E1E-6AF0143F5E5A}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{E8518D41-888F-4822-903A-257ADF727351}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{BE8B5735-D422-472C-A104-104CAA46D974}"
+ }
+}

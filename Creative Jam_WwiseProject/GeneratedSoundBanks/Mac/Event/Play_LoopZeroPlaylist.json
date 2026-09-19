@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1246549400",
+    "Type": "Event",
+    "GUID": "{2D934676-73EA-4702-B574-124B310C9ECA}",
+    "Language": "SFX",
+    "Hash": "{F7F53A2F-DE34-EA8B-C3AC-22C2FEBECCAF}",
+    "ObjectPath": "Play_LoopZeroPlaylist",
+    "ShortName": "Play_LoopZeroPlaylist",
+    "Path": "Event/Play_LoopZeroPlaylist.bnk",
+    "Media": [
+     {
+      "Id": "299228236",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "LoopZero.wav",
+      "Path": "Media/299228236.wem",
+      "CachePath": "10/{10E9A283-579D-8F59-B2B7-62F5171FC793}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1246549400",
+      "Name": "Play_LoopZeroPlaylist",
+      "ObjectPath": "\\Events\\Music\\Play_LoopZeroPlaylist",
+      "GUID": "{2D934676-73EA-4702-B574-124B310C9ECA}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "299228236"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C0D754AC-7F41-1BE0-855A-B4590511B9D0}"
+ }
+}

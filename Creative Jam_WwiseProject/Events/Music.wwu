@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5E3B921A-AAED-43CC-A990-5A78DE6847B0}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Music" ID="{5E3B921A-AAED-43CC-A990-5A78DE6847B0}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Stop_LoopZeroPlaylist" ID="{366AD80A-DFA3-4EDA-A333-220FBB438E6F}">
+					<ChildrenList>
+						<Action Name="" ID="{17535231-6DF9-4F44-9BE7-0B3B5EED7439}" ShortID="527252826">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LoopZeroPlaylist" ID="{1E80872E-5B8F-4018-8052-150093F4082D}" WorkUnitID="{3F5E0B41-D6F6-4778-85D2-7C18E21867C8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_LoopZeroPlaylist" ID="{2D934676-73EA-4702-B574-124B310C9ECA}">
+					<ChildrenList>
+						<Action Name="" ID="{D9E539EF-D129-40BE-804C-79B52A95796A}" ShortID="364715356">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LoopZeroPlaylist" ID="{1E80872E-5B8F-4018-8052-150093F4082D}" WorkUnitID="{3F5E0B41-D6F6-4778-85D2-7C18E21867C8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
