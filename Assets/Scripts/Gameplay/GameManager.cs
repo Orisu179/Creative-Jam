@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
 
-        DontDestroyOnLoad(gameObject); 
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -57,7 +57,8 @@ public class GameManager : MonoBehaviour
     {
         for (var i = 0; i < customerSize; i++)
         {
-            var curCustomer = new Customer("", placeholder); 
+            (OwlSpecies species, Accessory accessory) = CustomerSpriteManager.GetRandomOwlSpeciesAndAccessory();
+            var curCustomer = new Customer("", species, accessory);
             curCustomer.Dialogue = DialogueGenerator.GenerateDialogue(curCustomer);
             _customers.Add(curCustomer);
         }
@@ -69,7 +70,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("This is poisoned!");
             return;
-        } 
+        }
         Debug.Log($"The ingredient is: {ingredient.ToString()}");
     }
 

@@ -8,13 +8,17 @@ public struct Customer
 {
     public Dictionary<DrinkAttribute, int> Preferences { get; private set; }
     public string Dialogue { get; set; }
-    public Sprite Sprite { get; private set; }
 
-    public Customer(string dialogue, Sprite sprite)
+    public OwlSpecies Species { get; private set; }
+    public Accessory Accessory { get; private set; }
+
+    public Customer(string dialogue, OwlSpecies species, Accessory accessory)
     {
         Preferences = new Dictionary<DrinkAttribute, int>();
         Dialogue = dialogue;
-        Sprite = sprite;
+        Species = species;
+        Accessory = accessory;
+
         GenerateRandomStats();
     }
 
@@ -40,7 +44,7 @@ public struct Customer
         // 3. Partition remaining points so both primary stats are >= 3
         var minPrimary = 3;
         var maxPrimary = remaining - minPrimary; // Ensures the partner stat is also >= minPrimary
-        
+
         var highValue1 = Random.Range(minPrimary, maxPrimary + 1);
         var highValue2 = remaining - highValue1;
 

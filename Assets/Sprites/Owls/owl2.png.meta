@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b44a8fc783d9af148a804e3deb984ab8
+guid: 694b888a619698341be45f9513ca4eb3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 708934652261806618
-    second: owl4_0
+      213: -3108131241542524228
+    second: owl2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: owl4_0
+      name: owl2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a12b7056f44a6d900800000000000000
-      internalID: 708934652261806618
+      spriteID: cb260987a13bdd4d0800000000000000
+      internalID: -3108131241542524228
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ec8ffda17c041a24192340508bc3ff77
+    spriteID: 1f5eb25e14b213b449e2ee75b86f9e55
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      owl4_0: 708934652261806618
+      owl2_0: -3108131241542524228
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
