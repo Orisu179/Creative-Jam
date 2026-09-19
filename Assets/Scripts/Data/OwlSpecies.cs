@@ -1,0 +1,7 @@
+public enum OwlSpecies
+{
+	GREATER_HORNED_OWL,
+	BARN_OWL,
+	EURASIAN_EAGLE_OWL,
+	SNOWY_OWL,
+}
