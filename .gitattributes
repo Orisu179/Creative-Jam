@@ -1,0 +1,20 @@
+# --- Wwise Git LFS Assets ---
+
+# Original Source Audio (Crucial)
+**/Originals/**/*.wav filter=lfs diff=lfs merge=lfs -text
+**/Originals/**/*.aif filter=lfs diff=lfs merge=lfs -text
+**/Originals/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+
+# Wwise Cache and Generated Formats (If tracked)
+**/.cache/**/*.wav filter=lfs diff=lfs merge=lfs -text
+**/.cache/**/*.wvb filter=lfs diff=lfs merge=lfs -text
+
+# Platform Binaries / SoundBanks (If you commit them instead of ignoring)
+*.bnk filter=lfs diff=lfs merge=lfs -text
+*.wem filter=lfs diff=lfs merge=lfs -text
+*.pck filter=lfs diff=lfs merge=lfs -text
+
+# Miscellaneous media assets in the project
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
