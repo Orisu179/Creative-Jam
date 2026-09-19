@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using Gameplay;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -68,5 +71,36 @@ public class GameManager : MonoBehaviour
             return;
         } 
         Debug.Log($"The ingredient is: {ingredient.ToString()}");
+    }
+
+    private int CalculateScore(Customer c, DrinkObject d)
+    {
+        // range from -10 to 10
+        // increase or decrease by value of attribute in customer
+        // if miss both major attributes, -1 extra penalty
+
+        int score = 0;
+        int penalty = 0;
+        
+        foreach (var cust_pref in c.Preferences)
+        {
+            if(d.AttributeList.Contains(cust_pref.Key)) // if attributes match
+            {
+                score += cust_pref.Value;
+            }
+            else
+            {
+                score -= cust_pref.Value;
+                if(cust_pref.Value >= 3) // if miss a major attribute
+                {
+                    penalty++;
+                }
+            }
+        }
+        if(penalty == 2 && score > -10) // missed both major attributes
+        {
+            score--;
+        }
+        return score;
     }
 }

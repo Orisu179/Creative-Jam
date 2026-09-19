@@ -2,11 +2,16 @@ using UnityEngine;
 
 public enum DrinkAttribute
 {
-   whimsy,
-   bubbly,
-   fruity,
-   sweet,
-   milky,
-   mainstream,
-   academic
+   fruity, // happy
+   sweet, // happy 
+
+   strong, // tired
+   magical, // tired
+
+   cold, // sunny
+   bubbly, // sunny
+
+   hot, // chilly
+   milky, // chilly
+
 }
