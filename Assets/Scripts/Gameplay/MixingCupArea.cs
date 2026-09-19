@@ -14,10 +14,16 @@ namespace Gameplay
         // Inspector-friendly event
         // [SerializeField] private UnityEvent<GameObject> onDropResponse;
 
+        // public void ReceiveDrop(Ingredient droppedObject)
+        // {
+        //     // Fire event callbacks
+        //     // OnItemDropped?.Invoke(droppedObject);
+        //     OnAnyItemDropped?.Invoke(this, droppedObject);
+        // }
         public void ReceiveDrop(Ingredient droppedObject)
         {
-            // Fire event callbacks
-            // OnItemDropped?.Invoke(droppedObject);
+            Debug.Log("Ingredient dropped: " + droppedObject);
+
             OnAnyItemDropped?.Invoke(this, droppedObject);
         }
     }

@@ -9,87 +9,117 @@ public class Day : MonoBehaviour
     public List<Drink> OrderList;
     // public int NumOfDeath;
 
-    private void Start() //for testing
-    {
-        Debug.Log("--- STARTING RECIPE TESTS ---");
+    // private void Start() //for testing
+    // {
+    //     Debug.Log("--- STARTING RECIPE TESTS ---");
 
-        Debug.Log("--- FIRST DRINK ---");
-        Day.DrinkManager test = new Day.DrinkManager();
-        Debug.Log(test.CreatedDrink);
-
-
-        test.AddIngredient(Ingredient.Ice);
-        test.AddIngredient(Ingredient.Ice);
-        test.AddIngredient(Ingredient.Ice);
-        test.AddIngredient(Ingredient.Ice);
-        test.AddIngredient(Ingredient.Ice);
-        test.AddIngredient(Ingredient.Ice);
-        Debug.Log(test.IngredientListtoString());
-        test.PrepareDrink();
+    //     Debug.Log("--- FIRST DRINK ---");
+    //     Day.DrinkManager test = new Day.DrinkManager();
+    //     Debug.Log(test.CreatedDrink);
 
 
-        Debug.Log(test.CreatedDrink);
-        Debug.Log(test.IngredientListtoString());
+    //     test.AddIngredient(Ingredient.Ice);
+    //     test.AddIngredient(Ingredient.Ice);
+    //     test.AddIngredient(Ingredient.Ice);
+    //     test.AddIngredient(Ingredient.Ice);
+    //     test.AddIngredient(Ingredient.Ice);
+    //     test.AddIngredient(Ingredient.Ice);
+    //     Debug.Log(test.IngredientListtoString());
+    //     test.PrepareDrink();
 
-        Debug.Log("--- SECOND DRINK ---");
-        test = new Day.DrinkManager();
-        Debug.Log(test.CreatedDrink);
-        //"Sprite","FruitMix","MagicalFlower","FruitSyrup"
-        test.AddIngredient(Ingredient.Sprite);
-        test.AddIngredient(Ingredient.FruitMix);
-        test.AddIngredient(Ingredient.MagicalFlower);
-        test.AddIngredient(Ingredient.FruitSyrup);
-        test.PrepareDrink();
+
+    //     Debug.Log(test.CreatedDrink);
+    //     Debug.Log(test.IngredientListtoString());
+
+    //     Debug.Log("--- SECOND DRINK ---");
+    //     test = new Day.DrinkManager();
+    //     Debug.Log(test.CreatedDrink);
+    //     //"Sprite","FruitMix","MagicalFlower","FruitSyrup"
+    //     test.AddIngredient(Ingredient.Sprite);
+    //     test.AddIngredient(Ingredient.FruitMix);
+    //     test.AddIngredient(Ingredient.MagicalFlower);
+    //     test.AddIngredient(Ingredient.FruitSyrup);
+    //     test.PrepareDrink();
        
 
-        Debug.Log(test.CreatedDrink);
-        Debug.Log(test.IngredientListtoString());
+    //     Debug.Log(test.CreatedDrink);
+    //     Debug.Log(test.IngredientListtoString());
 
 
 
-        Debug.Log("--- THIRD DRINK ---");
-        test = new Day.DrinkManager();
-        Debug.Log(test.CreatedDrink);
-        test.PrepareDrink();
+    //     Debug.Log("--- THIRD DRINK ---");
+    //     test = new Day.DrinkManager();
+    //     Debug.Log(test.CreatedDrink);
+    //     test.PrepareDrink();
 
 
-        Debug.Log(test.CreatedDrink);
-        Debug.Log(test.IngredientListtoString());
+    //     Debug.Log(test.CreatedDrink);
+    //     Debug.Log(test.IngredientListtoString());
 
-        Debug.Log("--- RECIPE TESTS COMPLETE ---");
-    }
+    //     Debug.Log("--- RECIPE TESTS COMPLETE ---");
+    // }
 
     
     public class DrinkManager
     {
         public Drink? CreatedDrink = null;
         public List<Ingredient> IngredientList = new List<Ingredient>();
-
-        public void AddIngredient(Ingredient ingredient){
-            IngredientList.Add(ingredient);
-        }
+        private int MaxIngredientNum = 7;
 
         public string IngredientListtoString(){
+            Debug.Log("Current Ingredient List:");
             string commaSeparated = string.Join(", ", IngredientList);
             return commaSeparated;
         }
+
+
+        public void AddIngredient(Ingredient ingredient){//to cap
+            if (IngredientList.Count < MaxIngredientNum)
+            {
+                IngredientList.Add(ingredient);
+                Debug.Log("Added "+ingredient);
+                Debug.Log(this.IngredientListtoString());
+            }
+            else
+            {
+                Debug.Log("too many ingredients added already");
+            }
+        }
+
+        
 
         public void RemoveIngredient(){ //to undo
             if (IngredientList.Count > 0)
             {
                 IngredientList.RemoveAt(IngredientList.Count - 1);
+                Debug.Log("Removed "+IngredientList.Last());
+                Debug.Log(this.IngredientListtoString());
+            }
+            else
+            {
+                Debug.Log("No Ingredients to Remove");
             }
         }
 
         public void ResetMix(){
             IngredientList.Clear();
+            Debug.Log("Ingredient List Cleared");
+            Debug.Log(this.IngredientListtoString());
+
         }
         public void ResetDrink(){
             CreatedDrink = null;
+            Debug.Log("Drink Emptied");
+            Debug.Log(this.IngredientListtoString());
         }
     
-        public Drink PrepareDrink()
+        public Drink? PrepareDrink()
         {
+            if(IngredientList.Count <= 0)
+            {
+                Debug.Log("No Ingredients to Make a Drink");
+                return null;
+            }
             // Format and count the input ingredients into a sorted list
             var providedSignature = IngredientList
                 .GroupBy(i => i)
@@ -112,6 +142,7 @@ public class Day : MonoBehaviour
                 if (providedSignature.SequenceEqual(recipeSignature))
                 {
                     CreatedDrink = drink;
+                    Debug.Log("You prepared a "+drink);
                     ResetMix();
                     return drink;
                 }
@@ -120,8 +151,10 @@ public class Day : MonoBehaviour
             ResetMix();
 
             Debug.Log("no recipe matched");
+            
 
             CreatedDrink = Drink.invalid;
+            Debug.Log(this.CreatedDrink);
             return Drink.invalid;
         }
 
@@ -140,10 +173,10 @@ public class Day : MonoBehaviour
 
                 Drink.icedAmericano => new List<Ingredient>
                 {
-                    Ingredient.Ice,
-                    Ingredient.Expresso,
-                    Ingredient.Tea,
-                    Ingredient.Sugar
+                    Ingredient.Milk,
+                    Ingredient.Milk,
+                    Ingredient.Milk,
+                    Ingredient.Milk
                 },
 
                 Drink.magicMatcha => new List<Ingredient>
@@ -156,10 +189,10 @@ public class Day : MonoBehaviour
 
                 Drink.strawberryLemonade => new List<Ingredient>
                 {
-                    Ingredient.Tea,
+                    Ingredient.Milk,
                     Ingredient.Sugar,
-                    Ingredient.Sprite,
-                    Ingredient.FruitMix
+                    Ingredient.Milk,
+                    Ingredient.Sugar
                 },
 
                 Drink.icedLatte => new List<Ingredient>
@@ -188,34 +221,28 @@ public class Day : MonoBehaviour
 
                 Drink.magicalTea => new List<Ingredient>
                 {
-                    Ingredient.MagicalFlower,
-                    Ingredient.FruitSyrup,
-                    Ingredient.Milk,
                     Ingredient.Ice
                 },
 
                 Drink.cremeBruleeMilkTea => new List<Ingredient>
                 {
-                    Ingredient.FruitSyrup,
-                    Ingredient.Milk,
                     Ingredient.Ice,
-                    Ingredient.Milk
+                    Ingredient.Ice
                 },
 
                 Drink.rainbowSoda => new List<Ingredient>
                 {
-                    Ingredient.Milk,
                     Ingredient.Ice,
-                    Ingredient.Milk,
+                    Ingredient.Ice,
+                    Ingredient.Ice,
                     Ingredient.Ice
                 },
 
                 Drink.creamSoda => new List<Ingredient>
                 {
                     Ingredient.Ice,
-                    Ingredient.Milk,
                     Ingredient.Ice,
-                    Ingredient.Expresso
+                    Ingredient.Ice
                 },
 
                 _ => new List<Ingredient>()
