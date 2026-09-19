@@ -2,6 +2,7 @@ using UnityEngine;
 
 public enum Drink
 {
+    invalid,
     blueLatte,
     icedAmericano,
     magicMatcha,
