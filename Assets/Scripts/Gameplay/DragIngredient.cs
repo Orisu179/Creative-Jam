@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Gameplay
 {
     [RequireComponent(typeof(Collider2D))]
+    [RequireComponent(typeof(SpriteRenderer))]
     public class DragIngredient : MonoBehaviour
     {
         [SerializeField] private LayerMask dropAreaLayer;
         [SerializeField] private bool returnOnInvalidDrop = true;
-        [SerializeField] private Ingredient ingredient;
+        [SerializeField] private IngredientObject ingredient;
 
         private Vector3 _initialPosition;
         private Vector3 _dragOffset;
@@ -21,6 +23,7 @@ namespace Gameplay
 
         private void OnMouseDown()
         {
+            ingredient.playDragEvent.Post(gameObject);
             _initialPosition = transform.position;
             var mouseWorldPos = GetMouseWorldPosition();
             _dragOffset = transform.position - mouseWorldPos;
@@ -43,7 +46,8 @@ namespace Gameplay
         
             if (hit != null && hit.TryGetComponent<MixingCupArea>(out var dropArea))
             {
-                dropArea.ReceiveDrop(ingredient);
+                ingredient.dropDragEvent.Post(gameObject);
+                dropArea.ReceiveDrop(ingredient.IngredientType);
                 transform.position = _initialPosition;
             }
             else if (returnOnInvalidDrop)

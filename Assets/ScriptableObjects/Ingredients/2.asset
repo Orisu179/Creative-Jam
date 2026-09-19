@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d9943bd08f7d247a2a0e833236e466, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientObject
+  IngredientType: 2
+  playDragEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 73f95a2077a14124f9370d7b4b2a2c75, type: 2}
+  dropDragEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 21a3bccf165aa4741a56e96afbfcd10c, type: 2}
+  IngredientSprite: {fileID: 4521483149897660195, guid: 3168f0ea27742b74d91901e8f27e3216, type: 3}

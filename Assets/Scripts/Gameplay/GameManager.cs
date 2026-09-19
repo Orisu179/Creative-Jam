@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     private Ingredient? _poisonedIngredient = null;
     private uint _curLoop;
     private List<Customer> _customers;
-    private DialogueGenerator dialogueGenerator;
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
@@ -36,7 +35,6 @@ public class GameManager : MonoBehaviour
         var allIngredient = (Ingredient[])Enum.GetValues(typeof(Ingredient));
         _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
         _customers = new List<Customer>();
-        dialogueGenerator = new DialogueGenerator();
         GenerateCustomers();
 
         MixingCupArea.OnAnyItemDropped += HandleDrop;
@@ -49,6 +47,7 @@ public class GameManager : MonoBehaviour
         {
             // game overscreen
         }
+        // TODO: Finish this
     }
 
     private void GenerateCustomers()
