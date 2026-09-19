@@ -113,8 +113,13 @@ public class Day : MonoBehaviour
             Debug.Log(this.IngredientListtoString());
         }
     
-        public Drink PrepareDrink()
+        public Drink? PrepareDrink()
         {
+            if(IngredientList.Count <= 0)
+            {
+                Debug.Log("No Ingredients to Make a Drink");
+                return null;
+            }
             // Format and count the input ingredients into a sorted list
             var providedSignature = IngredientList
                 .GroupBy(i => i)
@@ -137,6 +142,7 @@ public class Day : MonoBehaviour
                 if (providedSignature.SequenceEqual(recipeSignature))
                 {
                     CreatedDrink = drink;
+                    Debug.Log("You prepared a "+drink);
                     ResetMix();
                     return drink;
                 }
@@ -145,8 +151,10 @@ public class Day : MonoBehaviour
             ResetMix();
 
             Debug.Log("no recipe matched");
+            
 
             CreatedDrink = Drink.invalid;
+            Debug.Log(this.CreatedDrink);
             return Drink.invalid;
         }
 
@@ -213,34 +221,28 @@ public class Day : MonoBehaviour
 
                 Drink.magicalTea => new List<Ingredient>
                 {
-                    Ingredient.MagicalFlower,
-                    Ingredient.FruitSyrup,
-                    Ingredient.Milk,
                     Ingredient.Ice
                 },
 
                 Drink.cremeBruleeMilkTea => new List<Ingredient>
                 {
-                    Ingredient.Sugar,
-                    Ingredient.Sugar,
-                    Ingredient.Sugar,
-                    Ingredient.Sugar
+                    Ingredient.Ice,
+                    Ingredient.Ice
                 },
 
                 Drink.rainbowSoda => new List<Ingredient>
                 {
-                    Ingredient.Milk,
                     Ingredient.Ice,
-                    Ingredient.Milk,
+                    Ingredient.Ice,
+                    Ingredient.Ice,
                     Ingredient.Ice
                 },
 
                 Drink.creamSoda => new List<Ingredient>
                 {
                     Ingredient.Ice,
-                    Ingredient.Milk,
                     Ingredient.Ice,
-                    Ingredient.Expresso
+                    Ingredient.Ice
                 },
 
                 _ => new List<Ingredient>()

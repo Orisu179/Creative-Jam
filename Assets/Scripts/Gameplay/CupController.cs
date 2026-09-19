@@ -58,21 +58,22 @@ public class CupController : MonoBehaviour
 
     public void PrepareDrink()
     {
-        Drink result = drinkManager.PrepareDrink();
+        Drink? result = drinkManager.PrepareDrink();
 
-        if (result == Drink.invalid)
-        {
-            Debug.Log("Invalid drink!");
-            return;
-        }
+        // if (result == Drink.invalid)
+        // {
+        //     Debug.Log("Invalid drink!");
+        //     return;
+        // }
 
         ChangeDrinkSprite(result);
     }
 
-    private void ChangeDrinkSprite(Drink drink)
+    private void ChangeDrinkSprite(Drink? drink)
     {
         cupSprite.sprite = drink switch
         {
+            Drink.invalid=>invalidSprite,
             Drink.blueLatte=>blueLatteSprite,
             Drink.icedAmericano=>icedAmericanoSprite,
             Drink.magicMatcha=>magicMatchaSprite,
@@ -85,7 +86,7 @@ public class CupController : MonoBehaviour
             Drink.rainbowSoda=>rainbowSodaSprite,
             Drink.creamSoda=>creamSodaSprite,
 
-            _ => invalidSprite
+            _ => null
         };
     }
 
