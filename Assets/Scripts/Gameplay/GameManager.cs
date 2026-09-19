@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("This is poisoned!");
             return;
         } 
-        
         Debug.Log($"The ingredient is: {ingredient.ToString()}");
     }
 }

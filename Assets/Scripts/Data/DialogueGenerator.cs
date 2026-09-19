@@ -5,6 +5,7 @@ public class DialogueGenerator
 {
     public static string GenerateDialogue(Customer customer)
     {
+        Debug.Log("Generating dialogues");
         if (customer.Preferences.Count != 3)
         {
             Debug.LogError($"Current attribute list does not equal to 3, list:{customer.Preferences.ToString()}");
@@ -13,12 +14,18 @@ public class DialogueGenerator
 
         foreach (var customerPreference in customer.Preferences)
         {
-            Debug.Log(customerPreference.Key);  // attribute
-            Debug.Log(customerPreference.Value); // the weight
+            Debug.Log($"The current attribute is: {customerPreference.Key} and the current weight is: {customerPreference.Value}");  // attribute
         }
-
         // TODO: @Holly
-        return "I want this kind of mood";
+        // Generate the prompt according to the attribute and weight
+        // weight will also be 1-2 for one random attribute, 3-5 for the other two
+        // They will add up to 10
+        // If you need to check/modify the attributes, go to DrinkAttribute.cs
+
+        var result = "replace here";
+        Debug.Log($"The resulting string is: {result}");
+
+        return result;
     }
     
 }
