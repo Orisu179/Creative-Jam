@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1233F0A2-6DD5-4321-BAAA-FFC35D1C0E34}",
     "Language": "SFX",
-    "Hash": "{133C432B-6BFF-5C59-FB85-F09E57166720}",
+    "Hash": "{136EDC1E-8DB1-8440-0267-49E10B42BD2D}",
     "ObjectPath": "Stop_RewindLoopsPlaylist",
     "ShortName": "Stop_RewindLoopsPlaylist",
     "Path": "Event/Stop_RewindLoopsPlaylist.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{9F8D44ED-A7CB-8AF9-8FFB-03DA6E3BF2C3}"
+  "FileHash": "{51CEC59D-BD9F-A03F-4F58-C2150AD17363}"
  }
 }
