@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
+using System;
 using Gameplay;
+using DG.Tweening;
+using System.Threading.Tasks;
 
 public class CreateDrink : MonoBehaviour
 {
     public DrinkManager drinkManager;
+    public Action<Drink?> OnDrinkCreated { get; set; }
 
     [SerializeField] private SpriteRenderer cupSprite;
     [SerializeField] private MixingCupArea mixingCupArea;
@@ -60,9 +64,12 @@ public class CreateDrink : MonoBehaviour
     {
         Drink? result = drinkManager.PrepareDrink();
         ChangeDrinkSprite(result);
+        OnDrinkCreated?.Invoke(result);
     }
-    public void RemoveDrink()
+    public async Task RemoveDrink()
     {
+        Tween fadeOut = cupSprite.DOFade(0f, 0.5f);
+        await fadeOut.AsyncWaitForCompletion();
         ChangeDrinkSprite(null);
     }
 

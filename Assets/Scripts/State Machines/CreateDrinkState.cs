@@ -1,37 +1,65 @@
-﻿namespace State_Machines
+﻿using UnityEngine;
+using System.Threading.Tasks;
+
+namespace State_Machines
 {
     public class CreateDrinkState : IState
     {
         private CreateDrink _createDrink;
+        private Drink? _currentDrink;
         private GameManager _manager;
-    
+
         public CreateDrinkState(GameManager manager, CreateDrink drink)
         {
             _manager = manager;
             _createDrink = drink;
         }
 
-        public void Enter()
+        public async void Enter()
         {
+            _currentDrink = null;
             // 1. Fade in the create drink UI
             // TODO: Add drink UI sprite fade in and await
 
             // 2. Enable ingredients listeners
+            _createDrink.OnDrinkCreated = HandleDrinkCreated;
             // 3. Enable the menu button
+
+            // Test create drink
+            _createDrink.drinkManager.ResetMix();
+            _createDrink.drinkManager.AddIngredient(Ingredient.MILK);
+            _createDrink.drinkManager.AddIngredient(Ingredient.SODA);
+            _createDrink.drinkManager.AddIngredient(Ingredient.SODA);
+            _createDrink.drinkManager.AddIngredient(Ingredient.SODA);
+            _createDrink.drinkManager.AddIngredient(Ingredient.ICE);
+            _createDrink.PrepareDrink();
+
+            await HandleFeedDrink(_currentDrink);
         }
 
         public void Exit()
         {
-            _manager.SetCurrentDrink(_createDrink.drinkManager.CreatedDrink);
-            _manager.DrinkMenu.CloseAndDisable();
+            _createDrink.RemoveDrink();
             // TODO: Disable ingredients listeners
             // Ease out the create drink UI
             // Customer move is handled by the next state
         }
 
-        public void HandleDrinkCreated()
+        public void HandleDrinkCreated(Drink? drink)
         {
+            if (drink == null)
+            {
+                return;
+            }
+            _currentDrink = drink;
+            Debug.Log($"Drink created: {drink.Value}");
+        }
 
+        private async Task HandleFeedDrink(Drink? drink)
+        {
+            _manager.SetCurrentDrink(drink);
+            _manager.AddDrink(drink);
+            await _createDrink.RemoveDrink();
             _manager._stateMachine.ChangeState(_manager._serveDrinkState);
         }
     }

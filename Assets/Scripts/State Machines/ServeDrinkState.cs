@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using DG.Tweening;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
@@ -16,40 +19,38 @@ namespace State_Machines
             _manager = manager;
             _customerSpriteManager = customerSpriteManager;
             _nextState = nextState;
+            _failedState = failedState;
         }
 
-        public void Enter()
+        public async void Enter()
         {
             // 1. Move customer to the right
-            _customerSpriteManager.MoveRight();
+            Tween moveRight = _customerSpriteManager.MoveRight();
+            await moveRight.AsyncWaitForCompletion();
 
             // calculate satisfaction
             int score = _manager.CalculateScore(_manager.CurDay);
-            Day curDay = _manager.CurDay;
-            curDay.SatisfactionLevel += score;
+            _manager.SetSatisfactionLevel(_manager.CurDay.SatisfactionLevel + score);
 
             // calc dialogue using day.current cust sat
             // setText(DialogueGenerator.GenerateResponse(score, ), callback);
-
-            // add drink to list
-            // _manager.AddDrink(CurrentDrink); 
             // call toggle
-            throw new System.NotImplementedException();
+            Debug.Log($"Customer satisfaction level: {_manager.CurDay.SatisfactionLevel}");
+
+            await HandleDialogueComplete();
         }
 
         public void Exit()
         {
-            throw new System.NotImplementedException();
             // disable dialogue. ie. call dialogue.toggle
             // dialogueBox.Toggle();
             // sprite.fade out 
-            _customerSpriteManager.FadeOut();
         }
 
         // handle callback from settext - ie. manager . next state
-        private void HandleDialogueComplete()
+        private async Task HandleDialogueComplete()
         {
-            if (_manager.CurDay.SatisfactionLevel < -10)
+            if (_manager.CurDay.SatisfactionLevel < -1000)
             {
                 SceneManager.LoadScene("GameOverScene");
                 return;
@@ -57,6 +58,8 @@ namespace State_Machines
             if (!_manager.IsLastCustomer())
             {
                 _manager.IncrementCustomer();
+                Tween fadeOut = _customerSpriteManager.FadeOut();
+                await fadeOut.AsyncWaitForCompletion();
                 _manager._stateMachine.ChangeState(_nextState);
                 return;
             }

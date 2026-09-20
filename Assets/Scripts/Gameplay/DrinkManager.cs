@@ -9,18 +9,20 @@ public class DrinkManager
     public List<Ingredient> IngredientList = new List<Ingredient>();
     private int MaxIngredientNum = 9;
 
-    public string IngredientListtoString(){
+    public string IngredientListtoString()
+    {
         Debug.Log("Current Ingredient List:");
         string commaSeparated = string.Join(", ", IngredientList);
         return commaSeparated;
     }
 
 
-    public void AddIngredient(Ingredient ingredient){//to cap
+    public void AddIngredient(Ingredient ingredient)
+    {//to cap
         if (IngredientList.Count < MaxIngredientNum)
         {
             IngredientList.Add(ingredient);
-            Debug.Log("Added "+ingredient);
+            Debug.Log("Added " + ingredient);
             Debug.Log(this.IngredientListtoString());
         }
         else
@@ -29,13 +31,14 @@ public class DrinkManager
         }
     }
 
-    
 
-    public void RemoveIngredient(){ //to undo
+
+    public void RemoveIngredient()
+    { //to undo
         if (IngredientList.Count > 0)
         {
             IngredientList.RemoveAt(IngredientList.Count - 1);
-            Debug.Log("Removed "+IngredientList.Last());
+            Debug.Log("Removed " + IngredientList.Last());
             Debug.Log(this.IngredientListtoString());
         }
         else
@@ -44,13 +47,15 @@ public class DrinkManager
         }
     }
 
-    public void ResetMix(){
+    public void ResetMix()
+    {
         IngredientList.Clear();
         Debug.Log("Ingredient List Cleared");
         Debug.Log(this.IngredientListtoString());
 
     }
-    public void ResetDrink(){
+    public void ResetDrink()
+    {
         CreatedDrink = null;
         Debug.Log("Drink Emptied");
         Debug.Log(this.IngredientListtoString());
@@ -58,7 +63,7 @@ public class DrinkManager
 
     public Drink? PrepareDrink()
     {
-        if(IngredientList.Count <= 0)
+        if (IngredientList.Count <= 0)
         {
             Debug.Log("No Ingredients to Make a Drink");
             return null;
@@ -85,7 +90,7 @@ public class DrinkManager
             if (providedSignature.SequenceEqual(recipeSignature))
             {
                 CreatedDrink = drink;
-                Debug.Log("You prepared a "+drink);
+                Debug.Log("You prepared a " + drink);
                 ResetMix();
                 return drink;
             }
@@ -94,7 +99,7 @@ public class DrinkManager
         ResetMix();
 
         Debug.Log("no recipe matched");
-        
+
 
         CreatedDrink = Drink.INVALID;
         Debug.Log(this.CreatedDrink);

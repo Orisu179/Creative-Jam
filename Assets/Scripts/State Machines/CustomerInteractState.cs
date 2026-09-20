@@ -20,8 +20,7 @@ namespace State_Machines
         {
             Debug.Log("CustomerInteractState: Enter");
             // 1. Fade in the customer
-            // _customerSpriteManager.SetSprite(_manager.CurDay.CurrentCustomer.Species, _manager.CurDay.CurrentCustomer.Accessory);
-            // Tween fadeIn = _customerSpriteManager.FadeIn();
+            Debug.Log($"CustomerInteractState: Current customer is {_manager.CurDay.CurrentCustomer.Species} with accessory {_manager.CurDay.CurrentCustomer.Accessory}");
             // 2. Add the customer dialogue and callback to the dialogue box
             // Dialogue.SetDialogue(_day.CurrentCustomer.Dialogue, HandleDialogueComplete);
 

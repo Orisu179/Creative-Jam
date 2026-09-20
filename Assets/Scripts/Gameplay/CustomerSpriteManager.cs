@@ -9,21 +9,14 @@ public class CustomerSpriteManager : MonoBehaviour
     [SerializeField] private CustomerObject _customerObject;
     [SerializeField] private TextAsset _customerConstants;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         AccessoryData.LoadFromJson(_customerConstants);
 
-        var _childrenSpriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-        _owlSpriteRenderer = _childrenSpriteRenderers[0];
-        _accessorySpriteRenderer = _childrenSpriteRenderers[1];
+        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+        _owlSpriteRenderer = renderers[0];
+        _accessorySpriteRenderer = renderers[1];
         _accessoryTransform = _accessorySpriteRenderer.transform;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void SetSprite(OwlSpecies species, Accessory accessory)
