@@ -39,6 +39,8 @@ public class DrinkMenuController : MonoBehaviour
     // Call on CreateDrinkState.Exit(): hides the menu AND locks the button.
     public void CloseAndDisable()
     {
+        
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayMenuButton);
         CloseMenu();
         SetPageInstant(0);
         DisableButton();
@@ -52,6 +54,7 @@ public class DrinkMenuController : MonoBehaviour
     // Wired to the open/close button's OnClick.
     public void ToggleMenu()
     {
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayMenuButton);
         if (isOpen)
         {
             CloseMenu();
@@ -95,6 +98,7 @@ public class DrinkMenuController : MonoBehaviour
 
     public void GoToPage(int index)
     {
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayPageFlip);
         if (index < 0 || index >= pages.Count || pages.Count == 0) return;
 
         if (pages[currentPageIndex] != null)

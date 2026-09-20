@@ -4,7 +4,7 @@ using UnityEngine;
 public class IngredientObject : ScriptableObject
 {
     public Ingredient IngredientType;
-    public AK.Wwise.Event playDragEvent;
+    public AK.Wwise.Event pickUpDragEvent;
     public AK.Wwise.Event dropDragEvent;
     public Sprite OnDragSprite;
 }

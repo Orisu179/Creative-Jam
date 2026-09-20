@@ -43,7 +43,7 @@ namespace Gameplay
             {
                 return;
             }
-            ingredient.playDragEvent.Post(gameObject);
+            ingredient.pickUpDragEvent.Post(gameObject);
 
             var mouseWorldPos = GetMouseWorldPosition();
             _dragOffset = transform.position - mouseWorldPos;

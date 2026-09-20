@@ -16,6 +16,10 @@ namespace State_Machines
 
         public void Enter()
         {
+            if (_manager.CurLoop > 0)
+            {
+               SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayRewindMusic); 
+            }
             Debug.Log("Entering Day start state");
             _manager.ResetCustomer();
             var counter = _manager.CustomerCounter;

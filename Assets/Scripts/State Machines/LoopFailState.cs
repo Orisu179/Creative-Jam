@@ -29,6 +29,14 @@ namespace State_Machines
 
         private void HandleContinue()
         {
+            if (_manager.CurLoop == 0)
+            {
+                SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopLoopZeroMusic);
+            }
+            else
+            {
+                SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopRewindMusic);
+            }
             if (_manager.CurLoop >= _manager.GetMaxLoop())
             {
                 // game overscreen
@@ -37,6 +45,7 @@ namespace State_Machines
                 return;
             }
             // Restart
+            SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayTimeTravel);
             _manager.IncrementLoop();
             _manager._stateMachine.ChangeState(_dayStartState);
         }

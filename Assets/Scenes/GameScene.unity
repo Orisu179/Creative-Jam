@@ -15207,20 +15207,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18eb42a09fe2cf449adbf96327bee11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  startEvents:
+  events:
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 73f95a2077a14124f9370d7b4b2a2c75, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 50b493e542b33f949a5e3ec837adea9f, type: 2}
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 21a3bccf165aa4741a56e96afbfcd10c, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: eeb2ec4b48a0b284980caa255972ac9c, type: 2}
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 488701dff6d164a4ca9b149960aa2bdd, type: 2}
-  endEvents:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 44753c8acbfd55d4799fc44a7bc1258a, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0cd3cfa555ca9a2468cd34f694c888e3, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 342f1e8d53392b64b81b30a4fbdb0314, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d362092dc099fe14c82179a72aa4f25c, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5e8e4cdb5b075be42af2b25eea92c913, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d52e6d80f4ac1a54c8373b02eebdf6ce, type: 2}
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: fe568b3b0ddb19848bac633f762c40c7, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 547a63ebff93db444b2cb87877ca734a, type: 2}
 --- !u!1 &1459937972
 GameObject:
   m_ObjectHideFlags: 0

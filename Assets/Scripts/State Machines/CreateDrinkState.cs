@@ -70,6 +70,7 @@ namespace State_Machines
             {
                 return;
             }
+            SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayDrinkReval);
             _currentDrink = drink;
             Debug.Log($"Drink created: {drink.Value}");
         }

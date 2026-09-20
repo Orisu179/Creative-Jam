@@ -31,6 +31,7 @@ namespace State_Machines
             // Dialogue.SetDialogue(_day.CurrentCustomer.Dialogue, HandleDialogueComplete);
             Debug.Log("Starting chatbox");
             // 3. Toggle the dialogue UI
+            SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayDialogue);
             TextBoxManager.Instance.SetDialogue(_manager.CurDay.CurrentCustomer.Dialogue, HandleDialogueComplete);
             await TextBoxManager.Instance.SetDisabled(false, 0.5f);
             // Fade in complete

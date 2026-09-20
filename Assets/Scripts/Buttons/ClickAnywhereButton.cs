@@ -18,6 +18,7 @@ public class ClickAnywhereButton : MonoBehaviour
     {
         Debug.Log("ClickAnywhereButton: OnMouseDown called");
         if (isCooldown) return;
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayMenuButton);
         StartCoroutine(CooldownRoutine());
         textBoxManager.CompleteDialogue();
     }

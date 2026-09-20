@@ -3,53 +3,6 @@
 	<Containers>
 		<WorkUnit Name="Default Work Unit" ID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Ingredient_1" ID="{AAD91052-7876-4412-9E68-884D2BD6AF09}" ShortID="1045893901">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Ingredient_1" ID="{96FF8827-44DA-4859-996F-03855368C328}">
-							<Language>SFX</Language>
-							<AudioFile>Ingredient_1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="654907536"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Ingredient_1" ID="{96FF8827-44DA-4859-996F-03855368C328}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Ingredient_2" ID="{7C5DA095-769F-43A5-8732-39DE9FDC9569}" ShortID="699939898">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Ingredient_2" ID="{CAA7611E-9410-4CA8-8F9E-0B8D5F10BE0C}">
-							<PropertyList>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Ingredient_2.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="419317056"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Ingredient_2" ID="{CAA7611E-9410-4CA8-8F9E-0B8D5F10BE0C}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Dialogue_67" ID="{6DC83F55-56C5-4C65-805D-D198825841A3}" ShortID="263481052">
 					<ReferenceList>
 						<Reference Name="Conversion">

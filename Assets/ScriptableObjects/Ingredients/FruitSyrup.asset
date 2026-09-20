@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: FruitSyrup
   m_EditorClassIdentifier: Assembly-CSharp::IngredientObject
   IngredientType: 5
-  playDragEvent:
+  pickUpDragEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 73f95a2077a14124f9370d7b4b2a2c75, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6e567dfd4a81d90439f3c09ea3cbcb5c, type: 2}
   dropDragEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 21a3bccf165aa4741a56e96afbfcd10c, type: 2}
-  IngredientSprite: {fileID: 1094682042135177466, guid: 6c5145e0e9effaf44a09a2bfe42d1709, type: 3}
+    WwiseObjectReference: {fileID: 11400000, guid: 87afe1955e03b9a49973a8dc7a5daace, type: 2}
+  OnDragSprite: {fileID: 0}

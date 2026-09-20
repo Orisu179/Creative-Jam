@@ -23,10 +23,12 @@ namespace State_Machines
             _manager._stateMachine.ChangeState(_manager._dayStartState);
 
             TextBoxManager.Instance.SetDisabled(true, 0f);
+            SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayLoopZeroMusic);
         }
 
-        public async Task Exit()
+        public Task Exit()
         {
+            return Task.CompletedTask;
         }
     }
 }

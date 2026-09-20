@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Tea
   m_EditorClassIdentifier: Assembly-CSharp::IngredientObject
   IngredientType: 3
-  playDragEvent:
+  pickUpDragEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 73f95a2077a14124f9370d7b4b2a2c75, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 0bf6e4fe136a8eb4eba2ed0aa40db997, type: 2}
   dropDragEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 21a3bccf165aa4741a56e96afbfcd10c, type: 2}
-  IngredientSprite: {fileID: 8490409112265031632, guid: 27b4438733715d848abada18e7463bce, type: 3}
+    WwiseObjectReference: {fileID: 11400000, guid: a48ba03a74abd7e4ea56a27de884e79e, type: 2}
+  OnDragSprite: {fileID: 0}

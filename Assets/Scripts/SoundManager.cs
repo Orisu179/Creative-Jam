@@ -8,10 +8,17 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
     public enum SoundEvent
     {
-        PlayIngredient1,
-        PlayIngredient2,
-        PlayMusic,
-        StopMusic
+        PlayDialogue,
+        PlayDrinkReval,
+        PlayMenuButton,
+        PlayPageFlip,
+        PlayShake,
+        PlaySteam,
+        PlayTimeTravel,
+        PlayLoopZeroMusic,
+        PlayRewindMusic,
+        StopLoopZeroMusic,
+        StopRewindMusic
     }
     
     private void Awake()
@@ -25,37 +32,32 @@ public class SoundManager : MonoBehaviour
         Instance = this;
 
         DontDestroyOnLoad(gameObject); 
+        
+        _events = new Dictionary<SoundEvent, Event>
+        {
+            { SoundEvent.PlayDialogue, events[0] },
+            { SoundEvent.PlayDrinkReval, events[1] },
+            { SoundEvent.PlayLoopZeroMusic, events[2] },
+            { SoundEvent.PlayMenuButton, events[3] },
+            { SoundEvent.PlayPageFlip, events[4] },
+            { SoundEvent.PlayShake, events[5] },
+            { SoundEvent.PlaySteam, events[6] },
+            { SoundEvent.PlayTimeTravel, events[7] },
+            { SoundEvent.PlayRewindMusic , events[8] },
+            { SoundEvent.StopLoopZeroMusic , events[9] },
+            { SoundEvent.StopRewindMusic , events[10] }
+        };
     }
     
-    [SerializeField] private List<Event> startEvents;
-    [SerializeField] private List<Event> endEvents;
-    private Dictionary<SoundEvent, Event> _startEvents;
-    private Dictionary<SoundEvent, Event> _endEvents;
+    [SerializeField] private List<Event> events;
+    private Dictionary<SoundEvent, Event> _events;
 
     public void Start()
     {
-        _startEvents = new Dictionary<SoundEvent, Event>
-        {
-            { SoundEvent.PlayMusic, startEvents[0] },
-            { SoundEvent.PlayIngredient1, startEvents[1] },
-            { SoundEvent.PlayIngredient2, startEvents[2] },
-        };
-        _endEvents = new Dictionary<SoundEvent, Event>
-        {
-            { SoundEvent.StopMusic, endEvents[0] },
-        };
     }
 
-    public void PostEvent(SoundEvent soundEvent, bool start)
+    public void PostEvent(SoundEvent soundEvent)
     {
-        if (start)
-        {
-            _startEvents[soundEvent].Post(gameObject);
-        }
-        else
-        {
-            _endEvents[soundEvent].Post(gameObject);
-        }
+        _events[soundEvent].Post(gameObject);
     }
-    
 }

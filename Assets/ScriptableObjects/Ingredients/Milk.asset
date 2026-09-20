@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Milk
   m_EditorClassIdentifier: Assembly-CSharp::IngredientObject
   IngredientType: 1
-  playDragEvent:
+  pickUpDragEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 73f95a2077a14124f9370d7b4b2a2c75, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 135cb6e77cf3b944ab6a77f88c7aefb2, type: 2}
   dropDragEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 21a3bccf165aa4741a56e96afbfcd10c, type: 2}
-  IngredientSprite: {fileID: 4521483149897660195, guid: 3168f0ea27742b74d91901e8f27e3216, type: 3}
+    WwiseObjectReference: {fileID: 11400000, guid: 90b866f976632514d8e027cb0d242034, type: 2}
+  OnDragSprite: {fileID: 0}
