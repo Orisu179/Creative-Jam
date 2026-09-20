@@ -34,11 +34,11 @@ public class SatisfactionBar : MonoBehaviour
 
 	public void SetScore(float score, bool animate = true)
 	{
-		// Clamp score between -10 and +10
-		currentScore = Mathf.Clamp(score, minScore, maxScore);
+		// Display the raw score, even when it is outside the bar range.
+		UpdateScoreText(score);
 
-		// Update the text display
-		UpdateScoreText();
+		// Clamp the value used for the bar position.
+		currentScore = Mathf.Clamp(score, minScore, maxScore);
 
 		// Normalize score to a 0 to 1 range
 		float normalizedValue = Mathf.InverseLerp(minScore, maxScore, currentScore);
@@ -72,12 +72,11 @@ public class SatisfactionBar : MonoBehaviour
 		}
 	}
 
-	private void UpdateScoreText()
+	private void UpdateScoreText(float displayedScore)
 	{
 		if (scoreText != null)
 		{
-			// Format the score (e.g., "-5.2" or "10")
-			scoreText.text = currentScore.ToString(textFormat);
+			scoreText.text = displayedScore.ToString(textFormat);
 		}
 	}
 }
