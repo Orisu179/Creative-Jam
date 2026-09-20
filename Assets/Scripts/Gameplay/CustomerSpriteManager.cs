@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class CustomerSpriteManager : MonoBehaviour
 {
@@ -40,6 +41,30 @@ public class CustomerSpriteManager : MonoBehaviour
             int yOffset = AccessoryData.AccessoryOffsets[accessory];
             _accessoryTransform.localPosition = new Vector3(0, yOffset, 0);
         }
+
+        FadeOut();
+        // FadeIn();
+    }
+
+    public void FadeIn()
+    {
+        _owlSpriteRenderer.color = Color.black;
+        _accessorySpriteRenderer.color = Color.black;
+        Sequence fadeInSequence = DOTween.Sequence();
+        fadeInSequence.Insert(0, _owlSpriteRenderer.DOFade(1f, 1f).From(0f));
+        fadeInSequence.Insert(0, _accessorySpriteRenderer.DOFade(1f, 1f).From(0f));
+
+        fadeInSequence.Insert(0.2f, _owlSpriteRenderer.DOColor(Color.white, 0.5f));
+        fadeInSequence.Insert(0.2f, _accessorySpriteRenderer.DOColor(Color.white, 0.5f));
+    }
+
+
+    public void FadeOut()
+    {
+        _owlSpriteRenderer.DOColor(Color.black, 0.5f);
+        _owlSpriteRenderer.DOFade(0f, 1f);
+        _accessorySpriteRenderer.DOColor(Color.black, 0.5f);
+        _accessorySpriteRenderer.DOFade(0f, 1f);
     }
 
     public static (OwlSpecies species, Accessory accessory) GetRandomOwlSpeciesAndAccessory()

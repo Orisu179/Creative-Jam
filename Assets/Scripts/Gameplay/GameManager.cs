@@ -6,6 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using Gameplay;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        DOTween.Init();
         _curLoop = 0;
         var allIngredient = (Ingredient[])Enum.GetValues(typeof(Ingredient));
         _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
@@ -82,23 +84,23 @@ public class GameManager : MonoBehaviour
 
         int score = 0;
         int penalty = 0;
-        
+
         foreach (var cust_pref in c.Preferences)
         {
-            if(d.AttributeList.Contains(cust_pref.Key)) // if attributes match
+            if (d.AttributeList.Contains(cust_pref.Key)) // if attributes match
             {
                 score += cust_pref.Value;
             }
             else
             {
                 score -= cust_pref.Value;
-                if(cust_pref.Value >= 3) // if miss a major attribute
+                if (cust_pref.Value >= 3) // if miss a major attribute
                 {
                     penalty++;
                 }
             }
         }
-        if(penalty == 2 && score > -10) // missed both major attributes
+        if (penalty == 2 && score > -10) // missed both major attributes
         {
             score--;
         }

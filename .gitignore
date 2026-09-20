@@ -110,6 +110,10 @@ InitTestScene*.unity*
 
 .idea/**
 
+# Recovery files
+/[Aa]ssets/_Recovery/
+/[Aa]ssets/_Recovery.meta
+
 # --- Wwise Ignore List ---
 
 # Ignore local user layouts and specific machine settings
