@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public uint CurLoop { get; private set; }
     public int CustomerCounter { get; private set; }
     public List<Customer> Customers { get; private set; }
-    public List<Drink> PoisonedDrinks;
+    public HashSet<Drink> PoisonedDrinks;
     private CustomerSpriteManager _customerSpriteManager;
     public Day CurDay { get; set; }
 

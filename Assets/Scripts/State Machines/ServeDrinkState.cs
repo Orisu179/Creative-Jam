@@ -81,6 +81,7 @@ namespace State_Machines
 
             bool isPoisoned = false;
             List<int> poisonedList = new List<int>();
+            _manager.PoisonedDrinks.Clear();
             for (int drinkIndex = 0; drinkIndex < _manager.CurDay.OrderList.Count; drinkIndex++)
             {
                 Drink d = _manager.CurDay.OrderList[drinkIndex];
@@ -90,6 +91,7 @@ namespace State_Machines
                     {
                         isPoisoned = true;
                         poisonedList.Add(drinkIndex);
+                        _manager.PoisonedDrinks.Add(d);
                         break;
                     }
                 }
@@ -103,7 +105,7 @@ namespace State_Machines
             else
             {
                 // go to win state
-                SceneManager.LoadScene("WinScene");
+                SceneManager.LoadScene("SuccessScene");
             }
         }
     }
