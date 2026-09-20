@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Gameplay;
 using State_Machines;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +23,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CreateDrink createDrink;
     [SerializeField] private DrinkMenuController drinkMenu;
     [SerializeField] private BrewingSpriteManager brewingSpriteManager;
-    [SerializeField] private FailLoopMenu failLoopMenu;
+    [SerializeField] private GameObject failLoopMenu;
+    private FailLoopMenu _failLoopMenuScript;
     [SerializeField] private SatisfactionBar satisfactionBar;
     public DrinkMenuController DrinkMenu => drinkMenu;
 
@@ -54,6 +57,8 @@ public class GameManager : MonoBehaviour
         _dayStartState = new DayStartState(this, _customerInteractState);
         _loopFailedState = new LoopFailState(this, _dayStartState);
         _serveDrinkState = new ServeDrinkState(this, _customerSpriteManager, _loopFailedState, _customerInteractState);
+
+        _failLoopMenuScript = failLoopMenu.GetComponentInChildren<FailLoopMenu>();
 
 
         _stateMachine.Initialize(_initState);
@@ -179,15 +184,24 @@ public class GameManager : MonoBehaviour
 
     public void SetFailMenuText(uint remainingDays)
     {
-        failLoopMenu.SetRemainingLoop(remainingDays);
+        _failLoopMenuScript.SetRemainingLoop(remainingDays);
     }
 
     public void SetFailMenuList(List<Drink> drinks)
     {
-        failLoopMenu.SetDrinks(drinks);
+        _failLoopMenuScript.SetDrinks(drinks);
     }
-    // Add this to your existing GameManager class.
 
+    public void SetFailMenuActive(bool active)
+    {
+        failLoopMenu.SetActive(active);
+    }
+
+    public void SetFailMenuButton(Action action)
+    {
+        _failLoopMenuScript.onClick += action;
+    }
+    
     public string DrinkHistoryToString()
     {
         return string.Join(", ", CurDay.OrderList);

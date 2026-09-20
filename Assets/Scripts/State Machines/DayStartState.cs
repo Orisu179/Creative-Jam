@@ -20,6 +20,7 @@ namespace State_Machines
             {
                SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayRewindMusic); 
             }
+            _manager.SetFailMenuActive(false);
             Debug.Log("Entering Day start state");
             _manager.ResetCustomer();
             var counter = _manager.CustomerCounter;

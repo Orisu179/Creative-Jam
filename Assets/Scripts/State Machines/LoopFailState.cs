@@ -19,7 +19,11 @@ namespace State_Machines
             // _manager.SetFailMenuList(_manager.CurDay.OrderList);
             
             // Debug.LogWarning($"The Poisoned drinks are: [{string.Join(", ", _manager.PoisonedDrinks)}]");
-            HandleContinue();
+            _manager.SetFailMenuActive(true);
+            SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopLoopZeroMusic);
+            SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopRewindMusic);
+            
+            _manager.SetFailMenuButton(HandleContinue);
         }
 
         public Task Exit()
@@ -29,14 +33,7 @@ namespace State_Machines
 
         private void HandleContinue()
         {
-            if (_manager.CurLoop == 0)
-            {
-                SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopLoopZeroMusic);
-            }
-            else
-            {
-                SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopRewindMusic);
-            }
+            _manager.SetFailMenuActive(true);
             if (_manager.CurLoop >= _manager.GetMaxLoop())
             {
                 // game overscreen

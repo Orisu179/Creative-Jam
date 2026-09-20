@@ -56,6 +56,9 @@ TagManager:
   - name: Menu
     uniqueID: 1661622385
     locked: 0
+  - name: EofDay
+    uniqueID: 798091925
+    locked: 0
   m_RenderingLayers:
   - Default
   - Menu

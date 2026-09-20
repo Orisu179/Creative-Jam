@@ -18,12 +18,13 @@ namespace State_Machines
             GlobalFields.Instance.Score = 0.0f;
             GlobalFields.Instance.State = null;
             GlobalFields.Instance.MouseInteractable = false;
+            _manager.SetFailMenuActive(false);
             _manager.GenerateCustomers();
             _manager.ResetLoop();
-            _manager._stateMachine.ChangeState(_manager._dayStartState);
 
             TextBoxManager.Instance.SetDisabled(true, 0f);
             SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayLoopZeroMusic);
+            _manager._stateMachine.ChangeState(_manager._dayStartState);
         }
 
         public Task Exit()

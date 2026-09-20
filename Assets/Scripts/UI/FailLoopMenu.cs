@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class FailLoopMenu : MonoBehaviour
 {
+    public Action onClick;
+
     public void SetActive(bool active)
     {
         gameObject.SetActive(active);
@@ -22,5 +25,10 @@ public class FailLoopMenu : MonoBehaviour
     {
         // display the list
         // map names to assets (?)
+    }
+
+    public void OnMouseDown()
+    {
+        onClick?.Invoke();
     }
 }

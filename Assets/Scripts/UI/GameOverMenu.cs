@@ -9,6 +9,8 @@ public class GameOverMenu : MonoBehaviour
     [SerializeField] private GameObject maxLooped;
     void Start()
     {
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopLoopZeroMusic);
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopRewindMusic);
         fired.SetActive(false);
         maxLooped.SetActive(false);
 
@@ -29,12 +31,6 @@ public class GameOverMenu : MonoBehaviour
         {
             Debug.Log("it's null");
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void returnToMain()
