@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ResetButton : MonoBehaviour
 {
-    [SerializeField] private CupController cupController;
+    [SerializeField] private CreateDrink cupController;
 
     private void OnMouseDown()
     {

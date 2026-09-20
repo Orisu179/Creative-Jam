@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PrepareButton : MonoBehaviour
 {
-    [SerializeField] private CupController cupController;
+    [SerializeField] private CreateDrink cupController;
 
     private void OnMouseDown()
     {

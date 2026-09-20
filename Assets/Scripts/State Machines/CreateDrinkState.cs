@@ -2,8 +2,10 @@
 {
     public class CreateDrinkState : IState
     {
-        public CreateDrinkState(GameManager manager)
+        private CreateDrink _createDrink;
+        public CreateDrinkState(GameManager manager,CreateDrink drink)
         {
+            _createDrink = drink;
         }
         
         public void Enter()

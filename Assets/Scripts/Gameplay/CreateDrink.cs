@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using Gameplay;
 
-public class CupController : MonoBehaviour
+public class CreateDrink : MonoBehaviour
 {
-    private Day.DrinkManager drinkManager;
+    private DrinkManager drinkManager;
 
     [SerializeField] private SpriteRenderer cupSprite;
     [SerializeField] private MixingCupArea mixingCupArea;
@@ -24,7 +24,7 @@ public class CupController : MonoBehaviour
 
     private void Awake()
     {
-        drinkManager = new Day.DrinkManager();
+        drinkManager = new DrinkManager();
     }
 
     private void OnEnable()
