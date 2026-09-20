@@ -9,15 +9,14 @@ namespace State_Machines
         {
             _manager = manager;
         }
-        
+
         public void Enter()
         {
-           _manager.IncrementLoop();
-           _manager.ResetCustomer();
-           var counter = _manager.CustomerCounter;
-           var curCustomer = _manager.Customers[counter];
-           _manager.CurDay = new Day{ CurrentCustomer = curCustomer, CurrentDrink = null, SatisfactionLevel =  0, OrderList =  new List<Drink>()};
-           _manager._stateMachine.ChangeState(_manager._customerInteractState);
+            _manager.ResetCustomer();
+            var counter = _manager.CustomerCounter;
+            var curCustomer = _manager.Customers[counter];
+            _manager.CurDay = new Day { CurrentCustomer = curCustomer, CurrentDrink = null, SatisfactionLevel = 0, OrderList = new List<Drink>() };
+            _manager._stateMachine.ChangeState(_manager._customerInteractState);
         }
 
         public void Exit()

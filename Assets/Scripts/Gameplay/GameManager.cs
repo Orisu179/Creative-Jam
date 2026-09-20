@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         }
         // Restart
         _curLoop++;
-
+        _stateMachine.ChangeState(_dayStartState);
     }
 
     // Used in Init State
@@ -143,10 +143,6 @@ public class GameManager : MonoBehaviour
     }
 
     // Day Start State
-    public void IncrementLoop()
-    {
-        _curLoop++;
-    }
 
     public void IncrementCounter()
     {

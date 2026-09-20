@@ -18,7 +18,7 @@ namespace State_Machines
         public async void Enter()
         {
             // 1. Fade in the customer
-            _customerSpriteManager.SetSprite(_manager.CurDay.CurrentCustomer.Species, _manager.Cur.CurrentCustomer.Accessory);
+            _customerSpriteManager.SetSprite(_manager.CurDay.CurrentCustomer.Species, _manager.CurDay.CurrentCustomer.Accessory);
             Tween fadeIn = _customerSpriteManager.FadeIn();
             // 2. Add the customer dialogue and callback to the dialogue box
             // Dialogue.SetDialogue(_day.CurrentCustomer.Dialogue, HandleDialogueComplete);
