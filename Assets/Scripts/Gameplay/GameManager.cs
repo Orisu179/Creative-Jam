@@ -1,40 +1,27 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
 using Gameplay;
+using State_Machines;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
-    // This should be a singleton
     // private Day curDay;
-    public static GameManager Instance { get; private set; }
     private Ingredient? _poisonedIngredient = null;
     private uint _curLoop;
+    private int _customerCounter;
     private List<Customer> _customers;
+    private StateMachine _stateMachine;
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
 
-    public void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject); // Clear duplicates
-            return;
-        }
-
-        Instance = this;
-
-        DontDestroyOnLoad(gameObject); 
-    }
-
     private void Start()
     {
         _curLoop = 0;
+
+        _stateMachine = new StateMachine();
         var allIngredient = (Ingredient[])Enum.GetValues(typeof(Ingredient));
         _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
         _customers = new List<Customer>();
@@ -45,12 +32,14 @@ public class GameManager : MonoBehaviour
 
     public void NextLoop()
     {
-        _curLoop++;
         if (_curLoop >= maxLoop)
         {
             // game overscreen
+            _stateMachine.ChangeState(new LoseState());
         }
-        // TODO: Finish this
+        // Restart
+        _curLoop++;
+        
     }
 
     private void GenerateCustomers()
