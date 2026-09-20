@@ -1,27 +1,25 @@
+using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TitleScene : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayRewindMusic);
     }
 
     public void goToGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayMenuButton);
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.StopRewindMusic);
+        SceneManager.LoadScene("JesseScene");
     }
 
     public void quitGame()
     {
+        SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayMenuButton);
         Application.Quit();
     }
 }

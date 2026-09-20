@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	965911504	Play_Ingredient_2_Ice_Drop			\Default Work Unit\Play_Ingredient_2_Ice_Drop	
-

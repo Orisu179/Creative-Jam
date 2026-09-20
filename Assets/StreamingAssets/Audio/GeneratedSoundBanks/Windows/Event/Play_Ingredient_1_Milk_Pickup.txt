@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3229503566	Play_Ingredient_1_Milk_Pickup			\Default Work Unit\Play_Ingredient_1_Milk_Pickup	
-

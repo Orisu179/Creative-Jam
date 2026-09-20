@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	2569580911	Play_MenuButton			\Default Work Unit\Play_MenuButton	
-

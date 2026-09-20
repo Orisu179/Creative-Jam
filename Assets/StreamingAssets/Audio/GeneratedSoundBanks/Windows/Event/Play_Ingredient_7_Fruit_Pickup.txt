@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3807130841	Play_Ingredient_7_Fruit_Pickup			\Default Work Unit\Play_Ingredient_7_Fruit_Pickup	
-

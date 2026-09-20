@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	352222192	Play_Drink_Reveal			\Default Work Unit\Play_Drink_Reveal	
-

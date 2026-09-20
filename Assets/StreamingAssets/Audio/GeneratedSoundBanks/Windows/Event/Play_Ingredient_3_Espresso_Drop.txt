@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1198850248	Play_Ingredient_3_Espresso_Drop			\Default Work Unit\Play_Ingredient_3_Espresso_Drop	
-
