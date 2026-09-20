@@ -68,6 +68,20 @@ public class CustomerSpriteManager : MonoBehaviour
         return fadeOutSequence;
     }
 
+    public Sequence MoveLeft()
+    {
+        Sequence moveLeftSequence = DOTween.Sequence();
+        moveLeftSequence.Append(transform.DOMoveX(-5f, -2f));
+        return moveLeftSequence;
+    }
+
+    public Sequence MoveRight()
+    {
+        Sequence moveRightSequence = DOTween.Sequence();
+        moveRightSequence.Append(transform.DOMoveX(5f, 2f));
+        return moveRightSequence;
+    }
+
     public static (OwlSpecies species, Accessory accessory) GetRandomOwlSpeciesAndAccessory()
     {
         var allSpecies = (OwlSpecies[])System.Enum.GetValues(typeof(OwlSpecies));

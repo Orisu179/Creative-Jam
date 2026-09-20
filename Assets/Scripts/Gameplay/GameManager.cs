@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour
     public List<Customer> Customers { get; private set; }
     private CustomerSpriteManager _customerSpriteManager;
     public Day CurDay { get; set; }
-    
+
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
-    
+
     // States
     public StateMachine _stateMachine;
     public InitState _initState { get; set; }
@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
     public LoopFailState _loopFailedState { get; set; }
     public ServeDrinkState _serveDrinkState { get; set; }
     public WinState _winState { get; set; }
-    
-    
+
+
 
     private void Start()
     {
@@ -45,17 +45,17 @@ public class GameManager : MonoBehaviour
         // _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
         Customers = new List<Customer>();
         CustomerCounter = 0;
-        
-        
+
+
         _initState = new InitState(this);
         _createDrinkState = new CreateDrinkState(this);
-        _customerInteractState = new CustomerInteractState(this);
+        _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
         _dayStartState = new DayStartState(this);
-        _loopFailedState = new LoopFailState(this);
+        _loopFailedState = new LoopFailState(this, _loopFailedState, _dayStartState);
         _serveDrinkState = new ServeDrinkState(this);
         _winState = new WinState(this);
-        
-        
+
+
         _stateMachine.Initialize(_initState);
 
         // MixingCupArea.OnAnyItemDropped += HandleDrop;
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
 
         foreach (var cust_pref in c.Preferences)
         {
-            if(DrinkAttributeDatabase.GetDrinkAttributes(d).Contains(cust_pref.Key)) // if attributes match
+            if (DrinkAttributeDatabase.GetDrinkAttributes(d).Contains(cust_pref.Key)) // if attributes match
             {
                 score += cust_pref.Value;
             }
