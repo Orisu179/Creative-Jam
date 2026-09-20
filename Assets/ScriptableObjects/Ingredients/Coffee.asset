@@ -20,5 +20,5 @@ MonoBehaviour:
   dropDragEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 21a3bccf165aa4741a56e96afbfcd10c, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a677692925651fb4bb3ff873301d7246, type: 2}
   OnDragSprite: {fileID: 0}

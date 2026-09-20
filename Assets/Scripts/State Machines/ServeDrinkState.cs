@@ -33,6 +33,7 @@ namespace State_Machines
             _manager.SetSatisfactionLevel(_manager.CurDay.SatisfactionLevel + score);
 
             // calc dialogue using day.current cust sat
+            SoundManager.Instance.PostEvent(SoundManager.SoundEvent.PlayDialogue);
             TextBoxManager.Instance.SetDialogue(DialogueGenerator.GenerateResponse(score, _manager.CurDay.CurrentCustomer), HandleDialogueComplete);
             await TextBoxManager.Instance.SetDisabled(false, 1.0f);
 

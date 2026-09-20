@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4f9886dfadd95b419dc10e74096a378, type: 3}
-  m_Name: 182665E2-D789-41AB-9361-521DC9248C98
+  m_Name: 1ADD5780-AFA5-4138-B90B-A9C6EB8AC93E
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
-  objectName: Play_Ingredient_2
-  id: 2114724124
-  guid: 182665E2-D789-41AB-9361-521DC9248C98
-  IsInUserDefinedSoundBank: 1
+  objectName: Play_Ingredient_3_Espresso_Drop
+  id: 1198850248
+  guid: 1ADD5780-AFA5-4138-B90B-A9C6EB8AC93E
+  IsInUserDefinedSoundBank: 0
