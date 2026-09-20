@@ -33,14 +33,6 @@ namespace State_Machines
 
             // Test create drink
             _createDrink.drinkManager.ResetMix();
-            _createDrink.drinkManager.AddIngredient(Ingredient.MILK);
-            _createDrink.drinkManager.AddIngredient(Ingredient.SODA);
-            _createDrink.drinkManager.AddIngredient(Ingredient.SODA);
-            _createDrink.drinkManager.AddIngredient(Ingredient.SODA);
-            _createDrink.drinkManager.AddIngredient(Ingredient.ICE);
-            _createDrink.PrepareDrink();
-
-            await HandleFeedDrink(_currentDrink);
         }
 
         public async Task Exit()
