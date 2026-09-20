@@ -25,8 +25,9 @@ namespace State_Machines
             _manager._stateMachine.ChangeState(_nextState);
         }
 
-        public async Task Exit()
+        public Task Exit()
         {
+            return Task.CompletedTask;
         }
     }
 }

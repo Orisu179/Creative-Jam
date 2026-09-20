@@ -15,10 +15,10 @@ namespace State_Machines
         }
         public void Enter()
         {
-            _manager.SetFailMenuText((_manager.GetMaxLoop() - _manager.CurLoop));
-            _manager.SetFailMenuList(_manager.CurDay.OrderList);
+            // _manager.SetFailMenuText((_manager.GetMaxLoop() - _manager.CurLoop));
+            // _manager.SetFailMenuList(_manager.CurDay.OrderList);
             
-            Debug.LogWarning($"The Poisoned drinks are: [{string.Join(", ", _manager.PoisonedDrinks)}]");
+            // Debug.LogWarning($"The Poisoned drinks are: [{string.Join(", ", _manager.PoisonedDrinks)}]");
             HandleContinue();
         }
 

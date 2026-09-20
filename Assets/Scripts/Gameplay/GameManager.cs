@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public uint CurLoop { get; private set; }
     public int CustomerCounter { get; private set; }
     public List<Customer> Customers { get; private set; }
+    public int minPoints = -10;
     public HashSet<Drink> PoisonedDrinks;
     private CustomerSpriteManager _customerSpriteManager;
     public Day CurDay { get; set; }
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
         // PoisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
         Customers = new List<Customer>();
         CustomerCounter = 0;
+        PoisonedDrinks = new HashSet<Drink>();
 
         _initState = new InitState(this);
         _createDrinkState = new CreateDrinkState(this, createDrink, brewingSpriteManager);
