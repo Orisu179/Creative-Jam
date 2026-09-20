@@ -7,11 +7,12 @@ public enum Drink
     icedAmericano,
     magicMatcha,
     strawberryLemonade,
-    icedLatte,
+    hotLatte,
     dragonfruitTea,
     lycheeMilkTea,
     magicalTea,
     cremeBruleeMilkTea,
     rainbowSoda,
-    creamSoda
+    creamSoda,
+    milkshake
 }

@@ -14,7 +14,7 @@ public class CupController : MonoBehaviour
     [SerializeField] private Sprite icedAmericanoSprite;
     [SerializeField] private Sprite magicMatchaSprite;
     [SerializeField] private Sprite strawberryLemonadeSprite;
-    [SerializeField] private Sprite icedLatteSprite;
+    [SerializeField] private Sprite hotLatteSprite;
     [SerializeField] private Sprite dragonfruitTeaSprite;
     [SerializeField] private Sprite lycheeMilkTeaSprite;
     [SerializeField] private Sprite magicalTeaSprite;
@@ -25,7 +25,6 @@ public class CupController : MonoBehaviour
     private void Awake()
     {
         drinkManager = new Day.DrinkManager();
-        mixingCupArea.ReceiveDrop(Ingredient.Milk);
     }
 
     private void OnEnable()
@@ -59,14 +58,11 @@ public class CupController : MonoBehaviour
     public void PrepareDrink()
     {
         Drink? result = drinkManager.PrepareDrink();
-
-        // if (result == Drink.invalid)
-        // {
-        //     Debug.Log("Invalid drink!");
-        //     return;
-        // }
-
         ChangeDrinkSprite(result);
+    }
+    public void RemoveDrink()
+    {
+        ChangeDrinkSprite(null);
     }
 
     private void ChangeDrinkSprite(Drink? drink)
@@ -78,7 +74,7 @@ public class CupController : MonoBehaviour
             Drink.icedAmericano=>icedAmericanoSprite,
             Drink.magicMatcha=>magicMatchaSprite,
             Drink.strawberryLemonade=>strawberryLemonadeSprite,
-            Drink.icedLatte=>icedLatteSprite,
+            Drink.hotLatte=>hotLatteSprite,
             Drink.dragonfruitTea=>dragonfruitTeaSprite,
             Drink.lycheeMilkTea=>lycheeMilkTeaSprite,
             Drink.magicalTea=>magicalTeaSprite,
@@ -92,6 +88,7 @@ public class CupController : MonoBehaviour
 
     public void ResetCup()
     {
+        RemoveDrink();
         drinkManager.ResetMix();
         drinkManager.ResetDrink();
     }

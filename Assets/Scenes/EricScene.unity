@@ -1107,7 +1107,7 @@ MonoBehaviour:
   icedAmericanoSprite: {fileID: -7469333554674542713, guid: 5db7d9ef8493dfe429dcc22a9fc2bb59, type: 3}
   magicMatchaSprite: {fileID: 0}
   strawberryLemonadeSprite: {fileID: -8748055147059846076, guid: 61dd4295b105a1942a9bc38193374cb2, type: 3}
-  icedLatteSprite: {fileID: 0}
+  hotLatteSprite: {fileID: 0}
   dragonfruitTeaSprite: {fileID: 0}
   lycheeMilkTeaSprite: {fileID: 0}
   magicalTeaSprite: {fileID: -8748055147059846076, guid: 61dd4295b105a1942a9bc38193374cb2, type: 3}
