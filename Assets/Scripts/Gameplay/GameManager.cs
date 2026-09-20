@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         Debug.Log($"The ingredient is: {ingredient.ToString()}");
     }
 
-    public int CalculateScore(Customer c, Drink d)
+    public int CalculateScore(Day d)
     {
         // range from -10 to 10
         // increase or decrease by value of attribute in customer
@@ -114,9 +114,9 @@ public class GameManager : MonoBehaviour
         int score = 0;
         int penalty = 0;
 
-        foreach (var cust_pref in c.Preferences)
+        foreach (var cust_pref in d.CurrentCustomer.Preferences)
         {
-            if (DrinkAttributeDatabase.GetDrinkAttributes(d).Contains(cust_pref.Key)) // if attributes match
+            if (DrinkAttributeDatabase.GetDrinkAttributes(d.CurrentDrink).Contains(cust_pref.Key)) // if attributes match
             {
                 score += cust_pref.Value;
             }
@@ -133,7 +133,8 @@ public class GameManager : MonoBehaviour
         {
             score--;
         }
-        return score;
+        
+        d.SatisfactionLevel = score;
     }
 
     // InitState
