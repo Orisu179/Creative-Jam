@@ -2,17 +2,15 @@ using UnityEngine;
 
 public enum Drink
 {
-    invalid,
-    blueLatte,
-    icedAmericano,
-    magicMatcha,
-    strawberryLemonade,
-    hotLatte,
-    dragonfruitTea,
-    lycheeMilkTea,
-    magicalTea,
-    cremeBruleeMilkTea,
-    rainbowSoda,
-    creamSoda,
-    milkshake
+    INVALID,
+    POUF_SODALICIOUS,
+    WHIMS_TEA,
+    HOT_LATTE,
+    OVER_THE_STARS_SODA,
+    UNDER_THE_ABYSS_MATCHA,
+    LYCHEE_MILK_TEA,
+    LATTE_BLEU,
+    CREME_BRULEE_MILK_TEA,
+    ICED_SODA_AMERICANO,
+    STRAWBERRY_ADE
 }
