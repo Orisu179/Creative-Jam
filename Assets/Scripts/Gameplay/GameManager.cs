@@ -29,9 +29,8 @@ public class GameManager : MonoBehaviour
     public CreateDrinkState _createDrinkState { get; set; }
     private CustomerInteractState _customerInteractState;
     public DayStartState _dayStartState { get; set; }
-    private LoopFailState _loopFailedState { get; set; }
+    public LoopFailState _loopFailedState { get; set; }
     public ServeDrinkState _serveDrinkState { get; set; }
-    public WinState _winState { get; set; }
 
 
 
@@ -46,14 +45,12 @@ public class GameManager : MonoBehaviour
         Customers = new List<Customer>();
         CustomerCounter = 0;
 
-
         _initState = new InitState(this);
         _createDrinkState = new CreateDrinkState(this, createDrink);
         _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
         _dayStartState = new DayStartState(this, _customerInteractState);
-        _loopFailedState = new LoopFailState(this, _dayStartState, new GameOverState(this));
-        _serveDrinkState = new ServeDrinkState(this,_customerSpriteManager);
-        _winState = new WinState(this);
+        _loopFailedState = new LoopFailState(this, _dayStartState);
+        _serveDrinkState = new ServeDrinkState(this, _customerSpriteManager);
 
 
         _stateMachine.Initialize(_initState);
@@ -69,7 +66,7 @@ public class GameManager : MonoBehaviour
             (OwlSpecies species, Accessory accessory) = CustomerSpriteManager.GetRandomOwlSpeciesAndAccessory();
             var curCustomer = new Customer("", species, accessory);
             curCustomer.Dialogue = DialogueGenerator.GenerateDialogue(curCustomer);
-            
+
             Customers.Add(curCustomer);
         }
     }
