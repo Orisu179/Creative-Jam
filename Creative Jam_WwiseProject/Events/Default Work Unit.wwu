@@ -3,28 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{7A21C8C5-59BA-4D93-B164-BFDA93968E85}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Ingredient_1" ID="{3595C6D0-813B-4227-B8DF-C42026AAC040}">
-					<ChildrenList>
-						<Action Name="" ID="{12A5321D-1C2E-4000-9342-ADE6882B6D65}" ShortID="963157586">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Ingredient_1" ID="{AAD91052-7876-4412-9E68-884D2BD6AF09}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Ingredient_2" ID="{182665E2-D789-41AB-9361-521DC9248C98}">
-					<ChildrenList>
-						<Action Name="" ID="{094BC27C-DDF5-4392-9CB2-BB334162D616}" ShortID="332138277">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Ingredient_2" ID="{7C5DA095-769F-43A5-8732-39DE9FDC9569}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Dialogue_Random_Container" ID="{F94DFC54-16BA-46A4-9DD8-624583FA170A}">
 					<ChildrenList>
 						<Action Name="" ID="{047BB2E0-8477-4179-93AB-73240FDD5AD1}" ShortID="951550625">
