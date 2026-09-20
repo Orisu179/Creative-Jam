@@ -54,10 +54,11 @@ namespace State_Machines
         {
             if (_manager.CurDay.SatisfactionLevel < _manager.minPoints)
             {
+                GlobalFields.Instance.State = GlobalFields.GameOverState.Fired;
                 SceneManager.LoadScene("GameOverScene");
                 return;
             }
-            
+
             if (!_manager.IsLastCustomer())
             {
                 _manager.IncrementCustomer();
@@ -106,6 +107,7 @@ namespace State_Machines
             else
             {
                 // go to win state
+                GlobalFields.Instance.Score = _manager.CurDay.SatisfactionLevel;
                 SceneManager.LoadScene("SuccessScene");
             }
         }

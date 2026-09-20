@@ -41,6 +41,7 @@ namespace State_Machines
             {
                 // game overscreen
                 // update global state
+                GlobalFields.Instance.State = GlobalFields.GameOverState.MaxLooped;
                 SceneManager.LoadScene("GameOverScene");
                 return;
             }

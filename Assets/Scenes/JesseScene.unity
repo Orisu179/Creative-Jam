@@ -3908,8 +3908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3822626c62bfd7e40800477a8053a298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  minPoints: -10
   placeholder: {fileID: 708934652261806618, guid: b44a8fc783d9af148a804e3deb984ab8, type: 3}
-  maxLoop: 3
+  maxLoop: 1
   customerSize: 1
   createDrink: {fileID: 616334158}
   drinkMenu: {fileID: 953192441}
