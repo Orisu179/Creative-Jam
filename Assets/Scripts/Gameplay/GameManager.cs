@@ -182,4 +182,15 @@ public class GameManager : MonoBehaviour
     {
         failLoopMenu.SetDrinks(drinks);
     }
+    // Add this to your existing GameManager class.
+
+    public string DrinkHistoryToString()
+    {
+        return string.Join(", ", CurDay.OrderList);
+    }
+
+    public void PrintDrinkHistory()
+    {
+        Debug.Log($"Drinks served today ({CurDay.OrderList.Count}): {DrinkHistoryToString()}");
+    }
 }

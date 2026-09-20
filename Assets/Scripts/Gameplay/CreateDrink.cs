@@ -9,6 +9,10 @@ public class CreateDrink : MonoBehaviour
     public DrinkManager drinkManager;
     public Action<Drink?> OnDrinkCreated { get; set; }
 
+    // Exposes whether a finished drink is currently sitting in the cup,
+    // so other systems (e.g. DragCup) know if it's safe to drag/serve.
+    public Drink? CurrentDrink { get; private set; }
+
     [SerializeField] private SpriteRenderer cupSprite;
     [SerializeField] private MixingCupArea mixingCupArea;
     [SerializeField] private SpriteRenderer ShelfSprite;
@@ -57,11 +61,13 @@ public class CreateDrink : MonoBehaviour
         cupColor.a = 1f;
         cupSprite.color = cupColor;
         Drink? result = drinkManager.PrepareDrink();
+        CurrentDrink = result;
         ChangeDrinkSprite(result);
         OnDrinkCreated?.Invoke(result);
     }
     public async Task RemoveDrink()
     {
+        CurrentDrink = null;
         Tween fadeOut = cupSprite.DOFade(0f, 0.5f);
         await fadeOut.AsyncWaitForCompletion();
         ChangeDrinkSprite(null);
