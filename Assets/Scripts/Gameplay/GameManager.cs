@@ -57,8 +57,6 @@ public class GameManager : MonoBehaviour
 
 
         _stateMachine.Initialize(_initState);
-
-        // MixingCupArea.OnAnyItemDropped += HandleDrop;
     }
 
     // Used in Init State
@@ -72,16 +70,6 @@ public class GameManager : MonoBehaviour
 
             Customers.Add(curCustomer);
         }
-    }
-
-    private void HandleDrop(MixingCupArea area, Ingredient ingredient)
-    {
-        if (ingredient == PoisonedIngredient)
-        {
-            Debug.Log("This is poisoned!");
-            return;
-        }
-        Debug.Log($"The ingredient is: {ingredient.ToString()}");
     }
 
     public int CalculateScore(Day d)
