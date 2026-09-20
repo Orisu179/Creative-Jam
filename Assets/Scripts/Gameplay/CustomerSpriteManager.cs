@@ -71,14 +71,14 @@ public class CustomerSpriteManager : MonoBehaviour
     public Sequence MoveLeft()
     {
         Sequence moveLeftSequence = DOTween.Sequence();
-        moveLeftSequence.Append(transform.DOMoveX(-5f, -2f));
+        moveLeftSequence.Append(transform.DOMoveX(-5, 1));
         return moveLeftSequence;
     }
 
     public Sequence MoveRight()
     {
         Sequence moveRightSequence = DOTween.Sequence();
-        moveRightSequence.Append(transform.DOMoveX(5f, 2f));
+        moveRightSequence.Append(transform.DOMoveX(0, 1));
         return moveRightSequence;
     }
 

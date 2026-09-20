@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public StateMachine _stateMachine;
     public InitState _initState { get; set; }
     public CreateDrinkState _createDrinkState { get; set; }
-    public CustomerInteractState _customerInteractState { get; set; }
+    private CustomerInteractState _customerInteractState;
     public DayStartState _dayStartState { get; set; }
     private LoopFailState _loopFailedState { get; set; }
     public ServeDrinkState _serveDrinkState { get; set; }
@@ -49,8 +49,9 @@ public class GameManager : MonoBehaviour
 
 
         _initState = new InitState(this);
-        _createDrinkState = new CreateDrinkState(this, createDrink); _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
-        _dayStartState = new DayStartState(this);
+        _createDrinkState = new CreateDrinkState(this, createDrink);
+        _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
+        _dayStartState = new DayStartState(this, _customerInteractState);
         _loopFailedState = new LoopFailState(this, _dayStartState, new GameOverState(this));
         _serveDrinkState = new ServeDrinkState(this);
         _winState = new WinState(this);
@@ -59,15 +60,6 @@ public class GameManager : MonoBehaviour
         _stateMachine.Initialize(_initState);
 
         // MixingCupArea.OnAnyItemDropped += HandleDrop;
-
-        Sequence customerSequence = DOTween.Sequence();
-        _customerSpriteManager.SetSprite(Customers[0].Species, Customers[0].Accessory);
-        customerSequence.Append(_customerSpriteManager.FadeIn());
-        customerSequence.Append(_customerSpriteManager.FadeOut()).OnComplete(() =>
-        {
-            _customerSpriteManager.SetSprite(Customers[1].Species, Customers[1].Accessory);
-            customerSequence.Append(_customerSpriteManager.FadeIn());
-        });
     }
 
     // Used in Init State

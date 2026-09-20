@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using UnityEngine;
 
 namespace State_Machines
 {
@@ -17,6 +18,7 @@ namespace State_Machines
 
         public async void Enter()
         {
+            Debug.Log("CustomerInteractState: Enter");
             // 1. Fade in the customer
             _customerSpriteManager.SetSprite(_manager.CurDay.CurrentCustomer.Species, _manager.CurDay.CurrentCustomer.Accessory);
             Tween fadeIn = _customerSpriteManager.FadeIn();
@@ -27,6 +29,13 @@ namespace State_Machines
             // 3. Toggle the dialogue UI
             // Dialogue.Toggle();
             // That's it, the callback will call transition
+
+            Debug.Log("CustomerInteractState: Enter complete");
+            Tween moveLeft = _customerSpriteManager.MoveLeft();
+            await moveLeft.AsyncWaitForCompletion();
+
+            Tween moveRight = _customerSpriteManager.MoveRight();
+            await moveRight.AsyncWaitForCompletion();
         }
 
         public void Exit()
