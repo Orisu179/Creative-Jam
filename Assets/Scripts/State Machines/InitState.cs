@@ -15,8 +15,9 @@ namespace State_Machines
         public void Enter()
         {
             Debug.Log("Entering Init state");
-            GlobalFields.Instance.score = 0.0f;
+            GlobalFields.Instance.Score = 0.0f;
             GlobalFields.Instance.State = null;
+            GlobalFields.Instance.MouseInteractable = false;
             _manager.GenerateCustomers();
             _manager.ResetLoop();
             _manager._stateMachine.ChangeState(_manager._dayStartState);

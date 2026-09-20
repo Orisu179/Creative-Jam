@@ -23,6 +23,10 @@ namespace Gameplay
 
         private void OnMouseDown()
         {
+            if (!GlobalFields.Instance.MouseInteractable)
+            {
+                return;
+            }
             ingredient.playDragEvent.Post(gameObject);
             _initialPosition = transform.position;
             var mouseWorldPos = GetMouseWorldPosition();

@@ -20,6 +20,8 @@ namespace State_Machines
 
         public async void Enter()
         {
+            // Make the drinks interactable
+            GlobalFields.Instance.MouseInteractable = true;
             _currentDrink = null;
             // 1. Fade in the create drink UI
             Tween fadeIn = _brewingSpriteManager.FadeIn();
@@ -40,6 +42,7 @@ namespace State_Machines
 
         public async Task Exit()
         {
+            GlobalFields.Instance.MouseInteractable = false;
             _createDrink.RemoveDrink();
             // close and disable menu
             _manager.DrinkMenu.CloseAndDisable();

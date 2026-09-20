@@ -29,7 +29,7 @@ namespace State_Machines
             await moveRight.AsyncWaitForCompletion();
 
             // calculate satisfaction
-            int score = _manager.CalculateScore(_manager.CurDay);
+            var score = _manager.CalculateScore(_manager.CurDay);
             _manager.SetSatisfactionLevel(_manager.CurDay.SatisfactionLevel + score);
 
             // calc dialogue using day.current cust sat

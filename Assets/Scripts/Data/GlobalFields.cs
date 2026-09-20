@@ -8,8 +8,9 @@ public class GlobalFields : MonoBehaviour
         MaxLooped,
     }
     public static GlobalFields Instance { get; private set; }
-    public float score;
+    public float Score { get; set; }
     public GameOverState? State = null;
+    public bool MouseInteractable { get; set; }
     
     private void Awake()
     {
