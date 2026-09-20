@@ -21,7 +21,7 @@ public static class DialogueBank
  
     public static Dictionary<Mood, string[]> greetings = new()
     {
-        { Mood.happy, new[] { "Hi! It's a great day! ", "Hey! How are you doing? ", "Hello! Love you see you again! " } },
+        { Mood.happy, new[] { "Hi! It's a great day! ", "Hey! How are you doing? ", "Hello! Great to see you again! " } },
         { Mood.tired, new[] { "[yawn] Hi... ", "Ugh, it's too early for this... ", "Oh, me? Sorry, I'm not a morning person. "} },
         { Mood.sunny, new[] { "It's another day of sun! ", "This sun... I can feel my feathers shriveling up already. ", "Thank Athena you have AC in here. "} },
         { Mood.chilly, new[] { "Man, I should have worn a jacket today. ", "The wind's rough out there! Not a good day for flying. ", "Brr, is winter coming already? " } }
@@ -34,7 +34,7 @@ public static class DialogueBank
         {
             Mood.happy, new()
             {
-                {0, new[] {"Oh, uh- Not really what I was expecting, but.. thanks! ", "Wow, this is definitely... not what I would usually get. Thanks.. for the new experience? ", ""}},
+                {0, new[] {"Oh, uh- Not really what I was expecting, but.. thanks! ", "Wow, this is definitely... not what I would usually get. Thanks.. for the new experience? ", "It's, uh, a valient effort. Thanks? "}},
                 {1, new[] {"Thanks! ", "See you! ", "Have a good day! "}},
                 {2, new[] {"Wow, you read my mind! Thanks so much! ", "You guys always deliver. Thanks so much! ", "My favourite for a reason! Thanks so much! "}}
             }
