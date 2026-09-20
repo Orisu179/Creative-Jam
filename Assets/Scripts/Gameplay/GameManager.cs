@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         Debug.Log($"The ingredient is: {ingredient.ToString()}");
     }
 
-    private int CalculateScore(Customer c, DrinkObject d)
+    public int CalculateScore(Customer c, Drink d)
     {
         // range from -10 to 10
         // increase or decrease by value of attribute in customer
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
 
         foreach (var cust_pref in c.Preferences)
         {
-            if (d.AttributeList.Contains(cust_pref.Key)) // if attributes match
+            if(DrinkAttributeDatabase.GetDrinkAttributes(d).Contains(cust_pref.Key)) // if attributes match
             {
                 score += cust_pref.Value;
             }

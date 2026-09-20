@@ -47,7 +47,7 @@ public class DialogueGenerator
         Mood cmood = DialogueBank.AttributeToMood[da_descending[0]];
         Debug.Log(cmood);
 
-        // dialogue start; [greetings] [attribute hint] x num_hints [goodbyes]
+        // dialogue start; [greetings] [attribute hint] x num_hints 
         string result = "";
         result += DialogueBank.greetings[cmood][UnityEngine.Random.Range(0, DialogueBank.greetings[cmood].Length)];
         for(int i = 0; i < num_hints; i++)
@@ -56,11 +56,18 @@ public class DialogueGenerator
                     [da_descending[i]]
                     [UnityEngine.Random.Range(0, DialogueBank.attr_hints[cmood][da_descending[i]].Length)];
         };
-        result += DialogueBank.goodbyes[cmood][UnityEngine.Random.Range(0, DialogueBank.goodbyes[cmood].Length)];
+
+        // move goodbye to after give drink to customer
+        // result += DialogueBank.goodbyes[cmood][UnityEngine.Random.Range(0, DialogueBank.goodbyes[cmood].Length)];
 
         Debug.Log($"The resulting string is: {result}");
 
         return result;
+    }
+
+    public static string GenerateDialogue(Customer customer)
+    {
+        
     }
     
 }

@@ -1,0 +1,52 @@
+{
+  "recipes": [
+    {
+      "drink": "blueLatte",
+      "ingredients": ["Milk", "Ice", "Expresso", "Tea"]
+    },
+    {
+      "drink": "icedAmericano",
+      "ingredients": ["Milk", "Milk", "Milk", "Milk"]
+    },
+    {
+      "drink": "magicMatcha",
+      "ingredients": ["Expresso", "Tea", "Sugar", "Sprite"]
+    },
+    {
+      "drink": "strawberryLemonade",
+      "ingredients": ["Milk", "Sugar", "Milk", "Sugar"]
+    },
+    {
+      "drink": "hotLatte",
+      "ingredients": ["Milk", "Milk", "Expresso", "Expresso"]
+    },
+    {
+      "drink": "dragonfruitTea",
+      "ingredients": ["Sprite", "FruitMix", "MagicalFlower", "FruitSyrup"]
+    },
+    {
+      "drink": "lycheeMilkTea",
+      "ingredients": ["FruitMix", "MagicalFlower", "FruitSyrup", "Milk"]
+    },
+    {
+      "drink": "magicalTea",
+      "ingredients": ["Ice"]
+    },
+    {
+      "drink": "cremeBruleeMilkTea",
+      "ingredients": ["Ice", "Ice"]
+    },
+    {
+      "drink": "rainbowSoda",
+      "ingredients": ["Ice", "Ice", "Ice", "Ice"]
+    },
+    {
+      "drink": "creamSoda",
+      "ingredients": ["Ice", "Ice", "Ice"]
+    },
+    {
+      "drink": "milkshake",
+      "ingredients": ["Milk", "Milk", "Milk", "Sugar"]
+    }
+  ]
+}

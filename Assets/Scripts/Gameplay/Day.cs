@@ -5,59 +5,27 @@ using UnityEngine;
 
 public class Day : MonoBehaviour
 {
-    public float SatisfactionLevel;
+    public int SatisfactionLevel = 0;
     public List<Drink> OrderList;
     // public int NumOfDeath;
 
-    // private void Start() //for testing
-    // {
-    //     Debug.Log("--- STARTING RECIPE TESTS ---");
+    [SerializeField] private Sprite placeholder;
 
-    //     Debug.Log("--- FIRST DRINK ---");
-    //     Day.DrinkManager test = new Day.DrinkManager();
-    //     Debug.Log(test.CreatedDrink);
+    private void Start() //for testing
+    {
+        Debug.Log("--- STARTING SATISFACTION SCORE TESTS ---");
+        GameManager test = new GameManager();
 
-
-    //     test.AddIngredient(Ingredient.Ice);
-    //     test.AddIngredient(Ingredient.Ice);
-    //     test.AddIngredient(Ingredient.Ice);
-    //     test.AddIngredient(Ingredient.Ice);
-    //     test.AddIngredient(Ingredient.Ice);
-    //     test.AddIngredient(Ingredient.Ice);
-    //     Debug.Log(test.IngredientListtoString());
-    //     test.PrepareDrink();
+        Customer testCustomer = new Customer("",placeholder);
+        Debug.Log("Customer PREFERENCES");
+        foreach (var (key, value) in testCustomer.Preferences)
+        {
+            Debug.Log($"Key: {key}, Value: {value}");
+        }
 
 
-    //     Debug.Log(test.CreatedDrink);
-    //     Debug.Log(test.IngredientListtoString());
-
-    //     Debug.Log("--- SECOND DRINK ---");
-    //     test = new Day.DrinkManager();
-    //     Debug.Log(test.CreatedDrink);
-    //     //"Sprite","FruitMix","MagicalFlower","FruitSyrup"
-    //     test.AddIngredient(Ingredient.Sprite);
-    //     test.AddIngredient(Ingredient.FruitMix);
-    //     test.AddIngredient(Ingredient.MagicalFlower);
-    //     test.AddIngredient(Ingredient.FruitSyrup);
-    //     test.PrepareDrink();
-       
-
-    //     Debug.Log(test.CreatedDrink);
-    //     Debug.Log(test.IngredientListtoString());
-
-
-
-    //     Debug.Log("--- THIRD DRINK ---");
-    //     test = new Day.DrinkManager();
-    //     Debug.Log(test.CreatedDrink);
-    //     test.PrepareDrink();
-
-
-    //     Debug.Log(test.CreatedDrink);
-    //     Debug.Log(test.IngredientListtoString());
-
-    //     Debug.Log("--- RECIPE TESTS COMPLETE ---");
-    // }
+        Debug.Log("--- SATISFACTION TESTS COMPLETE ---");
+    }
 
     
     public class DrinkManager
@@ -130,7 +98,7 @@ public class Day : MonoBehaviour
             // Scan through each drink to find a perfect signature match
             foreach (Drink drink in Enum.GetValues(typeof(Drink)))
             {
-                List<Ingredient> recipe = GetRecipeIngredients(drink);
+                List<Ingredient> recipe = RecipeDatabase.GetRecipeIngredients(drink);
 
                 var recipeSignature = recipe
                     .GroupBy(i => i)
@@ -159,95 +127,184 @@ public class Day : MonoBehaviour
         }
 
 
-        public static List<Ingredient> GetRecipeIngredients(Drink drink)
-        {
-            return drink switch
-            {
-                Drink.blueLatte => new List<Ingredient>
-                {
-                    Ingredient.Milk,
-                    Ingredient.Ice,
-                    Ingredient.Expresso,
-                    Ingredient.Tea
-                },
+    //     public static List<Ingredient> GetRecipeIngredients(Drink drink)
+    //     {
+    //         return drink switch
+    //         {
+    //             Drink.blueLatte => new List<Ingredient>
+    //             {
+    //                 Ingredient.Milk,
+    //                 Ingredient.Ice,
+    //                 Ingredient.Expresso,
+    //                 Ingredient.Tea
+    //             },
 
-                Drink.icedAmericano => new List<Ingredient>
-                {
-                    Ingredient.Milk,
-                    Ingredient.Milk,
-                    Ingredient.Milk,
-                    Ingredient.Milk
-                },
+    //             Drink.icedAmericano => new List<Ingredient>
+    //             {
+    //                 Ingredient.Milk,
+    //                 Ingredient.Milk,
+    //                 Ingredient.Milk,
+    //                 Ingredient.Milk
+    //             },
 
-                Drink.magicMatcha => new List<Ingredient>
-                {
-                    Ingredient.Expresso,
-                    Ingredient.Tea,
-                    Ingredient.Sugar,
-                    Ingredient.Sprite
-                },
+    //             Drink.magicMatcha => new List<Ingredient>
+    //             {
+    //                 Ingredient.Expresso,
+    //                 Ingredient.Tea,
+    //                 Ingredient.Sugar,
+    //                 Ingredient.Sprite
+    //             },
 
-                Drink.strawberryLemonade => new List<Ingredient>
-                {
-                    Ingredient.Milk,
-                    Ingredient.Sugar,
-                    Ingredient.Milk,
-                    Ingredient.Sugar
-                },
+    //             Drink.strawberryLemonade => new List<Ingredient>
+    //             {
+    //                 Ingredient.Milk,
+    //                 Ingredient.Sugar,
+    //                 Ingredient.Milk,
+    //                 Ingredient.Sugar
+    //             },
 
-                Drink.icedLatte => new List<Ingredient>
-                {
-                    Ingredient.Sugar,
-                    Ingredient.Sprite,
-                    Ingredient.FruitMix,
-                    Ingredient.MagicalFlower
-                },
+    //             Drink.icedLatte => new List<Ingredient>
+    //             {
+    //                 Ingredient.Sugar,
+    //                 Ingredient.Sprite,
+    //                 Ingredient.FruitMix,
+    //                 Ingredient.MagicalFlower
+    //             },
 
-                Drink.dragonfruitTea => new List<Ingredient>
-                {
-                    Ingredient.Sprite,
-                    Ingredient.FruitMix,
-                    Ingredient.MagicalFlower,
-                    Ingredient.FruitSyrup
-                },
+    //             Drink.dragonfruitTea => new List<Ingredient>
+    //             {
+    //                 Ingredient.Sprite,
+    //                 Ingredient.FruitMix,
+    //                 Ingredient.MagicalFlower,
+    //                 Ingredient.FruitSyrup
+    //             },
 
-                Drink.lycheeMilkTea => new List<Ingredient>
-                {
-                    Ingredient.FruitMix,
-                    Ingredient.MagicalFlower,
-                    Ingredient.FruitSyrup,
-                    Ingredient.Milk
-                },
+    //             Drink.lycheeMilkTea => new List<Ingredient>
+    //             {
+    //                 Ingredient.FruitMix,
+    //                 Ingredient.MagicalFlower,
+    //                 Ingredient.FruitSyrup,
+    //                 Ingredient.Milk
+    //             },
 
-                Drink.magicalTea => new List<Ingredient>
-                {
-                    Ingredient.Ice
-                },
+    //             Drink.magicalTea => new List<Ingredient>
+    //             {
+    //                 Ingredient.Ice
+    //             },
 
-                Drink.cremeBruleeMilkTea => new List<Ingredient>
-                {
-                    Ingredient.Ice,
-                    Ingredient.Ice
-                },
+    //             Drink.cremeBruleeMilkTea => new List<Ingredient>
+    //             {
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice
+    //             },
 
-                Drink.rainbowSoda => new List<Ingredient>
-                {
-                    Ingredient.Ice,
-                    Ingredient.Ice,
-                    Ingredient.Ice,
-                    Ingredient.Ice
-                },
+    //             Drink.rainbowSoda => new List<Ingredient>
+    //             {
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice
+    //             },
 
-                Drink.creamSoda => new List<Ingredient>
-                {
-                    Ingredient.Ice,
-                    Ingredient.Ice,
-                    Ingredient.Ice
-                },
+    //             Drink.creamSoda => new List<Ingredient>
+    //             {
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice
+    //             },
 
-                _ => new List<Ingredient>()
-            };
-        }
+    //             _ => new List<Ingredient>()
+    //         };
+    //     }
+
+    //     public static List<DrinkAttribute> GetDrinkAttributes(Drink drink)
+    //     {
+    //         return drink switch
+    //         {
+    //             Drink.blueLatte => new List<Ingredient>
+    //             {
+    //                 Ingredient.Milk,
+    //                 Ingredient.Ice,
+    //                 Ingredient.Expresso,
+    //                 Ingredient.Tea
+    //             },
+
+    //             Drink.icedAmericano => new List<Ingredient>
+    //             {
+    //                 Ingredient.Milk,
+    //                 Ingredient.Milk,
+    //                 Ingredient.Milk,
+    //                 Ingredient.Milk
+    //             },
+
+    //             Drink.magicMatcha => new List<Ingredient>
+    //             {
+    //                 Ingredient.Expresso,
+    //                 Ingredient.Tea,
+    //                 Ingredient.Sugar,
+    //                 Ingredient.Sprite
+    //             },
+
+    //             Drink.strawberryLemonade => new List<Ingredient>
+    //             {
+    //                 Ingredient.Milk,
+    //                 Ingredient.Sugar,
+    //                 Ingredient.Milk,
+    //                 Ingredient.Sugar
+    //             },
+
+    //             Drink.icedLatte => new List<Ingredient>
+    //             {
+    //                 Ingredient.Sugar,
+    //                 Ingredient.Sprite,
+    //                 Ingredient.FruitMix,
+    //                 Ingredient.MagicalFlower
+    //             },
+
+    //             Drink.dragonfruitTea => new List<Ingredient>
+    //             {
+    //                 Ingredient.Sprite,
+    //                 Ingredient.FruitMix,
+    //                 Ingredient.MagicalFlower,
+    //                 Ingredient.FruitSyrup
+    //             },
+
+    //             Drink.lycheeMilkTea => new List<Ingredient>
+    //             {
+    //                 Ingredient.FruitMix,
+    //                 Ingredient.MagicalFlower,
+    //                 Ingredient.FruitSyrup,
+    //                 Ingredient.Milk
+    //             },
+
+    //             Drink.magicalTea => new List<Ingredient>
+    //             {
+    //                 Ingredient.Ice
+    //             },
+
+    //             Drink.cremeBruleeMilkTea => new List<Ingredient>
+    //             {
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice
+    //             },
+
+    //             Drink.rainbowSoda => new List<Ingredient>
+    //             {
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice
+    //             },
+
+    //             Drink.creamSoda => new List<Ingredient>
+    //             {
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice,
+    //                 Ingredient.Ice
+    //             },
+
+    //             _ => new List<Ingredient>()
+    //         };
 
     }
 }

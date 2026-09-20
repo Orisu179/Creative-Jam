@@ -1,0 +1,52 @@
+{
+  "drinkAttributes": [
+    {
+      "drink": "blueLatte",
+      "attributes": ["hot", "magical", "milky"]
+    },
+    {
+      "drink": "icedAmericano",
+      "attributes": ["bubbly", "cold", "strong"]
+    },
+    {
+      "drink": "magicMatcha",
+      "attributes": ["hot", "magical", "sweet"]
+    },
+    {
+      "drink": "strawberryLemonade",
+      "attributes": ["cold", "fruity", "sweet"]
+    },
+    {
+      "drink": "hotLatte",
+      "attributes": ["hot", "milky", "strong"]
+    },
+    {
+      "drink": "dragonfruitTea",
+      "attributes": ["cold", "fruity", "magical"]
+    },
+    {
+      "drink": "lycheeMilkTea",
+      "attributes": ["fruity", "milky", "sweet"]
+    },
+    {
+      "drink": "magicalTea",
+      "attributes": ["bubbly", "hot", "magical"]
+    },
+    {
+      "drink": "cremeBruleeMilkTea",
+      "attributes": ["hot", "milky", "sweet"]
+    },
+    {
+      "drink": "rainbowSoda",
+      "attributes": ["bubbly", "fruity", "sweet"]
+    },
+    {
+      "drink": "creamSoda",
+      "attributes": ["bubbly", "milky", "sweet"]
+    },
+    {
+      "drink": "milkshake",
+      "attributes": ["cold", "milky", "sweet"]
+    }
+  ]
+}
