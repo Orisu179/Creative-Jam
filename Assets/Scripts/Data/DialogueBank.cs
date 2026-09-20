@@ -23,25 +23,55 @@ public static class DialogueBank
     {
         { Mood.happy, new[] { "Hi! It's a great day! ", "Hey! How are you doing? ", "Hello! Love you see you again! " } },
         { Mood.tired, new[] { "[yawn] Hi... ", "Ugh, it's too early for this... ", "Oh, me? Sorry, I'm not a morning person. "} },
-        { Mood.sunny, new[] { "It's another day of sun! ", "This sun... I can feel my feathers shriveling up already. ", "Thank god you have AC in here. "} },
+        { Mood.sunny, new[] { "It's another day of sun! ", "This sun... I can feel my feathers shriveling up already. ", "Thank Athena you have AC in here. "} },
         { Mood.chilly, new[] { "Man, I should have worn a jacket today. ", "The wind's rough out there! Not a good day for flying. ", "Brr, is winter coming already? " } }
     };
 
-    public static Dictionary<Mood, string[]> goodbyes = new()
+    // for goodbyes - search by mood, then score
+    // 0: score from -10 to 0, 1: score from 1 to 5, 2: score from 6 to 10
+    public static Dictionary<Mood, Dictionary<int, string[]>> goodbyes = new()
     {
-        { Mood.happy, new[] { "Thanks so much! Have a good one! ", "See you in the skies! ", "Hope to see you later! " } },
-        { Mood.tired, new[] { "tired goodbye 1" } },
-        { Mood.sunny, new[] { "sunny goodbye 1" } },
-        { Mood.chilly, new[] { "chilly goodbye 1" } }
+        {
+            Mood.happy, new()
+            {
+                {0, new[] {"Oh, uh- Not really what I was expecting, but.. thanks! ", "Wow, this is definitely... not what I would usually get. Thanks.. for the new experience? ", ""}},
+                {1, new[] {"Thanks! ", "See you! ", "Have a good day! "}},
+                {2, new[] {"Wow, you read my mind! Thanks so much! ", "You guys always deliver. Thanks so much! ", "My favourite for a reason! Thanks so much! "}}
+            }
+        },
+        {
+            Mood.tired, new()
+            {
+                {0, new[] {"This is mine? Well. Ok. ", "[sigh] Uh, thanks. ", "Wow, you must be tired too. It's okay. Happens to the best of us. "}},
+                {1, new[] {"Thanks. ", "Great, thanks. ", "Have a good one. "}},
+                {2, new[] {"Oh, thank Athena. Exactly what I need. ", "You're doing Athena's work out here. ", "Saving lives as always. Thanks. "}}
+            }
+        },
+        {
+            Mood.sunny, new()
+            {
+                {0, new[] {"Oh... not really the vibe I was going for, but thanks. ", "Huh, I guess this is mine? I'll drink it anyway. ", "Well, not exactly what I ordered, but enjoy the sunshine! "}},
+                {1, new[] {"Thanks! Catch you later. ", "Appreciate it, enjoy the weather! ", "Thanks, stay cool out there. "}},
+                {2, new[] {"Absolutely perfect for today, thank you so much! ", "This really hits the spot! Enjoy the sunshine! ", "Just what I needed for a beautiful day. Cheers! "}}
+            }
+        },
+        {
+            Mood.chilly, new()
+            {
+                {0, new[] {"Oh... I don't think this is what I ordered, but I just need to get going. ", "Well, it's not the comfort I was hoping for, but what do they say? The cold never bothered me anyways? ", "[shivers] Uh, I guess I'll take it. See you. "}},
+                {1, new[] {"Thanks, stay warm. ", "Appreciate it, bye. ", "Thanks, I'm gonna go warm up now. "}},
+                {2, new[] {"Ah, this is going to warm me right up. Thank you! ", "Perfect. The cold doesn't stand a chance now! ", "Oh, perfect! Stay warm out there! "}}
+            }
+        }
     };
 
-    // dialogue bank for all attribute hints - search by mood, and then drink attribute
+    // dialogue bank for all attribute hints - search by mood, then drink attribute
     public static Dictionary<Mood, Dictionary<DrinkAttribute, string[]>> attr_hints = new()
     {
         { 
             Mood.happy, new() 
             {
-                { DrinkAttribute.fruity, new[] { "I'm feeling something fruity today. ", "Throw an extra lemon on there? ", "Do you have any strawberries back there? Or something like that? "} },
+                { DrinkAttribute.fruity, new[] { "I'm feeling something fresh today. ", "Throw an extra lemon on there? ", "Do you have any strawberries back there? Or something like that? "} },
                 { DrinkAttribute.sweet, new[] { "I'd love a sweet treat today. ", "Don't hold back on the syrup.", "I'm craving some sugar. You gotta live a little sometimes, you know? " } },
                 { DrinkAttribute.strong, new[] { "Hit me with all you got! ", "I'm booked and busy today, so give me something strong! ", "I want a big kick! " } },
                 { DrinkAttribute.magical, new[] { "Put a little something special in there. ", "Could I get some glitter? ", "Surprise me with something out of this world! " } },
@@ -54,7 +84,7 @@ public static class DialogueBank
         { 
             Mood.tired, new() 
             {
-                { DrinkAttribute.fruity, new[] { "Something with fruit, [yawn], maybe... ", "Whatever fruit you have... ", "I think I need some Vitamin C... " } },
+                { DrinkAttribute.fruity, new[] { "Something with, like, a peach, [yawn], maybe... ", "Whatever fruit you have... ", "I think I need some Vitamin C... " } },
                 { DrinkAttribute.sweet, new[] { "Give me a sugar rush... " , "Extra sugar, please... I need it..... ", "Ugh, I need the glucose... " } },
                 { DrinkAttribute.strong, new[] { "I want my drink to take out a Victorian owlet. ", "Can I get a double shot? ...Maybe a triple? ", "As strong as you legally can.. " } },
                 { DrinkAttribute.magical, new[] { "Glitter? Sure, alright. I'll take all the help I can get... ", "By any chance do you know any necromancy? ", "Some of that... [waves claws vaguely], too..... " } },

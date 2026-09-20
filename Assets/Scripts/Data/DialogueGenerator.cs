@@ -39,30 +39,60 @@ public class DialogueGenerator
         // They will add up to 10
         // If you need to check/modify the attributes, go to DrinkAttribute.cs
 
-        // get the customer's attributes by descending value
-        List<DrinkAttribute> da_descending = customer.Preferences
-                .OrderByDescending(v => v.Value)
-                .Select(v => v.Key)
-                .ToList();
-        Mood cmood = DialogueBank.AttributeToMood[da_descending[0]];
-        Debug.Log(cmood);
+        // // get the customer's attributes by descending value
+        // List<DrinkAttribute> da_descending = customer.Preferences
+        //         .OrderByDescending(v => v.Value)
+        //         .Select(v => v.Key)
+        //         .ToList();
 
-        // dialogue start; [greetings] [attribute hint] x num_hints 
+        // // set mood by looking at highest attribute
+        // Mood cmood = DialogueBank.AttributeToMood[da_descending[0]];
+        // Debug.Log(cmood);
+
+        // // dialogue start; [greetings] [attribute hint] x num_hints 
+        // string result = "";
+        // result += DialogueBank.greetings[cmood][UnityEngine.Random.Range(0, DialogueBank.greetings[cmood].Length)];
+        // for(int i = 0; i < num_hints; i++)
+        // {
+        //     result += DialogueBank.attr_hints[cmood] // access mood, attribute, and random index in string[]
+        //             [da_descending[i]]
+        //             [UnityEngine.Random.Range(0, DialogueBank.attr_hints[cmood][da_descending[i]].Length)];
+        // };
+
+        List<DrinkAttribute> da = customer.Preferences.Select(v => v.Key).ToList();
+
         string result = "";
-        result += DialogueBank.greetings[cmood][UnityEngine.Random.Range(0, DialogueBank.greetings[cmood].Length)];
+        result += DialogueBank.greetings[customer.mood][UnityEngine.Random.Range(0, DialogueBank.greetings[customer.mood].Length)];
         for(int i = 0; i < num_hints; i++)
         {
-            result += DialogueBank.attr_hints[cmood] // access mood, attribute, and random index in string[]
-                    [da_descending[i]]
-                    [UnityEngine.Random.Range(0, DialogueBank.attr_hints[cmood][da_descending[i]].Length)];
-        };
-
-        // move goodbye to after give drink to customer
-        // result += DialogueBank.goodbyes[cmood][UnityEngine.Random.Range(0, DialogueBank.goodbyes[cmood].Length)];
+            result += DialogueBank.attr_hints[customer.mood]
+                        [da[i]]
+                        [UnityEngine.Random.Range(0, DialogueBank.attr_hints[customer.mood][da[i]].Length)];
+        }
 
         Debug.Log($"The resulting string is: {result}");
 
         return result;
+    }
+
+    // idk what the best way to get Mood here is. add it as an attribute to customer?
+    public static string GenerateResponse(int score, Customer customer)
+    {
+        int level = -1;
+        if(score <= 0)
+        {
+            level = 0;
+        }
+        else if(score <= 5)
+        {
+            level = 1;
+        }
+        else
+        {
+            level = 2;
+        }
+
+        return DialogueBank.goodbyes[customer.mood][level][UnityEngine.Random.Range(0, DialogueBank.goodbyes[customer.mood][level].Length)];
     }
     
 }

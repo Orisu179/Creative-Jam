@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
-    [SerializeField] private CreateDrink createDrink;
-
 
     // States
     public StateMachine _stateMachine;
@@ -50,9 +48,10 @@ public class GameManager : MonoBehaviour
 
 
         _initState = new InitState(this);
-        _createDrinkState = new CreateDrinkState(this, createDrink); _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
+        _createDrinkState = new CreateDrinkState(this);
+        _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
         _dayStartState = new DayStartState(this);
-        _loopFailedState = new LoopFailState(this);
+        _loopFailedState = new LoopFailState(this, _loopFailedState, _dayStartState);
         _serveDrinkState = new ServeDrinkState(this);
         _winState = new WinState(this);
 
@@ -80,7 +79,7 @@ public class GameManager : MonoBehaviour
         }
         // Restart
         _curLoop++;
-        _stateMachine.ChangeState(_dayStartState);
+
     }
 
     // Used in Init State
@@ -91,6 +90,7 @@ public class GameManager : MonoBehaviour
             (OwlSpecies species, Accessory accessory) = CustomerSpriteManager.GetRandomOwlSpeciesAndAccessory();
             var curCustomer = new Customer("", species, accessory);
             curCustomer.Dialogue = DialogueGenerator.GenerateDialogue(curCustomer);
+            
             Customers.Add(curCustomer);
         }
     }
@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
             score--;
         }
         
-        d.SatisfactionLevel = score;
+        return score;
     }
 
     // InitState
@@ -144,6 +144,10 @@ public class GameManager : MonoBehaviour
     }
 
     // Day Start State
+    public void IncrementLoop()
+    {
+        _curLoop++;
+    }
 
     public void IncrementCounter()
     {
