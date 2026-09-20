@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DrinkMenuController drinkMenu;
     [SerializeField] private BrewingSpriteManager brewingSpriteManager;
     [SerializeField] private FailLoopMenu failLoopMenu;
+    [SerializeField] private SatisfactionBar satisfactionBar;
     public DrinkMenuController DrinkMenu => drinkMenu;
 
     // States
@@ -164,6 +165,7 @@ public class GameManager : MonoBehaviour
         Day curDay = CurDay;
         curDay.SatisfactionLevel = level;
         CurDay = curDay;
+        satisfactionBar?.SetScore(level);
     }
 
     public void AddDrink(Drink? drink)
