@@ -1297,6 +1297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickAnywhereButton
   textBoxManager: {fileID: 873913302}
+  cooldownDuration: 0
 --- !u!224 &637001383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2815,6 +2816,8 @@ MonoBehaviour:
   createDrink: {fileID: 2024578448}
   drinkMenu: {fileID: 1791744597}
   brewingSpriteManager: {fileID: 190071307}
+  failLoopMenu: {fileID: 0}
+  satisfactionBar: {fileID: 0}
 --- !u!4 &1542660096
 Transform:
   m_ObjectHideFlags: 0

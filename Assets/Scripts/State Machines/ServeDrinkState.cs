@@ -57,6 +57,7 @@ namespace State_Machines
                 SceneManager.LoadScene("GameOverScene");
                 return;
             }
+            
             if (!_manager.IsLastCustomer())
             {
                 _manager.IncrementCustomer();

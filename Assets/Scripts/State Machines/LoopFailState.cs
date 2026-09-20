@@ -1,5 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace State_Machines
 {
@@ -14,11 +15,11 @@ namespace State_Machines
         }
         public void Enter()
         {
-            HandleContinue();
-
-            // 2. show fail menu
             _manager.SetFailMenuText((_manager.GetMaxLoop() - _manager.CurLoop));
             _manager.SetFailMenuList(_manager.CurDay.OrderList);
+            
+            Debug.LogWarning($"The Poisoned drinks are: [{string.Join(", ", _manager.PoisonedDrinks)}]");
+            HandleContinue();
         }
 
         public Task Exit()
