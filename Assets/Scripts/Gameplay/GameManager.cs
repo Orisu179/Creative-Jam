@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     // States
     public StateMachine _stateMachine;
     public InitState _initState { get; set; }
-    public CreateDrinkState _createDrinkState { get; set; }
+    private CreateDrinkState _createDrinkState { get; set; }
     private CustomerInteractState _customerInteractState;
     public DayStartState _dayStartState { get; set; }
     private LoopFailState _loopFailedState;
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
         _dayStartState = new DayStartState(this, _customerInteractState);
         _loopFailedState = new LoopFailState(this, _dayStartState);
-        _serveDrinkState = new ServeDrinkState(this, _customerSpriteManager, _loopFailedState, _dayStartState);
+        _serveDrinkState = new ServeDrinkState(this, _customerSpriteManager, _loopFailedState, _customerInteractState);
 
 
         _stateMachine.Initialize(_initState);
@@ -126,9 +126,15 @@ public class GameManager : MonoBehaviour
         CurLoop++;
     }
 
-    public void IncrementCounter()
+    public void IncrementCustomer()
     {
         CustomerCounter++;
+        if (CustomerCounter < Customers.Count)
+        {
+            Day curDay = CurDay;
+            curDay.CurrentCustomer = Customers[CustomerCounter];
+            CurDay = curDay;
+        }
     }
 
     public void ResetCustomer()
@@ -144,5 +150,19 @@ public class GameManager : MonoBehaviour
     public bool IsLastCustomer()
     {
         return CustomerCounter >= Customers.Count - 1;
+    }
+
+    public void SetCurrentDrink(Drink? drink)
+    {
+        Day curDay = CurDay;
+        curDay.CurrentDrink = drink;
+        CurDay = curDay;
+    }
+
+    public void SetSatisfactionLevel(int level)
+    {
+        Day curDay = CurDay;
+        curDay.SatisfactionLevel = level;
+        CurDay = curDay;
     }
 }

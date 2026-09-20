@@ -56,7 +56,8 @@ namespace State_Machines
             }
             if (!_manager.IsLastCustomer())
             {
-                _manager._stateMachine.ChangeState(_manager._dayStartState);
+                _manager.IncrementCustomer();
+                _manager._stateMachine.ChangeState(_nextState);
                 return;
             }
 
