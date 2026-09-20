@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace State_Machines
 {
@@ -14,6 +15,7 @@ namespace State_Machines
 
         public void Enter()
         {
+            Debug.Log("Entering Day start state");
             _manager.ResetCustomer();
             var counter = _manager.CustomerCounter;
             var curCustomer = _manager.Customers[counter];

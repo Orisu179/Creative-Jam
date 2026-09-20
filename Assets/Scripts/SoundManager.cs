@@ -34,7 +34,6 @@ public class SoundManager : MonoBehaviour
 
     public void Start()
     {
-        PostEvent(SoundEvent.PlayMusic, true);
         _startEvents = new Dictionary<SoundEvent, Event>
         {
             { SoundEvent.PlayMusic, startEvents[0] },

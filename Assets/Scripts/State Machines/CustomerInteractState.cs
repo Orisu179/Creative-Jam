@@ -20,22 +20,29 @@ namespace State_Machines
         {
             Debug.Log("CustomerInteractState: Enter");
             // 1. Fade in the customer
-            _customerSpriteManager.SetSprite(_manager.CurDay.CurrentCustomer.Species, _manager.CurDay.CurrentCustomer.Accessory);
-            Tween fadeIn = _customerSpriteManager.FadeIn();
+            // _customerSpriteManager.SetSprite(_manager.CurDay.CurrentCustomer.Species, _manager.CurDay.CurrentCustomer.Accessory);
+            // Tween fadeIn = _customerSpriteManager.FadeIn();
             // 2. Add the customer dialogue and callback to the dialogue box
             // Dialogue.SetDialogue(_day.CurrentCustomer.Dialogue, HandleDialogueComplete);
 
-            await fadeIn.AsyncWaitForCompletion();
+            // await fadeIn.AsyncWaitForCompletion();
+            Debug.Log("Starting chatbox");
             // 3. Toggle the dialogue UI
+            TextBoxManager.Instance.SetDisabled(false);
+
+            await TextBoxManager.Instance.AnimateFadeIn(_manager.CurDay.CurrentCustomer.Dialogue, 3.0f);
+            // Fade in complete
+            
             // Dialogue.Toggle();
             // That's it, the callback will call transition
 
-            Debug.Log("CustomerInteractState: Enter complete");
-            Tween moveLeft = _customerSpriteManager.MoveLeft();
-            await moveLeft.AsyncWaitForCompletion();
-
-            Tween moveRight = _customerSpriteManager.MoveRight();
-            await moveRight.AsyncWaitForCompletion();
+            Debug.Log("CustomerInteractState: Typing complete");
+            // Tween moveLeft = _customerSpriteManager.MoveLeft();
+            // await moveLeft.AsyncWaitForCompletion();
+            //
+            // Tween moveRight = _customerSpriteManager.MoveRight();
+            // await moveRight.AsyncWaitForCompletion();
+            // _manager._stateMachine.ChangeState(_nextState);
         }
 
         public void Exit()
@@ -44,6 +51,7 @@ namespace State_Machines
             // DialogueBox.Toggle();
             // 2. Translate the customer to the left
             _customerSpriteManager.MoveLeft();
+            TextBoxManager.Instance.SetDisabled(true);
         }
 
         private void HandleDialogueComplete()

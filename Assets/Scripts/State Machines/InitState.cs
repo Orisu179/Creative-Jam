@@ -1,4 +1,6 @@
-﻿namespace State_Machines
+﻿using UnityEngine;
+
+namespace State_Machines
 {
     public class InitState : IState
     {
@@ -11,11 +13,14 @@
         
         public void Enter()
         {
+            Debug.Log("Entering Init state");
             GlobalFields.Instance.score = 0.0f;
             GlobalFields.Instance.State = null;
             _manager.GenerateCustomers();
             _manager.ResetLoop();
             _manager._stateMachine.ChangeState(_manager._dayStartState);
+            
+            TextBoxManager.Instance.SetDisabled(true);
         }
 
         public void Exit()
