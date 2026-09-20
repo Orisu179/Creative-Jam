@@ -33,11 +33,11 @@ namespace State_Machines
             _manager.SetSatisfactionLevel(_manager.CurDay.SatisfactionLevel + score);
 
             // calc dialogue using day.current cust sat
-            setText(DialogueGenerator.GenerateResponse(score, _manager.CurDay.CurrentCustomer), callback);
+            TextBoxManager.Instance.SetDialogue(DialogueGenerator.GenerateResponse(score, _manager.CurDay.CurrentCustomer), HandleDialogueComplete);
+            await TextBoxManager.Instance.SetDisabled(false, 1.0f);
+
             // call toggle
             Debug.Log($"Customer satisfaction level: {_manager.CurDay.SatisfactionLevel}");
-
-            await HandleDialogueComplete();
         }
 
         public async Task Exit()
