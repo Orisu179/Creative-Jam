@@ -50,6 +50,685 @@
 						<ActiveSource Name="Ingredient_2" ID="{CAA7611E-9410-4CA8-8F9E-0B8D5F10BE0C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="Dialogue_67" ID="{6DC83F55-56C5-4C65-805D-D198825841A3}" ShortID="263481052">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Dialogue_67" ID="{E2819D9B-9C00-42E2-A360-ABFCD14D2F5D}">
+							<Language>SFX</Language>
+							<AudioFile>Dialogue_67.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="424702321"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Dialogue_67" ID="{E2819D9B-9C00-42E2-A360-ABFCD14D2F5D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Drink_Reveal" ID="{9AF2AE46-2B21-44DE-9D5F-2A555CAB8602}" ShortID="112637429">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Drink_Reveal" ID="{0154F02B-B22C-4D52-8065-A95A70F44A55}">
+							<Language>SFX</Language>
+							<AudioFile>Drink_Reveal.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="19158844"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Drink_Reveal" ID="{0154F02B-B22C-4D52-8065-A95A70F44A55}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_1_Milk_Drop" ID="{10ABD65C-6D54-4283-9636-16D16DC65132}" ShortID="1008543653">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_1_Milk_Drop" ID="{1057E3D8-DA31-46DC-A12E-7C287615F6CB}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_1_Milk_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1015987829"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_1_Milk_Drop" ID="{1057E3D8-DA31-46DC-A12E-7C287615F6CB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_1_Milk_Pickup" ID="{1502B33C-B408-418F-903E-89D764435C1E}" ShortID="998020956">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_1_Milk_Pickup" ID="{FEE7CD90-78DF-45C2-904C-589F7F9C4758}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_1_Milk_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="483641292"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_1_Milk_Pickup" ID="{FEE7CD90-78DF-45C2-904C-589F7F9C4758}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_2_Ice_Drop" ID="{4C791854-DCA6-4127-ABFE-0FDDA60D71AE}" ShortID="987743844">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_2_Ice_Drop" ID="{785BC0AD-9A4E-4E13-ABEE-55F4FD33B064}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_2_Ice_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="747089225"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_2_Ice_Drop" ID="{785BC0AD-9A4E-4E13-ABEE-55F4FD33B064}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_2_Ice_Pickup" ID="{EC80F0BC-0DFB-4A5D-AD30-623DB0C423F8}" ShortID="295689733">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_2_Ice_Pickup" ID="{C0D8BAE6-F79E-468C-ADEB-441A8308648E}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_2_Ice_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="473410349"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_2_Ice_Pickup" ID="{C0D8BAE6-F79E-468C-ADEB-441A8308648E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_3_Espresso_Drop" ID="{43855DD1-DE02-4543-B5DA-17CAC9BE86B0}" ShortID="114253259">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_3_Espresso_Drop" ID="{22DBECAC-E2C9-4AB3-9166-97CB2377D878}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_3_Espresso_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1016066887"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_3_Espresso_Drop" ID="{22DBECAC-E2C9-4AB3-9166-97CB2377D878}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_3_Espresso_Pickup" ID="{82D9087C-6D60-4B69-8E04-C047AF00B84C}" ShortID="141548553">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_3_Espresso_Pickup" ID="{C7B8B29D-F2CD-42CC-BD6D-8F376B9DC0B4}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_3_Espresso_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1017895428"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_3_Espresso_Pickup" ID="{C7B8B29D-F2CD-42CC-BD6D-8F376B9DC0B4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_4_Tea_Drop" ID="{778C941E-B57C-4B65-A554-EB41BF91919A}" ShortID="773095360">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_4_Tea_Drop" ID="{28448169-DD2C-4664-A225-2A6D526B8048}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_4_Tea_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="40193852"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_4_Tea_Drop" ID="{28448169-DD2C-4664-A225-2A6D526B8048}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_4_Tea_Pickup" ID="{B5D959C4-1087-4758-B73A-CF602100E80E}" ShortID="439066877">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_4_Tea_Pickup" ID="{9182A7CD-3EEB-4D35-B405-61A1A8DDE554}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_4_Tea_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="972739731"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_4_Tea_Pickup" ID="{9182A7CD-3EEB-4D35-B405-61A1A8DDE554}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_5_Sugar_Drop" ID="{340187EE-99FC-46FA-9CFA-4D1669FA6059}" ShortID="93213397">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_5_Sugar_Drop" ID="{0380DF5C-B241-4BBB-82FB-E77C163507D4}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_5_Sugar_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="744729348"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_5_Sugar_Drop" ID="{0380DF5C-B241-4BBB-82FB-E77C163507D4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_5_Sugar_Pickup" ID="{721AF7F0-CCBF-4DDF-B75F-5E55DC12C828}" ShortID="388022301">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_5_Sugar_Pickup" ID="{E9DB5C32-959C-4FFC-8E2F-BA07BD61B057}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_5_Sugar_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="628103514"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_5_Sugar_Pickup" ID="{E9DB5C32-959C-4FFC-8E2F-BA07BD61B057}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_6_Sprite_Drop" ID="{2FC7D184-EDB8-4167-A68D-71EDB110BBE8}" ShortID="57172358">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_6_Sprite_Drop" ID="{7DECF925-B8CE-427B-8898-052B112BDF35}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_6_Sprite_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="229294892"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_6_Sprite_Drop" ID="{7DECF925-B8CE-427B-8898-052B112BDF35}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_6_Sprite_Pickup" ID="{A2858CFA-199C-43AE-AF74-043F2116563C}" ShortID="606878639">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_6_Sprite_Pickup" ID="{DC0204A3-1D6A-4A2C-AA53-060A31A1D4AE}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_6_Sprite_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="274089939"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_6_Sprite_Pickup" ID="{DC0204A3-1D6A-4A2C-AA53-060A31A1D4AE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_7_Fruit_Drop" ID="{678AFB57-7F3E-4445-8DEF-0F0F3CE7E07E}" ShortID="133481285">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_7_Fruit_Drop" ID="{12554293-407D-408F-B233-58FDD24011FD}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_7_Fruit_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="336901303"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_7_Fruit_Drop" ID="{12554293-407D-408F-B233-58FDD24011FD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_7_Fruit_Pickup" ID="{15735A56-7E8D-4E64-A6C8-3257CDBDE1B8}" ShortID="434306020">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_7_Fruit_Pickup" ID="{2C6C758B-A7CA-4040-8150-3DC1C2039102}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_7_Fruit_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="68822105"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_7_Fruit_Pickup" ID="{2C6C758B-A7CA-4040-8150-3DC1C2039102}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_8_Flower_Drop" ID="{AE255298-4B75-46C8-A0D5-D78DD56DE608}" ShortID="380999101">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_8_Flower_Drop" ID="{4E702EA8-BEC8-4059-82FD-0FEABC424F0D}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_8_Flower_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="653595819"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_8_Flower_Drop" ID="{4E702EA8-BEC8-4059-82FD-0FEABC424F0D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_8_Flower_Pickup" ID="{FB218FE1-1635-464B-A448-D686A6DC1F72}" ShortID="841685906">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_8_Flower_Pickup" ID="{A6767380-6973-41AC-9695-5E7B4FD2A5D6}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_8_Flower_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="646913442"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_8_Flower_Pickup" ID="{A6767380-6973-41AC-9695-5E7B4FD2A5D6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_9_Syrup_Drop" ID="{545DC1CC-76E0-47D6-9F77-13D4AB4F173D}" ShortID="911475364">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_9_Syrup_Drop" ID="{FE87B965-E83B-403A-9459-3C7F0ECDAFE8}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_9_Syrup_Drop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="603540277"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_9_Syrup_Drop" ID="{FE87B965-E83B-403A-9459-3C7F0ECDAFE8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ingredient_9_Syrup_Pickup" ID="{4F062144-7F70-4C5D-B1AA-ECD3F351C0A9}" ShortID="139660034">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ingredient_9_Syrup_Pickup" ID="{C4FFA098-9A6F-446A-B5BF-14145506F939}">
+							<Language>SFX</Language>
+							<AudioFile>Ingredient_9_Syrup_Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="811144652"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ingredient_9_Syrup_Pickup" ID="{C4FFA098-9A6F-446A-B5BF-14145506F939}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="MenuButton" ID="{9C67506D-B929-4DEE-85E9-C0D915633FDA}" ShortID="1042569045">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="MenuButton" ID="{0EEB43C1-18BD-403F-9D8D-B281F856C9B9}">
+							<Language>SFX</Language>
+							<AudioFile>MenuButton.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="62472305"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="MenuButton" ID="{0EEB43C1-18BD-403F-9D8D-B281F856C9B9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="PageFlip" ID="{F5A1FEB8-E857-4DE2-9415-23C3D729A931}" ShortID="573460081">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="PageFlip" ID="{E61D697A-28A1-43BE-9AD0-0F719006E0AC}">
+							<Language>SFX</Language>
+							<AudioFile>PageFlip.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="988036320"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="PageFlip" ID="{E61D697A-28A1-43BE-9AD0-0F719006E0AC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Shake" ID="{EB35CEDD-BC36-4BD9-A2D0-520118B265DB}" ShortID="37808492">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Shake" ID="{162C0B22-6BF5-4884-A639-4114345EE50D}">
+							<Language>SFX</Language>
+							<AudioFile>Shake.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="842902296"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Shake" ID="{162C0B22-6BF5-4884-A639-4114345EE50D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Steam" ID="{D872C57E-B6AD-4C8D-9C50-7BD340716B63}" ShortID="285051278">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Steam" ID="{4B2B3313-5A63-46AF-AF29-3F286CB0AF67}">
+							<Language>SFX</Language>
+							<AudioFile>Steam.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="960796826"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Steam" ID="{4B2B3313-5A63-46AF-AF29-3F286CB0AF67}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="TimeTravel" ID="{2D7AF3A0-09F1-4007-A86C-E35A65954615}" ShortID="796051846">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="TimeTravel" ID="{555B00D8-D0DE-48E5-A2BD-85F3C72B81AB}">
+							<Language>SFX</Language>
+							<AudioFile>TimeTravel.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="258879552"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="TimeTravel" ID="{555B00D8-D0DE-48E5-A2BD-85F3C72B81AB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Dialogue_Random_Container" ID="{49F65A6E-199C-495E-87EF-0EB67474BF0F}" ShortID="469529487">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{91CD146F-9C83-490F-B66C-1E91AB66202B}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="1000"/>
+											<Property Name="Min" Type="Real64" Value="-500"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Dialogue_1" ID="{89618D6D-CB91-43E5-9785-15B88432F56C}" ShortID="999365360">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dialogue_1" ID="{95B1DFD7-225D-44AB-BC5E-DF772FAC74D9}">
+									<Language>SFX</Language>
+									<AudioFile>Dialogue_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="79320711"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Dialogue_1" ID="{95B1DFD7-225D-44AB-BC5E-DF772FAC74D9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Dialogue_3" ID="{A0A0351C-DE54-4D9B-A52B-32C988196369}" ShortID="466237219">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dialogue_3" ID="{0BF63CAA-5F4B-4D8B-A543-758C4A16A818}">
+									<Language>SFX</Language>
+									<AudioFile>Dialogue_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1005445235"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Dialogue_3" ID="{0BF63CAA-5F4B-4D8B-A543-758C4A16A818}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Dialogue_4" ID="{E61053A9-55F6-4F5C-B8E8-5236F57B6C19}" ShortID="253845546">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dialogue_4" ID="{9700D1BC-F3B1-4DBF-B65D-9B6CBE0E9E2D}">
+									<Language>SFX</Language>
+									<AudioFile>Dialogue_4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="733707518"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Dialogue_4" ID="{9700D1BC-F3B1-4DBF-B65D-9B6CBE0E9E2D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Dialogue_2" ID="{059F0635-FC8B-4593-96A8-EF57151C9914}" ShortID="87660492">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dialogue_2" ID="{68837778-8BAD-4761-82E0-850D24703036}">
+									<Language>SFX</Language>
+									<AudioFile>Dialogue_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="731345298"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Dialogue_2" ID="{68837778-8BAD-4761-82E0-850D24703036}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

@@ -25,6 +25,281 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Dialogue_Random_Container" ID="{F94DFC54-16BA-46A4-9DD8-624583FA170A}">
+					<ChildrenList>
+						<Action Name="" ID="{047BB2E0-8477-4179-93AB-73240FDD5AD1}" ShortID="951550625">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dialogue_Random_Container" ID="{49F65A6E-199C-495E-87EF-0EB67474BF0F}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Drink_Reveal" ID="{508DFE12-149C-47D8-B4B5-40ADCD028A70}">
+					<ChildrenList>
+						<Action Name="" ID="{0141CE6D-3DC8-4729-8B32-7DD17F3935D4}" ShortID="1024670391">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drink_Reveal" ID="{9AF2AE46-2B21-44DE-9D5F-2A555CAB8602}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_1_Milk_Drop" ID="{214EAC21-0BF4-4245-80AF-E80B7E1CBB1E}">
+					<ChildrenList>
+						<Action Name="" ID="{4C1CEC87-57D7-483E-8F6D-2428C1426116}" ShortID="274292864">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_1_Milk_Drop" ID="{10ABD65C-6D54-4283-9636-16D16DC65132}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_1_Milk_Pickup" ID="{7D8F00ED-89CC-4D45-8B95-0E9120412D2F}">
+					<ChildrenList>
+						<Action Name="" ID="{A0655D8B-D064-429C-9A46-FCDF9EAC2F45}" ShortID="602204816">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_1_Milk_Pickup" ID="{1502B33C-B408-418F-903E-89D764435C1E}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_2_Ice_Drop" ID="{6F838A1E-32F3-40D6-98EB-3583ECFB9AF9}">
+					<ChildrenList>
+						<Action Name="" ID="{077C7D2F-E440-428E-811E-C857113E454D}" ShortID="677220327">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_2_Ice_Drop" ID="{4C791854-DCA6-4127-ABFE-0FDDA60D71AE}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_2_Ice_Pickup" ID="{A882486C-C7B3-4E6F-94D2-B25F1FDAF41B}">
+					<ChildrenList>
+						<Action Name="" ID="{670D459E-DBB8-4F2D-9A43-95C8CA4ADB7F}" ShortID="242016664">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_2_Ice_Pickup" ID="{EC80F0BC-0DFB-4A5D-AD30-623DB0C423F8}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_3_Espresso_Drop" ID="{1ADD5780-AFA5-4138-B90B-A9C6EB8AC93E}">
+					<ChildrenList>
+						<Action Name="" ID="{893CCEFD-27FE-46A5-832E-44891BBAAC11}" ShortID="614595308">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_3_Espresso_Drop" ID="{43855DD1-DE02-4543-B5DA-17CAC9BE86B0}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_3_Espresso_Pickup" ID="{692C3708-EA09-4EA5-8ECD-7F2E112C902A}">
+					<ChildrenList>
+						<Action Name="" ID="{239831A6-664D-47AA-B886-CDEFC7DBEA83}" ShortID="555040323">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_3_Espresso_Pickup" ID="{82D9087C-6D60-4B69-8E04-C047AF00B84C}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_4_Tea_Drop" ID="{4390915C-835F-483C-B209-F637B00DFDDE}">
+					<ChildrenList>
+						<Action Name="" ID="{4D91AEAF-EB37-434A-8DC6-1F2B94C16E9A}" ShortID="299586599">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_4_Tea_Drop" ID="{778C941E-B57C-4B65-A554-EB41BF91919A}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_4_Tea_Pickup" ID="{549B8D02-DC74-4C3E-8F94-B2DF8F186096}">
+					<ChildrenList>
+						<Action Name="" ID="{2CBE57C5-D819-4D8E-B889-4A33531D9D9E}" ShortID="113160714">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_4_Tea_Pickup" ID="{B5D959C4-1087-4758-B73A-CF602100E80E}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_5_Sugar_Drop" ID="{65AADE09-CB7E-4C08-9419-81E520E9C438}">
+					<ChildrenList>
+						<Action Name="" ID="{37826C92-5D15-4EFD-B677-B28520D915C2}" ShortID="516820858">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_5_Sugar_Drop" ID="{340187EE-99FC-46FA-9CFA-4D1669FA6059}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_5_Sugar_Pickup" ID="{B2ED2869-0062-4745-8B12-D00216F58381}">
+					<ChildrenList>
+						<Action Name="" ID="{27BA002A-E07A-4200-B46A-945D06A6CA85}" ShortID="789867358">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_5_Sugar_Pickup" ID="{721AF7F0-CCBF-4DDF-B75F-5E55DC12C828}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_6_Sprite_Drop" ID="{AB7C02BB-F136-4490-8D96-856E5D4D8FEF}">
+					<ChildrenList>
+						<Action Name="" ID="{3AD2CC8C-011A-4748-9C9F-EEE0BDED4411}" ShortID="678703167">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_6_Sprite_Drop" ID="{2FC7D184-EDB8-4167-A68D-71EDB110BBE8}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_6_Sprite_Pickup" ID="{E842CB88-BEE4-4817-A82E-4EBAF1B8E847}">
+					<ChildrenList>
+						<Action Name="" ID="{3CC1BB79-92F3-4D60-9D75-85DC1DEFB4FE}" ShortID="87007227">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_6_Sprite_Pickup" ID="{A2858CFA-199C-43AE-AF74-043F2116563C}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_7_Fruit_Drop" ID="{E8BB1E73-3C22-44E0-B951-184D27F006BB}">
+					<ChildrenList>
+						<Action Name="" ID="{53040ADF-8F01-47E9-86BF-AD26112D6B94}" ShortID="298908916">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_7_Fruit_Drop" ID="{678AFB57-7F3E-4445-8DEF-0F0F3CE7E07E}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_7_Fruit_Pickup" ID="{6BABB6AD-F8F6-4290-978E-5C4A2569BC77}">
+					<ChildrenList>
+						<Action Name="" ID="{2ADFCAA8-34DA-445A-BE09-4B4F9FF33F5F}" ShortID="1005256422">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_7_Fruit_Pickup" ID="{15735A56-7E8D-4E64-A6C8-3257CDBDE1B8}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_8_Flower_Drop" ID="{54EB6223-D43C-4E17-AC5B-54921268AF81}">
+					<ChildrenList>
+						<Action Name="" ID="{81379998-16F2-4323-8FC7-02CEF71AEFA9}" ShortID="356904121">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_8_Flower_Drop" ID="{AE255298-4B75-46C8-A0D5-D78DD56DE608}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_8_Flower_Pickup" ID="{3AF6ABB5-8536-4043-B3CD-B08C3C7E55C5}">
+					<ChildrenList>
+						<Action Name="" ID="{4E85CB13-66E2-460E-BD32-2C3695236FE0}" ShortID="914239">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_8_Flower_Pickup" ID="{FB218FE1-1635-464B-A448-D686A6DC1F72}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_9_Syrup_Drop" ID="{C4D2A28F-86F0-4E0E-8A26-D454C64A19F0}">
+					<ChildrenList>
+						<Action Name="" ID="{158C2676-102F-4705-A81F-5F07DECB7D26}" ShortID="422570642">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_9_Syrup_Drop" ID="{545DC1CC-76E0-47D6-9F77-13D4AB4F173D}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ingredient_9_Syrup_Pickup" ID="{2033B2C9-49BB-4420-AFAD-88FB3AA950F2}">
+					<ChildrenList>
+						<Action Name="" ID="{B8BCC3D9-00C7-4D4A-94A6-1A151AE6CD79}" ShortID="840880781">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_9_Syrup_Pickup" ID="{4F062144-7F70-4C5D-B1AA-ECD3F351C0A9}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MenuButton" ID="{3EE4D5B2-17A3-4B1C-B294-5382D8E9B749}">
+					<ChildrenList>
+						<Action Name="" ID="{2286E59C-0396-4D76-ABB6-B106756FD5AC}" ShortID="877996271">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MenuButton" ID="{9C67506D-B929-4DEE-85E9-C0D915633FDA}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PageFlip" ID="{836A0545-7E12-45B7-855E-5DBFD43A9221}">
+					<ChildrenList>
+						<Action Name="" ID="{799FFAFB-E38F-4CC5-8782-C6BA8400494A}" ShortID="733889474">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PageFlip" ID="{F5A1FEB8-E857-4DE2-9415-23C3D729A931}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Shake" ID="{7F2CC9A6-5D20-4DBF-8638-5FBC259DA00D}">
+					<ChildrenList>
+						<Action Name="" ID="{8E6D5AA3-B1FE-4912-93AF-2149C4F4E650}" ShortID="1012213595">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shake" ID="{EB35CEDD-BC36-4BD9-A2D0-520118B265DB}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Steam" ID="{A4719FBD-63F9-4AB5-9D3F-09141214F146}">
+					<ChildrenList>
+						<Action Name="" ID="{708A3CD1-D832-49E1-A78B-913169BA4886}" ShortID="153814182">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Steam" ID="{D872C57E-B6AD-4C8D-9C50-7BD340716B63}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TimeTravel" ID="{32739572-BB54-4686-907C-0FEAD75AF291}">
+					<ChildrenList>
+						<Action Name="" ID="{9797BDF4-F729-4603-BF33-083F7D2AA5EF}" ShortID="39904214">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TimeTravel" ID="{2D7AF3A0-09F1-4007-A86C-E35A65954615}" WorkUnitID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3244659120",
+    "Type": "Event",
+    "GUID": "{7F2CC9A6-5D20-4DBF-8638-5FBC259DA00D}",
+    "Language": "SFX",
+    "Hash": "{919B9364-0FC3-3F0F-49B9-BF32049C865E}",
+    "ObjectPath": "Play_Shake",
+    "ShortName": "Play_Shake",
+    "Path": "Event/Play_Shake.bnk",
+    "Media": [
+     {
+      "Id": "842902296",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Shake.wav",
+      "Path": "Media/842902296.wem",
+      "CachePath": "20/{20CB9A6C-3B77-48C9-31E0-D6D149093C3A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3244659120",
+      "Name": "Play_Shake",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Shake",
+      "GUID": "{7F2CC9A6-5D20-4DBF-8638-5FBC259DA00D}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.76",
+      "DurationMax": "2.76",
+      "MediaRefs": [
+       {
+        "Id": "842902296"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F558FFE3-1808-FA25-4DD2-CF8B3A9AD941}"
+ }
+}

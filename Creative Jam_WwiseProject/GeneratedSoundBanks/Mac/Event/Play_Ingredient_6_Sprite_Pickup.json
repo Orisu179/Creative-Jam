@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2335477803",
+    "Type": "Event",
+    "GUID": "{E842CB88-BEE4-4817-A82E-4EBAF1B8E847}",
+    "Language": "SFX",
+    "Hash": "{17DEE84D-491E-6821-D85B-74A011388EC0}",
+    "ObjectPath": "Play_Ingredient_6_Sprite_Pickup",
+    "ShortName": "Play_Ingredient_6_Sprite_Pickup",
+    "Path": "Event/Play_Ingredient_6_Sprite_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "274089939",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_6_Sprite_Pickup.wav",
+      "Path": "Media/274089939.wem",
+      "CachePath": "54/{54F78105-1691-FE5F-019D-98AE204E5993}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2335477803",
+      "Name": "Play_Ingredient_6_Sprite_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_6_Sprite_Pickup",
+      "GUID": "{E842CB88-BEE4-4817-A82E-4EBAF1B8E847}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.92",
+      "DurationMax": "0.92",
+      "MediaRefs": [
+       {
+        "Id": "274089939"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7B0B46A2-6B71-EC5C-D52C-DAED605B79D9}"
+ }
+}

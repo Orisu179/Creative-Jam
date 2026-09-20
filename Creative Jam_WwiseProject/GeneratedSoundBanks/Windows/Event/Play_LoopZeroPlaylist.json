@@ -10,19 +10,19 @@
     "Type": "Event",
     "GUID": "{2D934676-73EA-4702-B574-124B310C9ECA}",
     "Language": "SFX",
-    "Hash": "{F7F53A2F-DE34-EA8B-C3AC-22C2FEBECCAF}",
+    "Hash": "{25E5BCF3-59E2-59E3-6771-33686414449E}",
     "ObjectPath": "Play_LoopZeroPlaylist",
     "ShortName": "Play_LoopZeroPlaylist",
     "Path": "Event/Play_LoopZeroPlaylist.bnk",
     "Media": [
      {
-      "Id": "299228236",
+      "Id": "850059652",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "LoopZero.wav",
-      "Path": "Media/299228236.wem",
-      "CachePath": "10/{10E9A283-579D-8F59-B2B7-62F5171FC793}.wem"
+      "ShortName": "LoopZero_92bpm.wav",
+      "Path": "Media/850059652.wem",
+      "CachePath": "74/{7429F5A2-2B51-542F-07DE-3CA3F0A14D74}.wem"
      }
     ],
     "Events": [
@@ -34,13 +34,13 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "299228236"
+        "Id": "850059652"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{10FABF74-05F1-8E8A-514D-C69FC7D7861A}"
+  "FileHash": "{66EBF17D-A410-AA7A-EC0D-2B3CF152897D}"
  }
 }

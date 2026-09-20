@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3172121248",
+    "Type": "Event",
+    "GUID": "{AB7C02BB-F136-4490-8D96-856E5D4D8FEF}",
+    "Language": "SFX",
+    "Hash": "{A3F710B1-BB18-4261-D86A-42CE6F8623F9}",
+    "ObjectPath": "Play_Ingredient_6_Sprite_Drop",
+    "ShortName": "Play_Ingredient_6_Sprite_Drop",
+    "Path": "Event/Play_Ingredient_6_Sprite_Drop.bnk",
+    "Media": [
+     {
+      "Id": "229294892",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_6_Sprite_Drop.wav",
+      "Path": "Media/229294892.wem",
+      "CachePath": "1D/{1DF26A11-2B2C-8760-8204-528A9ED8BA2D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3172121248",
+      "Name": "Play_Ingredient_6_Sprite_Drop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_6_Sprite_Drop",
+      "GUID": "{AB7C02BB-F136-4490-8D96-856E5D4D8FEF}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.92",
+      "DurationMax": "0.92",
+      "MediaRefs": [
+       {
+        "Id": "229294892"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AC59BA1B-3130-2DDD-14E7-72B01A27326F}"
+ }
+}

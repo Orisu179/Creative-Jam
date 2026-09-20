@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1278858207	Play_Ingredient_5_Sugar_Pickup			\Default Work Unit\Play_Ingredient_5_Sugar_Pickup	
+

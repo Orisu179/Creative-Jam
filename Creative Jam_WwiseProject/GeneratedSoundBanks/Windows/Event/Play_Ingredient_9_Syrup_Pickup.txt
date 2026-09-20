@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1943726798	Play_Ingredient_9_Syrup_Pickup			\Default Work Unit\Play_Ingredient_9_Syrup_Pickup	
+

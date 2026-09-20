@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2885688842",
+    "Type": "Event",
+    "GUID": "{A4719FBD-63F9-4AB5-9D3F-09141214F146}",
+    "Language": "SFX",
+    "Hash": "{8D7A5130-CF70-DDB5-A0A9-923BA0619A53}",
+    "ObjectPath": "Play_Steam",
+    "ShortName": "Play_Steam",
+    "Path": "Event/Play_Steam.bnk",
+    "Media": [
+     {
+      "Id": "960796826",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Steam.wav",
+      "Path": "Media/960796826.wem",
+      "CachePath": "51/{5197DABE-C6B6-351D-8AEC-6F75EEBDB4CF}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2885688842",
+      "Name": "Play_Steam",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Steam",
+      "GUID": "{A4719FBD-63F9-4AB5-9D3F-09141214F146}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.758604",
+      "DurationMax": "4.758604",
+      "MediaRefs": [
+       {
+        "Id": "960796826"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2CBCBEF3-E165-8A0D-06B2-B9F320A1F454}"
+ }
+}

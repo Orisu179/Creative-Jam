@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3244659120	Play_Shake			\Default Work Unit\Play_Shake	
+

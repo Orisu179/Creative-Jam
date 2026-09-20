@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1943726798",
+    "Type": "Event",
+    "GUID": "{2033B2C9-49BB-4420-AFAD-88FB3AA950F2}",
+    "Language": "SFX",
+    "Hash": "{D7205311-EF1C-6D84-ECA1-7C5FFCBCC260}",
+    "ObjectPath": "Play_Ingredient_9_Syrup_Pickup",
+    "ShortName": "Play_Ingredient_9_Syrup_Pickup",
+    "Path": "Event/Play_Ingredient_9_Syrup_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "811144652",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_9_Syrup_Pickup.wav",
+      "Path": "Media/811144652.wem",
+      "CachePath": "25/{25371B9B-AD61-7C0E-E25D-07771329D632}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1943726798",
+      "Name": "Play_Ingredient_9_Syrup_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_9_Syrup_Pickup",
+      "GUID": "{2033B2C9-49BB-4420-AFAD-88FB3AA950F2}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.92",
+      "DurationMax": "0.92",
+      "MediaRefs": [
+       {
+        "Id": "811144652"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5232C672-8D72-3DA3-DD8E-B9BBFC4BFA60}"
+ }
+}
