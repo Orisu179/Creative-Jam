@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // DrinkMenu itself stays active in the scene at all times now.
 // GameManager controls access via EnableButton()/CloseAndDisable() on
@@ -11,8 +12,8 @@ public class DrinkMenuController : MonoBehaviour
     [SerializeField] private GameObject menuContent;
 
     [Header("Open/Close Button")]
-    [Tooltip("The MouseDownButton component on the open/close menu object. Disabling this script stops OnMouseDown from firing at all.")]
-    [SerializeField] private MouseDownButton openCloseButton;
+    [Tooltip("The Button component on the open/close menu object. Disabling this script stops OnClick from firing at all.")]
+    [SerializeField] private Button openCloseButton;
 
     [Header("Pages")]
     [Tooltip("Drag in all page GameObjects, in order.")]
