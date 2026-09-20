@@ -17,7 +17,7 @@ namespace State_Machines
             if (newState == null || newState == CurrentState)
                 return;
 
-            await CurrentState?.Exit();
+            await CurrentState.Exit();
             CurrentState = newState;
             CurrentState.Enter();
         }

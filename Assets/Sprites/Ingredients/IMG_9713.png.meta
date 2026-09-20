@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f42d03177039b1d468ba3f7a391d099b
+guid: 12432c0a228ef33469bfb40c8c02e235
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5054835730326582615
-    second: IMG_9749_0
+      213: 1189808279747148941
+    second: IMG_9713_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_9749_0
+      name: IMG_9713_0
       rect:
         serializedVersion: 2
-        x: 168
-        y: 90
-        width: 1582
-        height: 930
+        x: 264
+        y: 110
+        width: 472
+        height: 699
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7557118a052662640800000000000000
-      internalID: 5054835730326582615
+      spriteID: d8cb529935c038010800000000000000
+      internalID: 1189808279747148941
       vertices: []
       indices: 
       edges: []
@@ -125,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_9749_0: 5054835730326582615
+      IMG_9713_0: 1189808279747148941
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

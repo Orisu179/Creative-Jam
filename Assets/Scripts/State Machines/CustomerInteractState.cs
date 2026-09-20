@@ -28,7 +28,6 @@ namespace State_Machines
             await fadeIn.AsyncWaitForCompletion();
 
             // 2. Add the customer dialogue and callback to the dialogue box
-            // Dialogue.SetDialogue(_day.CurrentCustomer.Dialogue, HandleDialogueComplete);
             Debug.Log("Starting chatbox");
             // 3. Toggle the dialogue UI
             TextBoxManager.Instance.SetDialogue(_manager.CurDay.CurrentCustomer.Dialogue, HandleDialogueComplete);
