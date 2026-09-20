@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SuccessScreen : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _textMeshPro;
+    [SerializeField] private TMP_Text _textMeshPro;
     private void Start()
     {
-        GlobalFields.Instance.Score = 10.0f;
+        if (GlobalFields.Instance.Score == null)
+        {
+            GlobalFields.Instance.Score = 0.0f;
+        }
         _textMeshPro.text = GlobalFields.Instance.Score.ToString(CultureInfo.InvariantCulture);
     }
 
