@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: cc3c2e79cdbc5b44585ffc7f5b8893a0
+guid: bb60e32963862dc4d8da5736ad0067e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2100854263841581716
-    second: IMG_9708_0
+      213: 4687309882487268517
+    second: coffee_0
+  - first:
+      213: 6655872186638320746
+    second: coffee_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,30 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_9708_0
+      name: coffee_0
       rect:
         serializedVersion: 2
-        x: 297
-        y: 118
-        width: 406
-        height: 817
+        x: 208
+        y: 50
+        width: 512
+        height: 517
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c659bd68d2448d2e0800000000000000
-      internalID: -2100854263841581716
+      spriteID: 5a4e4d1f08bac0140800000000000000
+      internalID: 4687309882487268517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coffee_1
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 391
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64cafa4d786e5c50800000000000000
+      internalID: 6655872186638320746
       vertices: []
       indices: 
       edges: []
@@ -138,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_9708_0: -2100854263841581716
+      coffee_0: 4687309882487268517
+      coffee_1: 6655872186638320746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

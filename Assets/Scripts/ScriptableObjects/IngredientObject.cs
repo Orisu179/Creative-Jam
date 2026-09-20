@@ -6,5 +6,5 @@ public class IngredientObject : ScriptableObject
     public Ingredient IngredientType;
     public AK.Wwise.Event playDragEvent;
     public AK.Wwise.Event dropDragEvent;
-    public Sprite IngredientSprite;
+    public Sprite OnDragSprite;
 }

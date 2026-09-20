@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6c5145e0e9effaf44a09a2bfe42d1709
+guid: dcc191ff0174acf42aba7db6d94530b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1094682042135177466
-    second: IMG_9710_0
+      213: -3413006870710782370
+    second: sugar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_9710_0
+      name: sugar_0
       rect:
         serializedVersion: 2
-        x: 203
-        y: 188
-        width: 613
-        height: 514
+        x: 141
+        y: 166
+        width: 580
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af867777487113f00800000000000000
-      internalID: 1094682042135177466
+      spriteID: e56f05f755092a0d0800000000000000
+      internalID: -3413006870710782370
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_9710_0: 1094682042135177466
+      sugar_0: -3413006870710782370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,14 +11,23 @@ namespace Gameplay
         [SerializeField] private bool returnOnInvalidDrop = true;
         [SerializeField] private IngredientObject ingredient;
 
+        [Header("Drag Appearance (optional)")]
+        [Tooltip("If set, the sprite swaps to this while being dragged, and back to the original sprite on release. Leave empty to keep the same sprite throughout.")]
+        [SerializeField] private Sprite dragSprite;
+
         private Vector3 _initialPosition;
         private Vector3 _dragOffset;
         private Camera _mainCamera;
         private bool _isDragging;
 
+        private SpriteRenderer _spriteRenderer;
+        private Sprite _defaultSprite;
+
         private void Awake()
         {
             _mainCamera = Camera.main;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _defaultSprite = _spriteRenderer.sprite;
         }
 
         private void OnMouseDown()
@@ -32,6 +41,11 @@ namespace Gameplay
             var mouseWorldPos = GetMouseWorldPosition();
             _dragOffset = transform.position - mouseWorldPos;
             _isDragging = true;
+
+            if (dragSprite != null)
+            {
+                _spriteRenderer.sprite = dragSprite;
+            }
         }
 
         private void OnMouseDrag()
@@ -57,6 +71,11 @@ namespace Gameplay
             else if (returnOnInvalidDrop)
             {
                 transform.position = _initialPosition;
+            }
+
+            if (dragSprite != null)
+            {
+                _spriteRenderer.sprite = _defaultSprite;
             }
         }
 
