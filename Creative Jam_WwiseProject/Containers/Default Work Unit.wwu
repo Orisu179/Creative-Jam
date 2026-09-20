@@ -3,28 +3,6 @@
 	<Containers>
 		<WorkUnit Name="Default Work Unit" ID="{0556E5EC-9323-44C2-AC25-3C190DAD8841}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Dialogue_67" ID="{6DC83F55-56C5-4C65-805D-D198825841A3}" ShortID="263481052">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Dialogue_67" ID="{E2819D9B-9C00-42E2-A360-ABFCD14D2F5D}">
-							<Language>SFX</Language>
-							<AudioFile>Dialogue_67.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="424702321"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Dialogue_67" ID="{E2819D9B-9C00-42E2-A360-ABFCD14D2F5D}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Drink_Reveal" ID="{9AF2AE46-2B21-44DE-9D5F-2A555CAB8602}" ShortID="112637429">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -678,6 +656,35 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Dialogue_2" ID="{68837778-8BAD-4761-82E0-850D24703036}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Dialogue_67" ID="{6DC83F55-56C5-4C65-805D-D198825841A3}" ShortID="263481052">
+							<PropertyList>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2BF1FD7C-1F00-4BE1-A3CB-4D4F8D956DDB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Dialogue_67" ID="{E2819D9B-9C00-42E2-A360-ABFCD14D2F5D}">
+									<Language>SFX</Language>
+									<AudioFile>Dialogue_67.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="424702321"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Dialogue_67" ID="{E2819D9B-9C00-42E2-A360-ABFCD14D2F5D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

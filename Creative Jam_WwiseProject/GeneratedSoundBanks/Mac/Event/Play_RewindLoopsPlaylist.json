@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{447938B9-A221-4554-9CD3-A8BF098AE790}",
     "Language": "SFX",
-    "Hash": "{1EE039AD-FDE6-FB87-73B6-27FA9F36BC9D}",
+    "Hash": "{30AC67DA-53B2-8BBB-A91A-980227633511}",
     "ObjectPath": "Play_RewindLoopsPlaylist",
     "ShortName": "Play_RewindLoopsPlaylist",
     "Path": "Event/Play_RewindLoopsPlaylist.bnk",
@@ -41,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{6B3DB84B-2549-5DF3-D750-FD1B91925CED}"
+  "FileHash": "{A202225D-CBDB-2A8C-B7DF-B965E32CF23B}"
  }
 }

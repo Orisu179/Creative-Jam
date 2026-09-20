@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{7D8F00ED-89CC-4D45-8B95-0E9120412D2F}",
     "Language": "SFX",
-    "Hash": "{8D2129FA-1C1B-0FAE-92C2-A0504AFEF5C0}",
+    "Hash": "{B0B542B0-3F4C-9676-789B-9B2EEE3C122C}",
     "ObjectPath": "Play_Ingredient_1_Milk_Pickup",
     "ShortName": "Play_Ingredient_1_Milk_Pickup",
     "Path": "Event/Play_Ingredient_1_Milk_Pickup.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{2085E461-2FEC-CF75-9EA8-F81B86379325}"
+  "FileHash": "{CAF5ADD6-835A-F95B-AEBF-0DE2BFAE51E0}"
  }
 }

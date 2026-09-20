@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{32739572-BB54-4686-907C-0FEAD75AF291}",
     "Language": "SFX",
-    "Hash": "{4928234E-F9CB-C5F2-6D30-3F3AB0CEDACE}",
+    "Hash": "{6E9CA80E-48F0-22A1-7698-EE91F057B29F}",
     "ObjectPath": "Play_TimeTravel",
     "ShortName": "Play_TimeTravel",
     "Path": "Event/Play_TimeTravel.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "TimeTravel.wav",
       "Path": "Media/258879552.wem",
-      "CachePath": "8E/{8EAAB8FB-3D47-FFE6-8764-793F12B06E9C}.wem"
+      "CachePath": "AC/{AC3D4E27-1E2D-7C67-8902-0641EA31BF6F}.wem"
      }
     ],
     "Events": [
@@ -32,8 +32,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_TimeTravel",
       "GUID": "{32739572-BB54-4686-907C-0FEAD75AF291}",
       "DurationType": "OneShot",
-      "DurationMin": "2.9843",
-      "DurationMax": "2.9843",
+      "DurationMin": "6.88",
+      "DurationMax": "6.88",
       "MediaRefs": [
        {
         "Id": "258879552"
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{5C7A99AE-C60F-80C4-E16C-FB5394D1D424}"
+  "FileHash": "{3E063A56-41D7-16D0-0442-4C38FF0B9E2D}"
  }
 }
