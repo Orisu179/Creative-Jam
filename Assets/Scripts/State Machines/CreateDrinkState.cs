@@ -36,6 +36,7 @@ namespace State_Machines
             // enable button to open/close menu
             _manager.DrinkMenu.EnableButton();
 
+            MixingCupArea.OnAnyItemDropped -= _createDrink.HandleIngredientDropped;
             MixingCupArea.OnAnyItemDropped += _createDrink.HandleIngredientDropped;
 
             // Serving: dragging the finished cup onto a customer fires this.

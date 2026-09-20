@@ -1,52 +1,44 @@
 {
   "drinkAttributes": [
     {
-      "drink": "blueLatte",
-      "attributes": ["hot", "magical", "milky"]
+      "drink": "POUF_SODALICIOUS",
+      "attributes": ["BUBBLY", "MILKY", "SWEET"]
     },
     {
-      "drink": "icedAmericano",
-      "attributes": ["bubbly", "cold", "strong"]
+      "drink": "WHIMS_TEA",
+      "attributes": ["MAGICAL", "STRONG", "HOT"]
     },
     {
-      "drink": "magicMatcha",
-      "attributes": ["hot", "magical", "sweet"]
+      "drink": "HOT_LATTE",
+      "attributes": ["MILKY", "HOT", "STRONG"]
     },
     {
-      "drink": "strawberryLemonade",
-      "attributes": ["cold", "fruity", "sweet"]
+      "drink": "OVER_THE_STARS_SODA",
+      "attributes": ["MAGICAL", "BUBBLY", "COLD"]
     },
     {
-      "drink": "hotLatte",
-      "attributes": ["hot", "milky", "strong"]
+      "drink": "UNDER_THE_ABYSS_MATCHA",
+      "attributes": ["MAGICAL", "MILKY", "HOT"]
     },
     {
-      "drink": "dragonfruitTea",
-      "attributes": ["cold", "fruity", "magical"]
+      "drink": "LYCHEE_MILK_TEA",
+      "attributes": ["FRUITY", "MILKY", "SWEET"]
     },
     {
-      "drink": "lycheeMilkTea",
-      "attributes": ["fruity", "milky", "sweet"]
+      "drink": "LATTE_BLEU",
+      "attributes": ["MILKY", "MAGICAL", "STRONG"]
     },
     {
-      "drink": "magicalTea",
-      "attributes": ["bubbly", "hot", "magical"]
+      "drink": "CREME_BRULEE_MILK_TEA",
+      "attributes": ["MILKY", "HOT", "SWEET"]
     },
     {
-      "drink": "cremeBruleeMilkTea",
-      "attributes": ["hot", "milky", "sweet"]
+      "drink": "ICED_SODA_AMERICANO",
+      "attributes": ["STRONG", "COLD", "BUBLY"]
     },
     {
-      "drink": "rainbowSoda",
-      "attributes": ["bubbly", "fruity", "sweet"]
-    },
-    {
-      "drink": "creamSoda",
-      "attributes": ["bubbly", "milky", "sweet"]
-    },
-    {
-      "drink": "milkshake",
-      "attributes": ["cold", "milky", "sweet"]
+      "drink": "STRAWBERRY_ADE",
+      "attributes": ["FRUITY", "COLD", "BUBBLY"]
     }
   ]
 }

@@ -38,7 +38,7 @@
     },
     {
       "drink": "STRAWBERRY_ADE",
-      "ingredients": ["FRUIT", "FRUIT", "FRUIT", "ICE", "SODA"]
+      "ingredients": ["FRUIT", "FRUIT", "FRUIT", "ICE", "ICE", "SODA"]
     }
   ]
 }
