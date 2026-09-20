@@ -52,7 +52,7 @@ namespace State_Machines
         // handle callback from settext - ie. manager . next state
         private void HandleDialogueComplete()
         {
-            if (_manager.CurDay.SatisfactionLevel < -1000)
+            if (_manager.CurDay.SatisfactionLevel < -10)
             {
                 SceneManager.LoadScene("GameOverScene");
                 return;
