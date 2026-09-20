@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
@@ -16,6 +17,7 @@ namespace State_Machines
             _manager = manager;
             _customerSpriteManager = customerSpriteManager;
             _nextState = nextState;
+            _failedState = failedState;
         }
 
         public void Enter()
@@ -25,21 +27,18 @@ namespace State_Machines
 
             // calculate satisfaction
             int score = _manager.CalculateScore(_manager.CurDay);
-            Day curDay = _manager.CurDay;
-            curDay.SatisfactionLevel += score;
+            _manager.SetSatisfactionLevel(_manager.CurDay.SatisfactionLevel + score);
 
             // calc dialogue using day.current cust sat
             // setText(DialogueGenerator.GenerateResponse(score, ), callback);
-
-            // add drink to list
-            // _manager.AddDrink(CurrentDrink); 
             // call toggle
-            throw new System.NotImplementedException();
+            Debug.Log($"Customer satisfaction level: {_manager.CurDay.SatisfactionLevel}");
+
+            HandleDialogueComplete();
         }
 
         public void Exit()
         {
-            throw new System.NotImplementedException();
             // disable dialogue. ie. call dialogue.toggle
             // dialogueBox.Toggle();
             // sprite.fade out 
@@ -49,7 +48,7 @@ namespace State_Machines
         // handle callback from settext - ie. manager . next state
         private void HandleDialogueComplete()
         {
-            if (_manager.CurDay.SatisfactionLevel < -10)
+            if (_manager.CurDay.SatisfactionLevel < -1000)
             {
                 SceneManager.LoadScene("GameOverScene");
                 return;

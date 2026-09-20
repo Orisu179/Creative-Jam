@@ -168,4 +168,9 @@ public class GameManager : MonoBehaviour
         curDay.SatisfactionLevel = level;
         CurDay = curDay;
     }
+
+    public void AddDrink(Drink? drink)
+    {
+        CurDay.OrderList.Add(drink ?? Drink.INVALID);
+    }
 }
