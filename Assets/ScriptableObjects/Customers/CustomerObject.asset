@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ff6c5144448d345bf873a83a96c50f, type: 3}
+  m_Name: CustomerObject
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerObject
+  customerSprites:
+  - {fileID: -8021989480495394199, guid: 8075c13a1b98e484dbb89c7dcb2b1a07, type: 3}
+  - {fileID: -3108131241542524228, guid: 694b888a619698341be45f9513ca4eb3, type: 3}
+  - {fileID: 7156827904665575740, guid: bad6a523ad35b3d41842c64def32ffc9, type: 3}
+  - {fileID: 708934652261806618, guid: b44a8fc783d9af148a804e3deb984ab8, type: 3}
+  accessorySprites:
+  - {fileID: 0}
+  - {fileID: -7699295363376189914, guid: 1f0fb2071094ae34b9277621042001a4, type: 3}
+  - {fileID: -3318955859782138863, guid: a3485bda8e4fefc42ae02bb4cb78384c, type: 3}
+  - {fileID: -5010747910089713351, guid: 91d4dfd74192f3347b371229aa1bd7fa, type: 3}
+  - {fileID: 4390884701830573478, guid: 4dbf4991115c07743a93a8a53414b051, type: 3}

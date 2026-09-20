@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: b44a8fc783d9af148a804e3deb984ab8
+guid: 1f0fb2071094ae34b9277621042001a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 708934652261806618
-    second: owl4_0
+      213: 6246429722606064703
+    second: acc1_0
+  - first:
+      213: 4197064260966886744
+    second: acc1_1
+  - first:
+      213: -7699295363376189914
+    second: acc1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +102,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: owl4_0
+      name: acc1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3000
-        height: 4000
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1286
+        y: 3925
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a12b7056f44a6d900800000000000000
-      internalID: 708934652261806618
+      spriteID: f34506adcb6cfa650800000000000000
+      internalID: 6246429722606064703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc1_1
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 3926
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d2b6655b7fe3a30800000000000000
+      internalID: 4197064260966886744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acc1_2
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 3507
+        width: 751
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e662dd8ab962590800000000000000
+      internalID: -7699295363376189914
       vertices: []
       indices: 
       edges: []
@@ -138,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ec8ffda17c041a24192340508bc3ff77
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      owl4_0: 708934652261806618
+      acc1_0: 6246429722606064703
+      acc1_1: 4197064260966886744
+      acc1_2: -7699295363376189914
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

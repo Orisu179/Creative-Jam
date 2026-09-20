@@ -1,0 +1,26 @@
+{
+	"customers": {
+		"accessories": [
+			{
+				"name": "NONE",
+				"yOffset": 0
+			},
+			{
+				"name": "HAT",
+				"yOffset": 37
+			},
+			{
+				"name": "TIE",
+				"yOffset": 17
+			},
+			{
+				"name": "BOWTIE",
+				"yOffset": 22
+			},
+			{
+				"name": "GLASSES",
+				"yOffset": 29
+			}
+		]
+	}
+}
