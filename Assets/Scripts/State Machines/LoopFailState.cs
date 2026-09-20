@@ -1,4 +1,5 @@
 ﻿using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 namespace State_Machines
 {
@@ -19,7 +20,7 @@ namespace State_Machines
             HandleContinue();
         }
 
-        public void Exit()
+        public async Task Exit()
         {
         }
 

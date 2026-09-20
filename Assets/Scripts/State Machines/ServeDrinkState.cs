@@ -40,8 +40,10 @@ namespace State_Machines
             await HandleDialogueComplete();
         }
 
-        public void Exit()
+        public async Task Exit()
         {
+            Tween fadeOut = _customerSpriteManager.FadeOut();
+            await fadeOut.AsyncWaitForCompletion();
             // disable dialogue. ie. call dialogue.toggle
             // dialogueBox.Toggle();
             // sprite.fade out 
@@ -58,8 +60,6 @@ namespace State_Machines
             if (!_manager.IsLastCustomer())
             {
                 _manager.IncrementCustomer();
-                Tween fadeOut = _customerSpriteManager.FadeOut();
-                await fadeOut.AsyncWaitForCompletion();
                 _manager._stateMachine.ChangeState(_nextState);
                 return;
             }

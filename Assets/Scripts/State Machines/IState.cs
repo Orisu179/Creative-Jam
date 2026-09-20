@@ -1,8 +1,10 @@
-﻿namespace State_Machines
+﻿using System.Threading.Tasks;
+
+namespace State_Machines
 {
     public interface IState
     {
         void Enter();       // Called once when switching to this state
-        void Exit();       // Called once when existing
+        Task Exit();       // Called once when existing
     }
 }

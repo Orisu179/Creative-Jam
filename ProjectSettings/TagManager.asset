@@ -53,5 +53,8 @@ TagManager:
   - name: Text
     uniqueID: 2083765077
     locked: 0
+  - name: Menu
+    uniqueID: 1661622385
+    locked: 0
   m_RenderingLayers:
   - Default

@@ -37,7 +37,7 @@ namespace State_Machines
             await HandleFeedDrink(_currentDrink);
         }
 
-        public void Exit()
+        public async Task Exit()
         {
             _createDrink.RemoveDrink();
             // TODO: Disable ingredients listeners

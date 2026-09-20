@@ -1,4 +1,6 @@
-﻿namespace State_Machines
+﻿using System.Threading.Tasks;
+
+namespace State_Machines
 {
     public class StateMachine
     {
@@ -10,12 +12,12 @@
             CurrentState.Enter();
         }
 
-        public void ChangeState(IState newState)
+        public async Task ChangeState(IState newState)
         {
             if (newState == null || newState == CurrentState)
                 return;
 
-            CurrentState?.Exit();
+            await CurrentState?.Exit();
             CurrentState = newState;
             CurrentState.Enter();
         }

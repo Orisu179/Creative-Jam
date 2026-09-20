@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace State_Machines
@@ -23,7 +24,7 @@ namespace State_Machines
             _manager._stateMachine.ChangeState(_nextState);
         }
 
-        public void Exit()
+        public async Task Exit()
         {
         }
     }

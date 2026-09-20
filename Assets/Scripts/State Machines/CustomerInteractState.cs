@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace State_Machines
@@ -20,37 +21,29 @@ namespace State_Machines
         {
             Debug.Log("CustomerInteractState: Enter");
             // 1. Fade in the customer
+            Debug.Log($"CustomerInteractState: {_manager.CurLoop} loop {_manager.CustomerCounter} customer");
             Debug.Log($"CustomerInteractState: Current customer is {_manager.CurDay.CurrentCustomer.Species} with accessory {_manager.CurDay.CurrentCustomer.Accessory}");
+            _customerSpriteManager.SetSprite(_manager.CurDay.CurrentCustomer.Species, _manager.CurDay.CurrentCustomer.Accessory);
+            Tween fadeIn = _customerSpriteManager.FadeIn();
+            await fadeIn.AsyncWaitForCompletion();
+
             // 2. Add the customer dialogue and callback to the dialogue box
             // Dialogue.SetDialogue(_day.CurrentCustomer.Dialogue, HandleDialogueComplete);
-
-            // await fadeIn.AsyncWaitForCompletion();
             Debug.Log("Starting chatbox");
             // 3. Toggle the dialogue UI
-            TextBoxManager.Instance.SetDisabled(false);
-
-            await TextBoxManager.Instance.AnimateFadeIn(_manager.CurDay.CurrentCustomer.Dialogue, 3.0f);
+            TextBoxManager.Instance.SetDialogue(_manager.CurDay.CurrentCustomer.Dialogue, HandleDialogueComplete);
+            await TextBoxManager.Instance.SetDisabled(false, 1.0f);
             // Fade in complete
-            
-            // Dialogue.Toggle();
             // That's it, the callback will call transition
-
-            Debug.Log("CustomerInteractState: Typing complete");
-            // Tween moveLeft = _customerSpriteManager.MoveLeft();
-            // await moveLeft.AsyncWaitForCompletion();
-            //
-            // Tween moveRight = _customerSpriteManager.MoveRight();
-            // await moveRight.AsyncWaitForCompletion();
-            // _manager._stateMachine.ChangeState(_nextState);
         }
 
-        public void Exit()
+        public async Task Exit()
         {
             // 1. Toggle the dialogue UI
-            // DialogueBox.Toggle();
+            await TextBoxManager.Instance.SetDisabled(true);
+
             // 2. Translate the customer to the left
-            _customerSpriteManager.MoveLeft();
-            TextBoxManager.Instance.SetDisabled(true);
+            await _customerSpriteManager.MoveLeft().AsyncWaitForCompletion();
         }
 
         private void HandleDialogueComplete()
