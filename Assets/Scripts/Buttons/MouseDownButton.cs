@@ -11,6 +11,7 @@ public class MouseDownButton : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("clicked");
         onClick?.Invoke();
     }
 }

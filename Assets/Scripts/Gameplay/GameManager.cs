@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
     [SerializeField] private CreateDrink createDrink;
+    [SerializeField] private DrinkMenuController drinkMenu;
+ 
+    public DrinkMenuController DrinkMenu => drinkMenu;
 
     // States
     public StateMachine _stateMachine;

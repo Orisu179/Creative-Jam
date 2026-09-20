@@ -4,6 +4,7 @@
     {
         private CreateDrink _createDrink;
         private GameManager _manager;
+    
         public CreateDrinkState(GameManager manager, CreateDrink drink)
         {
             _manager = manager;
@@ -22,6 +23,7 @@
         public void Exit()
         {
             _manager.SetCurrentDrink(_createDrink.drinkManager.CreatedDrink);
+            _manager.DrinkMenu.CloseAndDisable();
             // TODO: Disable ingredients listeners
             // Ease out the create drink UI
             // Customer move is handled by the next state

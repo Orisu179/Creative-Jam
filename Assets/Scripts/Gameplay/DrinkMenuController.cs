@@ -1,40 +1,54 @@
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 
+// DrinkMenu itself stays active in the scene at all times now.
+// GameManager controls access via EnableButton()/CloseAndDisable() on
+// CreateDrinkState.Enter()/Exit() instead of toggling this whole GameObject.
 public class DrinkMenuController : MonoBehaviour
 {
-    [Header("Menu Root")]
-    [Tooltip("The parent panel containing the whole menu (background + pages). Needs a CanvasGroup component.")]
-    [SerializeField] private GameObject menuRoot;
-    [SerializeField] private float fadeDuration = 0.3f;
+    [Header("Content")]
+    [Tooltip("The container holding the pages + nav arrows. Shown/hidden on open/close.")]
+    [SerializeField] private GameObject menuContent;
+
+    [Header("Open/Close Button")]
+    [Tooltip("The MouseDownButton component on the open/close menu object. Disabling this script stops OnMouseDown from firing at all.")]
+    [SerializeField] private MouseDownButton openCloseButton;
 
     [Header("Pages")]
-    [Tooltip("Drag in all 6 page GameObjects, in order.")]
+    [Tooltip("Drag in all page GameObjects, in order.")]
     [SerializeField] private List<GameObject> pages = new List<GameObject>();
 
-    private CanvasGroup menuCanvasGroup;
     private int currentPageIndex;
     private bool isOpen;
 
     private void Awake()
     {
-        menuCanvasGroup = menuRoot.GetComponent<CanvasGroup>();
-        if (menuCanvasGroup == null)
-        {
-            menuCanvasGroup = menuRoot.AddComponent<CanvasGroup>();
-        }
-
-        // Start closed and on page 0, with no animation.
         SetPageInstant(0);
-        menuCanvasGroup.alpha = 0f;
-        menuCanvasGroup.interactable = false;
-        menuCanvasGroup.blocksRaycasts = false;
-        menuRoot.SetActive(false);
+        menuContent.SetActive(false);
+        DisableButton();
         isOpen = false;
     }
 
-    // Wire this to the "open/close menu" button's OnClick().
+    // Call on CreateDrinkState.Enter().
+    public void EnableButton()
+    {
+        openCloseButton.enabled = true;
+    }
+
+    // Call on CreateDrinkState.Exit(): hides the menu AND locks the button.
+    public void CloseAndDisable()
+    {
+        CloseMenu();
+        SetPageInstant(0);
+        DisableButton();
+    }
+
+    private void DisableButton()
+    {
+        openCloseButton.enabled = false;
+    }
+
+    // Wired to the open/close button's OnClick.
     public void ToggleMenu()
     {
         if (isOpen)
@@ -50,28 +64,14 @@ public class DrinkMenuController : MonoBehaviour
     public void OpenMenu()
     {
         if (isOpen) return;
-
-        menuRoot.SetActive(true);
-        SetPageInstant(0);
-
-        menuCanvasGroup.DOKill();
-        menuCanvasGroup.DOFade(1f, fadeDuration).SetEase(Ease.OutQuad);
-        menuCanvasGroup.interactable = true;
-        menuCanvasGroup.blocksRaycasts = true;
+        menuContent.SetActive(true);
         isOpen = true;
     }
 
     public void CloseMenu()
     {
         if (!isOpen) return;
-
-        menuCanvasGroup.DOKill();
-        menuCanvasGroup.DOFade(0f, fadeDuration)
-            .SetEase(Ease.InQuad)
-            .OnComplete(() => menuRoot.SetActive(false));
-
-        menuCanvasGroup.interactable = false;
-        menuCanvasGroup.blocksRaycasts = false;
+        menuContent.SetActive(false);
         isOpen = false;
     }
 
