@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public struct Day 
+public struct Day
 {
     public int SatisfactionLevel;
     public List<Drink> OrderList;
-    public Drink? currentDrink;
-    public Customer currentCustomer;
+    public Drink? CurrentDrink;
+    public Customer CurrentCustomer;
 }
