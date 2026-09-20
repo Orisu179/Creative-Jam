@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DrinkMenuController drinkMenu;
     [SerializeField] private BrewingSpriteManager brewingSpriteManager;
     [SerializeField] private FailLoopMenu failLoopMenu;
+    [SerializeField] private SatisfactionBar satisfactionBar;
     public DrinkMenuController DrinkMenu => drinkMenu;
 
     // States
@@ -164,6 +165,7 @@ public class GameManager : MonoBehaviour
         Day curDay = CurDay;
         curDay.SatisfactionLevel = level;
         CurDay = curDay;
+        satisfactionBar?.SetScore(level);
     }
 
     public void AddDrink(Drink? drink)
@@ -179,5 +181,16 @@ public class GameManager : MonoBehaviour
     public void SetFailMenuList(List<Drink> drinks)
     {
         failLoopMenu.SetDrinks(drinks);
+    }
+    // Add this to your existing GameManager class.
+
+    public string DrinkHistoryToString()
+    {
+        return string.Join(", ", CurDay.OrderList);
+    }
+
+    public void PrintDrinkHistory()
+    {
+        Debug.Log($"Drinks served today ({CurDay.OrderList.Count}): {DrinkHistoryToString()}");
     }
 }

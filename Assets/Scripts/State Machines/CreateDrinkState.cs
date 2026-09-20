@@ -21,6 +21,7 @@ namespace State_Machines
 
         public async void Enter()
         {
+            Debug.Log("entering create drink state");
             // Make the drinks interactable
             GlobalFields.Instance.MouseInteractable = true;
             _currentDrink = null;
@@ -37,6 +38,9 @@ namespace State_Machines
 
             MixingCupArea.OnAnyItemDropped += _createDrink.HandleIngredientDropped;
 
+            // Serving: dragging the finished cup onto a customer fires this.
+            CustomerDropArea.OnAnyCupServed += HandleCupServed;
+
             // Test create drink
             _createDrink.drinkManager.ResetMix();
         }
@@ -49,11 +53,14 @@ namespace State_Machines
             _manager.DrinkMenu.CloseAndDisable();
 
             MixingCupArea.OnAnyItemDropped -= _createDrink.HandleIngredientDropped;
+            CustomerDropArea.OnAnyCupServed -= HandleCupServed;
             // TODO: Disable ingredients listeners
             // Ease out the create drink UI
             Tween fadeOut = _brewingSpriteManager.FadeOut();
             await fadeOut.AsyncWaitForCompletion();
             // Customer move is handled by the next state
+            Debug.Log("exiting create drink state");
+
         }
 
         public void HandleDrinkCreated(Drink? drink)
@@ -66,10 +73,22 @@ namespace State_Machines
             Debug.Log($"Drink created: {drink.Value}");
         }
 
-        private async Task HandleFeedDrink(Drink? drink)
+        private async void HandleCupServed(CustomerDropArea area, Drink drink)
         {
-            _manager.SetCurrentDrink(drink);
-            _manager.AddDrink(drink);
+            await HandleFeedDrink();
+        }
+
+        private async Task HandleFeedDrink() // save current drink
+        {
+            if (_currentDrink == null)
+            {
+                Debug.LogWarning("HandleFeedDrink called with no drink prepared.");
+                return;
+            }
+
+            Debug.Log($"served the following drink: {_currentDrink.Value} to move to the next state");
+            _manager.SetCurrentDrink(_currentDrink.Value);
+            _manager.AddDrink(_currentDrink.Value);
             await _createDrink.RemoveDrink();
             _manager._stateMachine.ChangeState(_manager._serveDrinkState);
         }

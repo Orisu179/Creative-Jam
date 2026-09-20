@@ -9,7 +9,7 @@ public class FailLoopMenu : MonoBehaviour
 {
     public void SetActive(bool active)
     {
-        gameObject.SetActive(active); 
+        gameObject.SetActive(active);
     }
 
     public void SetRemainingLoop(uint remainingLoops)
