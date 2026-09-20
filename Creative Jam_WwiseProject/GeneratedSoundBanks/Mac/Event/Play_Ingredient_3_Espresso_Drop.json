@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1198850248",
+    "Type": "Event",
+    "GUID": "{1ADD5780-AFA5-4138-B90B-A9C6EB8AC93E}",
+    "Language": "SFX",
+    "Hash": "{5D3C764C-386A-8452-88D4-195E92FCD24E}",
+    "ObjectPath": "Play_Ingredient_3_Espresso_Drop",
+    "ShortName": "Play_Ingredient_3_Espresso_Drop",
+    "Path": "Event/Play_Ingredient_3_Espresso_Drop.bnk",
+    "Media": [
+     {
+      "Id": "1016066887",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_3_Espresso_Drop.wav",
+      "Path": "Media/1016066887.wem",
+      "CachePath": "59/{59738A9A-BB91-D7C8-BDF2-87585BB46B58}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1198850248",
+      "Name": "Play_Ingredient_3_Espresso_Drop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_3_Espresso_Drop",
+      "GUID": "{1ADD5780-AFA5-4138-B90B-A9C6EB8AC93E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.10875",
+      "DurationMax": "0.10875",
+      "MediaRefs": [
+       {
+        "Id": "1016066887"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{90761A82-392E-4FBF-8854-F03F33C904B7}"
+ }
+}

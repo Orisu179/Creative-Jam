@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2569580911",
+    "Type": "Event",
+    "GUID": "{3EE4D5B2-17A3-4B1C-B294-5382D8E9B749}",
+    "Language": "SFX",
+    "Hash": "{F3EC3EB6-317C-EE23-5ABE-B5F4618EC38B}",
+    "ObjectPath": "Play_MenuButton",
+    "ShortName": "Play_MenuButton",
+    "Path": "Event/Play_MenuButton.bnk",
+    "Media": [
+     {
+      "Id": "62472305",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "MenuButton.wav",
+      "Path": "Media/62472305.wem",
+      "CachePath": "7A/{7A3D7DBD-28CA-6AA6-188C-7D5AC565F1F6}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2569580911",
+      "Name": "Play_MenuButton",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MenuButton",
+      "GUID": "{3EE4D5B2-17A3-4B1C-B294-5382D8E9B749}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.376",
+      "DurationMax": "1.376",
+      "MediaRefs": [
+       {
+        "Id": "62472305"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0E9D61A7-1531-F994-87DB-F05666585293}"
+ }
+}

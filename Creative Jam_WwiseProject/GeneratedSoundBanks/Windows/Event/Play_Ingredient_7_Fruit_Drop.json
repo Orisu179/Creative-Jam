@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2060457838",
+    "Type": "Event",
+    "GUID": "{E8BB1E73-3C22-44E0-B951-184D27F006BB}",
+    "Language": "SFX",
+    "Hash": "{EAAEF9D0-DB7A-BB20-8AC1-BAF3649D70AF}",
+    "ObjectPath": "Play_Ingredient_7_Fruit_Drop",
+    "ShortName": "Play_Ingredient_7_Fruit_Drop",
+    "Path": "Event/Play_Ingredient_7_Fruit_Drop.bnk",
+    "Media": [
+     {
+      "Id": "336901303",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_7_Fruit_Drop.wav",
+      "Path": "Media/336901303.wem",
+      "CachePath": "A6/{A668B9AD-BE48-7D72-8127-3E1E5639193C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2060457838",
+      "Name": "Play_Ingredient_7_Fruit_Drop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_7_Fruit_Drop",
+      "GUID": "{E8BB1E73-3C22-44E0-B951-184D27F006BB}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.69",
+      "DurationMax": "0.69",
+      "MediaRefs": [
+       {
+        "Id": "336901303"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BCCB8660-D95E-EB47-E0AF-8C9D8EF0F608}"
+ }
+}

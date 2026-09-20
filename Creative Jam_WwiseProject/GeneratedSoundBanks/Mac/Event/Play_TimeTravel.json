@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2398522065",
+    "Type": "Event",
+    "GUID": "{32739572-BB54-4686-907C-0FEAD75AF291}",
+    "Language": "SFX",
+    "Hash": "{6E9CA80E-48F0-22A1-7698-EE91F057B29F}",
+    "ObjectPath": "Play_TimeTravel",
+    "ShortName": "Play_TimeTravel",
+    "Path": "Event/Play_TimeTravel.bnk",
+    "Media": [
+     {
+      "Id": "258879552",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "TimeTravel.wav",
+      "Path": "Media/258879552.wem",
+      "CachePath": "AC/{AC3D4E27-1E2D-7C67-8902-0641EA31BF6F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2398522065",
+      "Name": "Play_TimeTravel",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_TimeTravel",
+      "GUID": "{32739572-BB54-4686-907C-0FEAD75AF291}",
+      "DurationType": "OneShot",
+      "DurationMin": "6.88",
+      "DurationMax": "6.88",
+      "MediaRefs": [
+       {
+        "Id": "258879552"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3E063A56-41D7-16D0-0442-4C38FF0B9E2D}"
+ }
+}

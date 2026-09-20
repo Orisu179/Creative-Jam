@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1831554427",
+    "Type": "Event",
+    "GUID": "{4390915C-835F-483C-B209-F637B00DFDDE}",
+    "Language": "SFX",
+    "Hash": "{12C11971-65BF-4597-F5AA-27E5D51C8330}",
+    "ObjectPath": "Play_Ingredient_4_Tea_Drop",
+    "ShortName": "Play_Ingredient_4_Tea_Drop",
+    "Path": "Event/Play_Ingredient_4_Tea_Drop.bnk",
+    "Media": [
+     {
+      "Id": "40193852",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_4_Tea_Drop.wav",
+      "Path": "Media/40193852.wem",
+      "CachePath": "AD/{AD28AA69-9453-5E27-A910-F86CC47D3284}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1831554427",
+      "Name": "Play_Ingredient_4_Tea_Drop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_4_Tea_Drop",
+      "GUID": "{4390915C-835F-483C-B209-F637B00DFDDE}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.078125",
+      "DurationMax": "1.078125",
+      "MediaRefs": [
+       {
+        "Id": "40193852"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{20B46129-2000-AEE1-7AD4-F8C9E198D8F5}"
+ }
+}

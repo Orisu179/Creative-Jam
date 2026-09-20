@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2430917834",
+    "Type": "Event",
+    "GUID": "{447938B9-A221-4554-9CD3-A8BF098AE790}",
+    "Language": "SFX",
+    "Hash": "{30AC67DA-53B2-8BBB-A91A-980227633511}",
+    "ObjectPath": "Play_RewindLoopsPlaylist",
+    "ShortName": "Play_RewindLoopsPlaylist",
+    "Path": "Event/Play_RewindLoopsPlaylist.bnk",
+    "Media": [
+     {
+      "Id": "734453169",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RewindLoops_120bpm.wav",
+      "Path": "Media/734453169.wem",
+      "CachePath": "62/{62DB28BA-55BD-16B5-C6F8-D02FE4D27880}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2430917834",
+      "Name": "Play_RewindLoopsPlaylist",
+      "ObjectPath": "\\Events\\Music\\Play_RewindLoopsPlaylist",
+      "GUID": "{447938B9-A221-4554-9CD3-A8BF098AE790}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "734453169"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A202225D-CBDB-2A8C-B7DF-B965E32CF23B}"
+ }
+}

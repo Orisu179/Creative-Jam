@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1919561887",
+    "Type": "Event",
+    "GUID": "{3AF6ABB5-8536-4043-B3CD-B08C3C7E55C5}",
+    "Language": "SFX",
+    "Hash": "{8511BABE-B952-5ED9-62A4-3211A9E824C9}",
+    "ObjectPath": "Play_Ingredient_8_Flower_Pickup",
+    "ShortName": "Play_Ingredient_8_Flower_Pickup",
+    "Path": "Event/Play_Ingredient_8_Flower_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "646913442",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_8_Flower_Pickup.wav",
+      "Path": "Media/646913442.wem",
+      "CachePath": "5B/{5BBA0811-29F8-67BE-E392-0CC0A8906E13}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1919561887",
+      "Name": "Play_Ingredient_8_Flower_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_8_Flower_Pickup",
+      "GUID": "{3AF6ABB5-8536-4043-B3CD-B08C3C7E55C5}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.92",
+      "DurationMax": "0.92",
+      "MediaRefs": [
+       {
+        "Id": "646913442"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{14D16CE3-4018-E14E-C951-BF68E73450F5}"
+ }
+}
