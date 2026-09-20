@@ -17,10 +17,8 @@ public class ClickAnywhereButton : MonoBehaviour
     public void CompleteDialogue()
     {
         Debug.Log("ClickAnywhereButton: OnMouseDown called");
-        if (!isCooldown)
-        {
-            StartCoroutine(CooldownRoutine());
-        }
+        if (isCooldown) return;
+        StartCoroutine(CooldownRoutine());
         textBoxManager.CompleteDialogue();
     }
     private IEnumerator CooldownRoutine()
