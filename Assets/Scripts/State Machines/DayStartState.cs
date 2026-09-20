@@ -1,20 +1,26 @@
-﻿namespace State_Machines
+﻿using System.Collections.Generic;
+
+namespace State_Machines
 {
     public class DayStartState : IState
     {
+        private readonly GameManager _manager;
         public DayStartState(GameManager manager)
         {
-            
+            _manager = manager;
         }
         
         public void Enter()
         {
-            throw new System.NotImplementedException();
+           _manager.IncrementLoop();
+           _manager.ResetCustomer();
+           var counter = _manager.CustomerCounter;
+           var curCustomer = _manager.Customers[counter];
+           _manager.CurDay = new Day{ currentCustomer = curCustomer, currentDrink = null, SatisfactionLevel =  0, OrderList =  new List<Drink>()};
         }
 
         public void Exit()
         {
-            throw new System.NotImplementedException();
         }
     }
 }

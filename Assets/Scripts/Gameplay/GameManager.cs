@@ -11,12 +11,13 @@ using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
-    // private Day curDay;
     private Ingredient? _poisonedIngredient = null;
     private uint _curLoop;
-    private int _customerCounter;
-    private List<Customer> _customers;
+    public int CustomerCounter { get; private set; }
+    public List<Customer> Customers { get; private set; }
     private CustomerSpriteManager _customerSpriteManager;
+    public Day CurDay { get; set; }
+    
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
@@ -40,10 +41,10 @@ public class GameManager : MonoBehaviour
 
         _stateMachine = new StateMachine();
         _customerSpriteManager = GetComponentInChildren<CustomerSpriteManager>();
-        var allIngredient = (Ingredient[])Enum.GetValues(typeof(Ingredient));
-        _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
-        _customers = new List<Customer>();
-        GenerateCustomers();
+        // var allIngredient = (Ingredient[])Enum.GetValues(typeof(Ingredient));
+        // _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
+        Customers = new List<Customer>();
+        CustomerCounter = 0;
         
         
         _initState = new InitState(this);
@@ -60,11 +61,11 @@ public class GameManager : MonoBehaviour
         // MixingCupArea.OnAnyItemDropped += HandleDrop;
 
         Sequence customerSequence = DOTween.Sequence();
-        _customerSpriteManager.SetSprite(_customers[0].Species, _customers[0].Accessory);
+        _customerSpriteManager.SetSprite(Customers[0].Species, Customers[0].Accessory);
         customerSequence.Append(_customerSpriteManager.FadeIn());
         customerSequence.Append(_customerSpriteManager.FadeOut()).OnComplete(() =>
         {
-            _customerSpriteManager.SetSprite(_customers[1].Species, _customers[1].Accessory);
+            _customerSpriteManager.SetSprite(Customers[1].Species, Customers[1].Accessory);
             customerSequence.Append(_customerSpriteManager.FadeIn());
         });
     }
@@ -81,14 +82,15 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void GenerateCustomers()
+    // Used in Init State
+    public void GenerateCustomers()
     {
         for (var i = 0; i < customerSize; i++)
         {
             (OwlSpecies species, Accessory accessory) = CustomerSpriteManager.GetRandomOwlSpeciesAndAccessory();
             var curCustomer = new Customer("", species, accessory);
             curCustomer.Dialogue = DialogueGenerator.GenerateDialogue(curCustomer);
-            _customers.Add(curCustomer);
+            Customers.Add(curCustomer);
         }
     }
 
@@ -131,5 +133,27 @@ public class GameManager : MonoBehaviour
             score--;
         }
         return score;
+    }
+
+    // InitState
+    public void ResetLoop()
+    {
+        _curLoop = 0;
+    }
+
+    // Day Start State
+    public void IncrementLoop()
+    {
+        _curLoop++;
+    }
+
+    public void IncrementCounter()
+    {
+        CustomerCounter++;
+    }
+
+    public void ResetCustomer()
+    {
+        CustomerCounter = 0;
     }
 }

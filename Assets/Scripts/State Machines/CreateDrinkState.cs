@@ -4,7 +4,6 @@
     {
         public CreateDrinkState(GameManager manager)
         {
-            
         }
         
         public void Enter()
