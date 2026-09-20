@@ -1,21 +1,22 @@
-﻿namespace State_Machines
+﻿using UnityEngine.SceneManagement;
+
+namespace State_Machines
 {
     public class LoopFailState : IState
     {
         private readonly GameManager _manager;
         private readonly IState _dayStartState;
-        private readonly IState _gameOverState;
-        public LoopFailState(GameManager manager, IState dayStartState, IState gameOverState)
+        public LoopFailState(GameManager manager, IState dayStartState)
         {
             _manager = manager;
             _dayStartState = dayStartState;
-            _gameOverState = gameOverState;
         }
 
         public void Enter()
         {
             // 1. Show UI for loop fail
             // UI.ShowLoopFail(_manager.NextLoop);
+            HandleContinue();
         }
 
         public void Exit()
@@ -27,7 +28,9 @@
             if (_manager.CurLoop >= _manager.GetMaxLoop())
             {
                 // game overscreen
-                _manager._stateMachine.ChangeState(_gameOverState);
+                // update global state
+                SceneManager.LoadScene("GameOverScene");
+                return;
             }
             // Restart
             _manager.IncrementLoop();

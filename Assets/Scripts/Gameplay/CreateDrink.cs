@@ -3,7 +3,7 @@ using Gameplay;
 
 public class CreateDrink : MonoBehaviour
 {
-    private DrinkManager drinkManager;
+    public DrinkManager drinkManager;
 
     [SerializeField] private SpriteRenderer cupSprite;
     [SerializeField] private MixingCupArea mixingCupArea;

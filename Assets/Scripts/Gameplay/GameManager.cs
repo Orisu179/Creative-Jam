@@ -11,7 +11,7 @@ using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
-    private Ingredient? _poisonedIngredient = null;
+    public Ingredient? PoisonedIngredient = null;
     public uint CurLoop { get; private set; }
     public int CustomerCounter { get; private set; }
     public List<Customer> Customers { get; private set; }
@@ -22,16 +22,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
     [SerializeField] private CreateDrink createDrink;
+    [SerializeField] private DrinkMenuController drinkMenu;
+ 
+    public DrinkMenuController DrinkMenu => drinkMenu;
 
     // States
     public StateMachine _stateMachine;
     public InitState _initState { get; set; }
-    public CreateDrinkState _createDrinkState { get; set; }
+    private CreateDrinkState _createDrinkState { get; set; }
     private CustomerInteractState _customerInteractState;
     public DayStartState _dayStartState { get; set; }
-    private LoopFailState _loopFailedState { get; set; }
+    private LoopFailState _loopFailedState;
     public ServeDrinkState _serveDrinkState { get; set; }
-    public WinState _winState { get; set; }
 
 
 
@@ -42,18 +44,16 @@ public class GameManager : MonoBehaviour
         _stateMachine = new StateMachine();
         _customerSpriteManager = GetComponentInChildren<CustomerSpriteManager>();
         // var allIngredient = (Ingredient[])Enum.GetValues(typeof(Ingredient));
-        // _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
+        // PoisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
         Customers = new List<Customer>();
         CustomerCounter = 0;
-
 
         _initState = new InitState(this);
         _createDrinkState = new CreateDrinkState(this, createDrink);
         _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _initState);
         _dayStartState = new DayStartState(this, _customerInteractState);
-        _loopFailedState = new LoopFailState(this, _dayStartState, new GameOverState(this));
-        _serveDrinkState = new ServeDrinkState(this,_customerSpriteManager);
-        _winState = new WinState(this);
+        _loopFailedState = new LoopFailState(this, _dayStartState);
+        _serveDrinkState = new ServeDrinkState(this, _customerSpriteManager, _loopFailedState, _customerInteractState);
 
 
         _stateMachine.Initialize(_initState);
@@ -69,14 +69,14 @@ public class GameManager : MonoBehaviour
             (OwlSpecies species, Accessory accessory) = CustomerSpriteManager.GetRandomOwlSpeciesAndAccessory();
             var curCustomer = new Customer("", species, accessory);
             curCustomer.Dialogue = DialogueGenerator.GenerateDialogue(curCustomer);
-            
+
             Customers.Add(curCustomer);
         }
     }
 
     private void HandleDrop(MixingCupArea area, Ingredient ingredient)
     {
-        if (ingredient == _poisonedIngredient)
+        if (ingredient == PoisonedIngredient)
         {
             Debug.Log("This is poisoned!");
             return;
@@ -129,9 +129,15 @@ public class GameManager : MonoBehaviour
         CurLoop++;
     }
 
-    public void IncrementCounter()
+    public void IncrementCustomer()
     {
         CustomerCounter++;
+        if (CustomerCounter < Customers.Count)
+        {
+            Day curDay = CurDay;
+            curDay.CurrentCustomer = Customers[CustomerCounter];
+            CurDay = curDay;
+        }
     }
 
     public void ResetCustomer()
@@ -142,5 +148,24 @@ public class GameManager : MonoBehaviour
     public uint GetMaxLoop()
     {
         return maxLoop;
+    }
+
+    public bool IsLastCustomer()
+    {
+        return CustomerCounter >= Customers.Count - 1;
+    }
+
+    public void SetCurrentDrink(Drink? drink)
+    {
+        Day curDay = CurDay;
+        curDay.CurrentDrink = drink;
+        CurDay = curDay;
+    }
+
+    public void SetSatisfactionLevel(int level)
+    {
+        Day curDay = CurDay;
+        curDay.SatisfactionLevel = level;
+        CurDay = curDay;
     }
 }
