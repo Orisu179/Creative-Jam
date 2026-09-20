@@ -52,6 +52,7 @@ public class DrinkMenuController : MonoBehaviour
     // Wired to the open/close button's OnClick.
     public void ToggleMenu()
     {
+        Debug.Log("DrinkMenuController: ToggleMenu called");
         if (isOpen)
         {
             CloseMenu();

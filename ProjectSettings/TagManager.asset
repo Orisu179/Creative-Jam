@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Drop Area
-  - 
+  - Menu
   - 
   - 
   - 
@@ -58,3 +58,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - Menu
