@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	2114724127	Play_Ingredient_1			\Default Work Unit\Play_Ingredient_1	
-

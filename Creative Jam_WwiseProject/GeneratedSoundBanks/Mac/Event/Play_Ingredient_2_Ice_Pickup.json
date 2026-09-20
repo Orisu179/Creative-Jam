@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1880633403",
+    "Type": "Event",
+    "GUID": "{A882486C-C7B3-4E6F-94D2-B25F1FDAF41B}",
+    "Language": "SFX",
+    "Hash": "{35D65CC6-84D9-9524-2926-455699B142EF}",
+    "ObjectPath": "Play_Ingredient_2_Ice_Pickup",
+    "ShortName": "Play_Ingredient_2_Ice_Pickup",
+    "Path": "Event/Play_Ingredient_2_Ice_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "473410349",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_2_Ice_Pickup.wav",
+      "Path": "Media/473410349.wem",
+      "CachePath": "35/{351E611A-8C10-01B0-621C-B0CF79BE2E98}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1880633403",
+      "Name": "Play_Ingredient_2_Ice_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_2_Ice_Pickup",
+      "GUID": "{A882486C-C7B3-4E6F-94D2-B25F1FDAF41B}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1499896",
+      "DurationMax": "1.1499896",
+      "MediaRefs": [
+       {
+        "Id": "473410349"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8AE0CEBB-D31A-030C-6873-9D2179B4FAA6}"
+ }
+}

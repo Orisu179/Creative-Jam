@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1127946520	Play_Ingredient_4_Tea_Pickup			\Default Work Unit\Play_Ingredient_4_Tea_Pickup	
+

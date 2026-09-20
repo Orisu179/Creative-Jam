@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2060457838	Play_Ingredient_7_Fruit_Drop			\Default Work Unit\Play_Ingredient_7_Fruit_Drop	
+

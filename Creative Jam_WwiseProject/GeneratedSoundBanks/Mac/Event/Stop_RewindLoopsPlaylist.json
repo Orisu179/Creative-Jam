@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3815514664",
+    "Type": "Event",
+    "GUID": "{1233F0A2-6DD5-4321-BAAA-FFC35D1C0E34}",
+    "Language": "SFX",
+    "Hash": "{133C432B-6BFF-5C59-FB85-F09E57166720}",
+    "ObjectPath": "Stop_RewindLoopsPlaylist",
+    "ShortName": "Stop_RewindLoopsPlaylist",
+    "Path": "Event/Stop_RewindLoopsPlaylist.bnk",
+    "Events": [
+     {
+      "Id": "3815514664",
+      "Name": "Stop_RewindLoopsPlaylist",
+      "ObjectPath": "\\Events\\Music\\Stop_RewindLoopsPlaylist",
+      "GUID": "{1233F0A2-6DD5-4321-BAAA-FFC35D1C0E34}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D5E3CA2E-2659-B104-595A-B0A54104A43C}"
+ }
+}

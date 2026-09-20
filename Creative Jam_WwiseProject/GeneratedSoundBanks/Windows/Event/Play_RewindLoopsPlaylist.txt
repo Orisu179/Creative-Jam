@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2430917834	Play_RewindLoopsPlaylist			\Music\Play_RewindLoopsPlaylist	
+

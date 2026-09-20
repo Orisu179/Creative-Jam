@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1880633403	Play_Ingredient_2_Ice_Pickup			\Default Work Unit\Play_Ingredient_2_Ice_Pickup	
+

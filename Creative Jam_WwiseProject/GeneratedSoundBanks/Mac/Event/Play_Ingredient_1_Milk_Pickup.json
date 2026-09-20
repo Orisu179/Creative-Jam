@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3229503566",
+    "Type": "Event",
+    "GUID": "{7D8F00ED-89CC-4D45-8B95-0E9120412D2F}",
+    "Language": "SFX",
+    "Hash": "{B0B542B0-3F4C-9676-789B-9B2EEE3C122C}",
+    "ObjectPath": "Play_Ingredient_1_Milk_Pickup",
+    "ShortName": "Play_Ingredient_1_Milk_Pickup",
+    "Path": "Event/Play_Ingredient_1_Milk_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "483641292",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_1_Milk_Pickup.wav",
+      "Path": "Media/483641292.wem",
+      "CachePath": "68/{68E8417A-AA0B-A96D-DF23-1F3CD030EFC9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3229503566",
+      "Name": "Play_Ingredient_1_Milk_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_1_Milk_Pickup",
+      "GUID": "{7D8F00ED-89CC-4D45-8B95-0E9120412D2F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.29427084",
+      "DurationMax": "0.29427084",
+      "MediaRefs": [
+       {
+        "Id": "483641292"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CAF5ADD6-835A-F95B-AEBF-0DE2BFAE51E0}"
+ }
+}
