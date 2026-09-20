@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Threading.Tasks;
+using DG.Tweening;
 
 namespace State_Machines
 {
@@ -8,17 +9,22 @@ namespace State_Machines
         private CreateDrink _createDrink;
         private Drink? _currentDrink;
         private GameManager _manager;
+        private BrewingSpriteManager _brewingSpriteManager;
 
-        public CreateDrinkState(GameManager manager, CreateDrink drink)
+        public CreateDrinkState(GameManager manager, CreateDrink drink, BrewingSpriteManager brewingSpriteManager)
         {
             _manager = manager;
             _createDrink = drink;
+            _brewingSpriteManager = brewingSpriteManager;
         }
 
         public async void Enter()
         {
             _currentDrink = null;
             // 1. Fade in the create drink UI
+            Tween fadeIn = _brewingSpriteManager.FadeIn();
+            await fadeIn.AsyncWaitForCompletion();
+
             // TODO: Add drink UI sprite fade in and await
 
             // 2. Enable ingredients listeners
@@ -42,6 +48,8 @@ namespace State_Machines
             _createDrink.RemoveDrink();
             // TODO: Disable ingredients listeners
             // Ease out the create drink UI
+            Tween fadeOut = _brewingSpriteManager.FadeOut();
+            await fadeOut.AsyncWaitForCompletion();
             // Customer move is handled by the next state
         }
 

@@ -33,7 +33,7 @@ namespace State_Machines
             _manager.SetSatisfactionLevel(_manager.CurDay.SatisfactionLevel + score);
 
             // calc dialogue using day.current cust sat
-            // setText(DialogueGenerator.GenerateResponse(score, ), callback);
+            setText(DialogueGenerator.GenerateResponse(score, _manager.CurDay.CurrentCustomer), callback);
             // call toggle
             Debug.Log($"Customer satisfaction level: {_manager.CurDay.SatisfactionLevel}");
 

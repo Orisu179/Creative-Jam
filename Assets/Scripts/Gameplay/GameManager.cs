@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private uint customerSize;
     [SerializeField] private CreateDrink createDrink;
     [SerializeField] private DrinkMenuController drinkMenu;
-
+    [SerializeField] private BrewingSpriteManager brewingSpriteManager;
     public DrinkMenuController DrinkMenu => drinkMenu;
 
     // States
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         CustomerCounter = 0;
 
         _initState = new InitState(this);
-        _createDrinkState = new CreateDrinkState(this, createDrink);
+        _createDrinkState = new CreateDrinkState(this, createDrink, brewingSpriteManager);
         _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
         _dayStartState = new DayStartState(this, _customerInteractState);
         _loopFailedState = new LoopFailState(this, _dayStartState);
