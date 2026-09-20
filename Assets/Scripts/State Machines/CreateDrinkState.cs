@@ -31,6 +31,9 @@ namespace State_Machines
             _createDrink.OnDrinkCreated = HandleDrinkCreated;
             // 3. Enable the menu button
 
+            // enable button to open/close menu
+            _manager.DrinkMenu.EnableButton();
+
             // Test create drink
             _createDrink.drinkManager.ResetMix();
         }
@@ -38,6 +41,9 @@ namespace State_Machines
         public async Task Exit()
         {
             _createDrink.RemoveDrink();
+            // close and disable menu
+            _manager.DrinkMenu.CloseAndDisable();
+
             // TODO: Disable ingredients listeners
             // Ease out the create drink UI
             Tween fadeOut = _brewingSpriteManager.FadeOut();
