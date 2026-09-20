@@ -1,15 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
 using Gameplay;
 using State_Machines;
 using UnityEngine;
-using Random = UnityEngine.Random;
 using DG.Tweening;
-using System.ComponentModel.Design;
-using UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +10,7 @@ public class GameManager : MonoBehaviour
     public uint CurLoop { get; private set; }
     public int CustomerCounter { get; private set; }
     public List<Customer> Customers { get; private set; }
+    public List<Drink> PoisonedDrinks;
     private CustomerSpriteManager _customerSpriteManager;
     public Day CurDay { get; set; }
 
@@ -177,9 +171,9 @@ public class GameManager : MonoBehaviour
         CurDay.OrderList.Add(drink ?? Drink.INVALID);
     }
 
-    public void SetFailMenuText(int remaining_days)
+    public void SetFailMenuText(uint remainingDays)
     {
-        failLoopMenu.SetRemainingLoop(remaining_days);
+        failLoopMenu.SetRemainingLoop(remainingDays);
     }
 
     public void SetFailMenuList(List<Drink> drinks)

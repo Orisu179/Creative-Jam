@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using TMPro;
@@ -11,7 +12,7 @@ public class FailLoopMenu : MonoBehaviour
         gameObject.SetActive(active); 
     }
 
-    public void SetRemainingLoop(int remaining_days)
+    public void SetRemainingLoop(uint remainingLoops)
     {
         // put in the num of remaining days
         // Loops left: {remaining_days}

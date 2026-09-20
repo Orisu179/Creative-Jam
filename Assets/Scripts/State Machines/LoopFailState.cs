@@ -6,8 +6,6 @@ namespace State_Machines
     public class LoopFailState : IState
     {
         private readonly GameManager _manager;
-        // loops remaining: _manager.getmaxloop() - _manager.curloop
-        // list<drink> = _manager.curday.orderlist
         private readonly IState _dayStartState;
         public LoopFailState(GameManager manager, IState dayStartState)
         {
@@ -16,17 +14,16 @@ namespace State_Machines
         }
         public void Enter()
         {
-            // 1. Show UI for loop fail
-            // UI.ShowLoopFail(_manager.NextLoop);
             HandleContinue();
 
             // 2. show fail menu
-            _manager.SetFailMenuText(_manager.getMaxLoop() - _manager.CurLoop);
+            _manager.SetFailMenuText((_manager.GetMaxLoop() - _manager.CurLoop));
             _manager.SetFailMenuList(_manager.CurDay.OrderList);
         }
 
-        public async Task Exit()
+        public Task Exit()
         {
+            return Task.CompletedTask;
         }
 
         private void HandleContinue()
