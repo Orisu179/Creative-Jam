@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8d9943bd08f7d247a2a0e833236e466, type: 3}
-  m_Name: 6
+  m_Name: Soda
   m_EditorClassIdentifier: Assembly-CSharp::IngredientObject
-  IngredientType: 6
+  IngredientType: 0
   playDragEvent:
     idInternal: 0
     valueGuidInternal: 

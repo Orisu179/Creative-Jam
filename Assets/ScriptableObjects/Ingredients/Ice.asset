@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8d9943bd08f7d247a2a0e833236e466, type: 3}
-  m_Name: 3
+  m_Name: Ice
   m_EditorClassIdentifier: Assembly-CSharp::IngredientObject
-  IngredientType: 3
+  IngredientType: 2
   playDragEvent:
     idInternal: 0
     valueGuidInternal: 
@@ -21,4 +21,4 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 21a3bccf165aa4741a56e96afbfcd10c, type: 2}
-  IngredientSprite: {fileID: 8490409112265031632, guid: 27b4438733715d848abada18e7463bce, type: 3}
+  IngredientSprite: {fileID: 4521483149897660195, guid: 3168f0ea27742b74d91901e8f27e3216, type: 3}

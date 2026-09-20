@@ -11,6 +11,7 @@ public class CreateDrink : MonoBehaviour
 
     [SerializeField] private SpriteRenderer cupSprite;
     [SerializeField] private MixingCupArea mixingCupArea;
+    [SerializeField] private SpriteRenderer ShelfSprite;
 
     [Header("Drink Sprites")]
     [SerializeField] private Sprite INVALIDSprite;
