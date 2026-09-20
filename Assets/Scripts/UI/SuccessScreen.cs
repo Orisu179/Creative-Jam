@@ -14,7 +14,7 @@ public class SuccessScreen : MonoBehaviour
 
     public void ToMenuScreen()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("TitleScene");
     }
 
     public void ToStartState()

@@ -12,9 +12,9 @@ public class GameOverMenu : MonoBehaviour
         fired.SetActive(false);
         maxLooped.SetActive(false);
 
-        if(GlobalFields.Instance != null)
+        if (GlobalFields.Instance != null)
         {
-            if(GlobalFields.Instance.State == GlobalFields.GameOverState.Fired)
+            if (GlobalFields.Instance.State == GlobalFields.GameOverState.Fired)
             {
                 maxLooped.SetActive(false);
                 fired.SetActive(true);
@@ -34,7 +34,7 @@ public class GameOverMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void returnToMain()
