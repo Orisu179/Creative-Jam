@@ -18,7 +18,6 @@ public class CustomerSpriteManager : MonoBehaviour
         _accessorySpriteRenderer = _childrenSpriteRenderers[1];
         _accessoryTransform = _accessorySpriteRenderer.transform;
 
-        SetSprite(OwlSpecies.GREATER_HORNED_OWL, Accessory.TIE);
     }
 
     // Update is called once per frame
@@ -41,12 +40,9 @@ public class CustomerSpriteManager : MonoBehaviour
             int yOffset = AccessoryData.AccessoryOffsets[accessory];
             _accessoryTransform.localPosition = new Vector3(0, yOffset, 0);
         }
-
-        FadeOut();
-        // FadeIn();
     }
 
-    public void FadeIn()
+    public Sequence FadeIn()
     {
         _owlSpriteRenderer.color = Color.black;
         _accessorySpriteRenderer.color = Color.black;
@@ -56,15 +52,20 @@ public class CustomerSpriteManager : MonoBehaviour
 
         fadeInSequence.Insert(0.2f, _owlSpriteRenderer.DOColor(Color.white, 0.5f));
         fadeInSequence.Insert(0.2f, _accessorySpriteRenderer.DOColor(Color.white, 0.5f));
+
+        return fadeInSequence;
     }
 
 
-    public void FadeOut()
+    public Sequence FadeOut()
     {
-        _owlSpriteRenderer.DOColor(Color.black, 0.5f);
-        _owlSpriteRenderer.DOFade(0f, 1f);
-        _accessorySpriteRenderer.DOColor(Color.black, 0.5f);
-        _accessorySpriteRenderer.DOFade(0f, 1f);
+        Sequence fadeOutSequence = DOTween.Sequence();
+        fadeOutSequence.Insert(0, _owlSpriteRenderer.DOColor(Color.black, 0.5f));
+        fadeOutSequence.Insert(0, _accessorySpriteRenderer.DOColor(Color.black, 0.5f));
+        fadeOutSequence.Insert(0.5f, _owlSpriteRenderer.DOFade(0f, 1f));
+        fadeOutSequence.Insert(0.5f, _accessorySpriteRenderer.DOFade(0f, 1f));
+
+        return fadeOutSequence;
     }
 
     public static (OwlSpecies species, Accessory accessory) GetRandomOwlSpeciesAndAccessory()
