@@ -116,7 +116,8 @@ public class GameManager : MonoBehaviour
 
         foreach (var cust_pref in d.CurrentCustomer.Preferences)
         {
-            if (DrinkAttributeDatabase.GetDrinkAttributes(d.CurrentDrink).Contains(cust_pref.Key)) // if attributes match
+            
+            if (DrinkAttributeDatabase.GetDrinkAttributes(d.CurrentDrink ?? Drink.invalid).Contains(cust_pref.Key)) // if attributes match
             {
                 score += cust_pref.Value;
             }
@@ -134,7 +135,7 @@ public class GameManager : MonoBehaviour
             score--;
         }
         
-        d.SatisfactionLevel = score;
+        return score;
     }
 
     // InitState
