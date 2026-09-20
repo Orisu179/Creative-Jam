@@ -9,18 +9,19 @@ public class CreateDrink : MonoBehaviour
     [SerializeField] private MixingCupArea mixingCupArea;
 
     [Header("Drink Sprites")]
-    [SerializeField] private Sprite invalidSprite;
-    [SerializeField] private Sprite blueLatteSprite;
-    [SerializeField] private Sprite icedAmericanoSprite;
-    [SerializeField] private Sprite magicMatchaSprite;
-    [SerializeField] private Sprite strawberryLemonadeSprite;
-    [SerializeField] private Sprite hotLatteSprite;
-    [SerializeField] private Sprite dragonfruitTeaSprite;
-    [SerializeField] private Sprite lycheeMilkTeaSprite;
-    [SerializeField] private Sprite magicalTeaSprite;
-    [SerializeField] private Sprite cremeBruleeMilkTeaSprite;
-    [SerializeField] private Sprite rainbowSodaSprite;
-    [SerializeField] private Sprite creamSodaSprite;
+    [SerializeField] private Sprite INVALIDSprite;
+    [SerializeField] private Sprite POUF_SODALICIOUSSprite;
+    [SerializeField] private Sprite WHIMS_TEASprite;
+    [SerializeField] private Sprite HOT_LATTESprite;
+    [SerializeField] private Sprite OVER_THE_STARS_SODASprite;
+    [SerializeField] private Sprite UNDER_THE_ABYSS_MATCHASprite;
+    [SerializeField] private Sprite LYCHEE_MILK_TEASprite;
+    [SerializeField] private Sprite LATTE_BLEUSprite;
+    [SerializeField] private Sprite CREME_BRULEE_MILK_TEASprite;
+    [SerializeField] private Sprite ICED_SODA_AMERICANOSprite;
+    [SerializeField] private Sprite STRAWBERRY_ADESprite;
+
+
 
     private void Awake()
     {
@@ -69,19 +70,16 @@ public class CreateDrink : MonoBehaviour
     {
         cupSprite.sprite = drink switch
         {
-            Drink.invalid=>invalidSprite,
-            Drink.blueLatte=>blueLatteSprite,
-            Drink.icedAmericano=>icedAmericanoSprite,
-            Drink.magicMatcha=>magicMatchaSprite,
-            Drink.strawberryLemonade=>strawberryLemonadeSprite,
-            Drink.hotLatte=>hotLatteSprite,
-            Drink.dragonfruitTea=>dragonfruitTeaSprite,
-            Drink.lycheeMilkTea=>lycheeMilkTeaSprite,
-            Drink.magicalTea=>magicalTeaSprite,
-            Drink.cremeBruleeMilkTea=>cremeBruleeMilkTeaSprite,
-            Drink.rainbowSoda=>rainbowSodaSprite,
-            Drink.creamSoda=>creamSodaSprite,
-
+            Drink.POUF_SODALICIOUS => POUF_SODALICIOUSSprite,
+            Drink.WHIMS_TEA => WHIMS_TEASprite,
+            Drink.HOT_LATTE => HOT_LATTESprite,
+            Drink.OVER_THE_STARS_SODA => OVER_THE_STARS_SODASprite,
+            Drink.UNDER_THE_ABYSS_MATCHA => UNDER_THE_ABYSS_MATCHASprite,
+            Drink.LYCHEE_MILK_TEA => LYCHEE_MILK_TEASprite,
+            Drink.LATTE_BLEU => LATTE_BLEUSprite,
+            Drink.CREME_BRULEE_MILK_TEA => CREME_BRULEE_MILK_TEASprite,
+            Drink.ICED_SODA_AMERICANO => ICED_SODA_AMERICANOSprite,
+            Drink.STRAWBERRY_ADE => STRAWBERRY_ADESprite,
             _ => null
         };
     }

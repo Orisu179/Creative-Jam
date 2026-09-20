@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc81ba4592614f4aa89084f9ca706fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrepareButton
-  cupController: {fileID: 1985936539}
+  cupController: {fileID: 0}
 --- !u!212 &319812348
 SpriteRenderer:
   serializedVersion: 2
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90cb0b64ab98e1408b8d7f7882e1bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetButton
-  cupController: {fileID: 1985936539}
+  cupController: {fileID: 0}
 --- !u!212 &728425554
 SpriteRenderer:
   serializedVersion: 2
@@ -750,6 +750,7 @@ MonoBehaviour:
   placeholder: {fileID: 708934652261806618, guid: b44a8fc783d9af148a804e3deb984ab8, type: 3}
   maxLoop: 3
   customerSize: 10
+  createDrink: {fileID: 1985936539}
 --- !u!4 &803898184
 Transform:
   m_ObjectHideFlags: 0
@@ -765,17 +766,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1264279388 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7556495660217536292, guid: a322b192a885e4742a0fb304689f4d48, type: 3}
-  m_PrefabInstance: {fileID: 5645110185292156599}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4ee02cdc284488588fbe4758db8c72b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.MixingCupArea
 --- !u!1 &1447876882
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1427d9e7839258244bef01607b5acf96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UndoButton
-  cupController: {fileID: 1985936539}
+  cupController: {fileID: 0}
 --- !u!212 &1491881446
 SpriteRenderer:
   serializedVersion: 2
@@ -976,11 +966,53 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.0000015497208}
   m_Radius: 0.1
---- !u!212 &1714815291 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8836411823057537821, guid: a322b192a885e4742a0fb304689f4d48, type: 3}
-  m_PrefabInstance: {fileID: 1748073348}
+--- !u!1 &1696757902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696757904}
+  - component: {fileID: 1696757903}
+  m_Layer: 0
+  m_Name: DayLoop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1696757903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696757902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40dd9d992286453449c131db0969171e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Day
+  SatisfactionLevel: 0
+  OrderList: 
+  placeholder: {fileID: 0}
+--- !u!4 &1696757904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696757902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1748073348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1099,21 +1131,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 658ca75db58c4c54d806b5c78bdb96f2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CupController
-  cupSprite: {fileID: 1714815291}
-  mixingCupArea: {fileID: 1264279388}
-  invalidSprite: {fileID: -4013147163869790203, guid: c0a95ef709f5773429805fcd610f617f, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::CreateDrink
+  cupSprite: {fileID: 0}
+  mixingCupArea: {fileID: 0}
+  invalidSprite: {fileID: 0}
   blueLatteSprite: {fileID: 0}
-  icedAmericanoSprite: {fileID: -7469333554674542713, guid: 5db7d9ef8493dfe429dcc22a9fc2bb59, type: 3}
+  icedAmericanoSprite: {fileID: 0}
   magicMatchaSprite: {fileID: 0}
-  strawberryLemonadeSprite: {fileID: -8748055147059846076, guid: 61dd4295b105a1942a9bc38193374cb2, type: 3}
+  strawberryLemonadeSprite: {fileID: 0}
   hotLatteSprite: {fileID: 0}
   dragonfruitTeaSprite: {fileID: 0}
   lycheeMilkTeaSprite: {fileID: 0}
-  magicalTeaSprite: {fileID: -8748055147059846076, guid: 61dd4295b105a1942a9bc38193374cb2, type: 3}
-  cremeBruleeMilkTeaSprite: {fileID: 7340796897427660173, guid: bac0885067b6be44cb5147fb8708d698, type: 3}
-  rainbowSodaSprite: {fileID: 6721448230392165470, guid: 11edbd296a6643644869e6f0100c13e9, type: 3}
-  creamSodaSprite: {fileID: 1189808279747148941, guid: 48b5bd828c776cf46b9cb195d3c09382, type: 3}
+  magicalTeaSprite: {fileID: 0}
+  cremeBruleeMilkTeaSprite: {fileID: 0}
+  rainbowSodaSprite: {fileID: 0}
+  creamSodaSprite: {fileID: 0}
 --- !u!1 &2016961981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1316,7 @@ SceneRoots:
   - {fileID: 5645110185292156599}
   - {fileID: 1748073348}
   - {fileID: 803898184}
+  - {fileID: 1696757904}
   - {fileID: 1447876885}
   - {fileID: 603863812}
   - {fileID: 2016961985}

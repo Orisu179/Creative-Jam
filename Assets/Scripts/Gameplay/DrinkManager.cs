@@ -96,9 +96,9 @@ public class DrinkManager
         Debug.Log("no recipe matched");
         
 
-        CreatedDrink = Drink.invalid;
+        CreatedDrink = Drink.INVALID;
         Debug.Log(this.CreatedDrink);
-        return Drink.invalid;
+        return Drink.INVALID;
     }
     /////////////////////////////
 }

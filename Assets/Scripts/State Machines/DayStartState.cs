@@ -5,9 +5,11 @@ namespace State_Machines
     public class DayStartState : IState
     {
         private readonly GameManager _manager;
-        public DayStartState(GameManager manager)
+        private readonly IState _nextState;
+        public DayStartState(GameManager manager, IState nextState)
         {
             _manager = manager;
+            _nextState = nextState;
         }
 
         public void Enter()
@@ -16,7 +18,7 @@ namespace State_Machines
             var counter = _manager.CustomerCounter;
             var curCustomer = _manager.Customers[counter];
             _manager.CurDay = new Day { CurrentCustomer = curCustomer, CurrentDrink = null, SatisfactionLevel = 0, OrderList = new List<Drink>() };
-            _manager._stateMachine.ChangeState(_manager._customerInteractState);
+            _manager._stateMachine.ChangeState(_nextState);
         }
 
         public void Exit()

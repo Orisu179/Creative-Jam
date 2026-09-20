@@ -12,7 +12,7 @@ using DG.Tweening;
 public class GameManager : MonoBehaviour
 {
     private Ingredient? _poisonedIngredient = null;
-    private uint _curLoop;
+    public uint CurLoop { get; private set; }
     public int CustomerCounter { get; private set; }
     public List<Customer> Customers { get; private set; }
     private CustomerSpriteManager _customerSpriteManager;
@@ -26,9 +26,9 @@ public class GameManager : MonoBehaviour
     public StateMachine _stateMachine;
     public InitState _initState { get; set; }
     public CreateDrinkState _createDrinkState { get; set; }
-    public CustomerInteractState _customerInteractState { get; set; }
+    private CustomerInteractState _customerInteractState;
     public DayStartState _dayStartState { get; set; }
-    public LoopFailState _loopFailedState { get; set; }
+    private LoopFailState _loopFailedState { get; set; }
     public ServeDrinkState _serveDrinkState { get; set; }
     public WinState _winState { get; set; }
 
@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         DOTween.Init();
-        _curLoop = 0;
 
         _stateMachine = new StateMachine();
         _customerSpriteManager = GetComponentInChildren<CustomerSpriteManager>();
@@ -48,10 +47,10 @@ public class GameManager : MonoBehaviour
 
 
         _initState = new InitState(this);
-        _createDrinkState = new CreateDrinkState(this);
+        _createDrinkState = new CreateDrinkState(this, createDrink);
         _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
-        _dayStartState = new DayStartState(this);
-        _loopFailedState = new LoopFailState(this, _loopFailedState, _dayStartState);
+        _dayStartState = new DayStartState(this, _customerInteractState);
+        _loopFailedState = new LoopFailState(this, _dayStartState, new GameOverState(this));
         _serveDrinkState = new ServeDrinkState(this);
         _winState = new WinState(this);
 
@@ -59,27 +58,6 @@ public class GameManager : MonoBehaviour
         _stateMachine.Initialize(_initState);
 
         // MixingCupArea.OnAnyItemDropped += HandleDrop;
-
-        Sequence customerSequence = DOTween.Sequence();
-        _customerSpriteManager.SetSprite(Customers[0].Species, Customers[0].Accessory);
-        customerSequence.Append(_customerSpriteManager.FadeIn());
-        customerSequence.Append(_customerSpriteManager.FadeOut()).OnComplete(() =>
-        {
-            _customerSpriteManager.SetSprite(Customers[1].Species, Customers[1].Accessory);
-            customerSequence.Append(_customerSpriteManager.FadeIn());
-        });
-    }
-
-    public void NextLoop()
-    {
-        if (_curLoop >= maxLoop)
-        {
-            // game overscreen
-            _stateMachine.ChangeState(new GameOverState(this));
-        }
-        // Restart
-        _curLoop++;
-
     }
 
     // Used in Init State
@@ -116,7 +94,8 @@ public class GameManager : MonoBehaviour
 
         foreach (var cust_pref in d.CurrentCustomer.Preferences)
         {
-            if (DrinkAttributeDatabase.GetDrinkAttributes(d.CurrentDrink).Contains(cust_pref.Key)) // if attributes match
+
+            if (DrinkAttributeDatabase.GetDrinkAttributes(d.CurrentDrink ?? Drink.INVALID).Contains(cust_pref.Key)) // if attributes match
             {
                 score += cust_pref.Value;
             }
@@ -133,20 +112,20 @@ public class GameManager : MonoBehaviour
         {
             score--;
         }
-        
+
         return score;
     }
 
     // InitState
     public void ResetLoop()
     {
-        _curLoop = 0;
+        CurLoop = 0;
     }
 
     // Day Start State
     public void IncrementLoop()
     {
-        _curLoop++;
+        CurLoop++;
     }
 
     public void IncrementCounter()
@@ -157,5 +136,10 @@ public class GameManager : MonoBehaviour
     public void ResetCustomer()
     {
         CustomerCounter = 0;
+    }
+
+    public uint GetMaxLoop()
+    {
+        return maxLoop;
     }
 }
