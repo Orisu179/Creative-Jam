@@ -1764,9 +1764,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 408883991}
-  - component: {fileID: 408883994}
   - component: {fileID: 408883993}
   - component: {fileID: 408883992}
+  - component: {fileID: 408883994}
   m_Layer: 6
   m_Name: ResetButton
   m_TagString: Untagged
@@ -1783,7 +1783,7 @@ Transform:
   m_GameObject: {fileID: 408883990}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.95, y: -4.51, z: 0}
+  m_LocalPosition: {x: -4, y: -4.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1861,8 +1861,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &408883994
-BoxCollider2D:
+--- !u!58 &408883994
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1895,18 +1895,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.46, y: 1.5}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.0077376366}
+  m_Radius: 0.8351121
 --- !u!1 &415812432
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,8 +4228,8 @@ GameObject:
   m_Component:
   - component: {fileID: 673155512}
   - component: {fileID: 673155515}
-  - component: {fileID: 673155514}
   - component: {fileID: 673155513}
+  - component: {fileID: 673155516}
   m_Layer: 6
   m_Name: PrepareButton
   m_TagString: Untagged
@@ -4256,7 +4246,7 @@ Transform:
   m_GameObject: {fileID: 673155511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: -4.53, z: 0}
+  m_LocalPosition: {x: 0, y: -4.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4321,8 +4311,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &673155514
-BoxCollider2D:
+--- !u!114 &673155515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673155511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc81ba4592614f4aa89084f9ca706fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PrepareButton
+  cupController: {fileID: 616334158}
+--- !u!60 &673155516
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4365,21 +4368,49 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &673155515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673155511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bc81ba4592614f4aa89084f9ca706fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PrepareButton
-  cupController: {fileID: 616334158}
+  m_Points:
+    m_Paths:
+    - - {x: 2.405, y: -0.02}
+      - {x: 2.405, y: 0.13}
+      - {x: 2.315, y: 0.22}
+      - {x: 2.155, y: 0.29999998}
+      - {x: 1.665, y: 0.53}
+      - {x: 0.72499996, y: 0.96999997}
+      - {x: 0.575, y: 0.96999997}
+      - {x: 0.525, y: 0.9}
+      - {x: 0.505, y: 0.87}
+      - {x: 0.48499998, y: 0.71}
+      - {x: 0.48499998, y: 0.48}
+      - {x: 0.24499999, y: 0.48}
+      - {x: -0.625, y: 0.45}
+      - {x: -1.285, y: 0.47}
+      - {x: -1.735, y: 0.48999998}
+      - {x: -2.2549999, y: 0.45999998}
+      - {x: -2.375, y: 0.35}
+      - {x: -2.405, y: 0.29}
+      - {x: -2.405, y: -0.48999998}
+      - {x: -2.325, y: -0.59999996}
+      - {x: -2.245, y: -0.61}
+      - {x: -1.5749999, y: -0.62}
+      - {x: -1.0749999, y: -0.61}
+      - {x: -0.45499998, y: -0.59}
+      - {x: 0.035, y: -0.59999996}
+      - {x: 0.405, y: -0.59999996}
+      - {x: 0.505, y: -0.63}
+      - {x: 0.53499997, y: -0.83}
+      - {x: 0.635, y: -0.95}
+      - {x: 0.695, y: -0.96999997}
+      - {x: 0.935, y: -0.96999997}
+      - {x: 1.305, y: -0.74}
+      - {x: 2.165, y: -0.22999999}
+      - {x: 2.315, y: -0.13}
+    - - {x: 0.295, y: -0.90999997}
+      - {x: 0.325, y: -0.94}
+      - {x: 0.355, y: -0.93}
+      - {x: 0.355, y: -0.88}
+      - {x: 0.33499998, y: -0.85999995}
+      - {x: 0.305, y: -0.87}
+  m_UseDelaunayMesh: 1
 --- !u!1 &750449686
 GameObject:
   m_ObjectHideFlags: 0
@@ -19754,9 +19785,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799361635}
-  - component: {fileID: 1799361638}
   - component: {fileID: 1799361637}
   - component: {fileID: 1799361636}
+  - component: {fileID: 1799361638}
   m_Layer: 6
   m_Name: UndoButton
   m_TagString: Untagged
@@ -19773,7 +19804,7 @@ Transform:
   m_GameObject: {fileID: 1799361634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.22, y: -4.55, z: 0}
+  m_LocalPosition: {x: 4, y: -4.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19851,8 +19882,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &1799361638
-BoxCollider2D:
+--- !u!58 &1799361638
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19885,18 +19916,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.55, y: 1.49}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.04045868, y: 0}
+  m_Radius: 0.85640717
 --- !u!212 &1829862296 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8836411823057537821, guid: a322b192a885e4742a0fb304689f4d48, type: 3}
