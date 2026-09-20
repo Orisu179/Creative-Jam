@@ -28,10 +28,11 @@ namespace State_Machines
             await fadeIn.AsyncWaitForCompletion();
 
             // 2. Add the customer dialogue and callback to the dialogue box
+            // Dialogue.SetDialogue(_day.CurrentCustomer.Dialogue, HandleDialogueComplete);
             Debug.Log("Starting chatbox");
             // 3. Toggle the dialogue UI
             TextBoxManager.Instance.SetDialogue(_manager.CurDay.CurrentCustomer.Dialogue, HandleDialogueComplete);
-            await TextBoxManager.Instance.SetDisabled(false, 1.0f);
+            await TextBoxManager.Instance.SetDisabled(false, .0f);
             // Fade in complete
             // That's it, the callback will call transition
         }
@@ -42,7 +43,7 @@ namespace State_Machines
             await TextBoxManager.Instance.SetDisabled(true);
 
             // 2. Translate the customer to the left
-            await _customerSpriteManager.MoveLeft().AsyncWaitForCompletion();
+            _customerSpriteManager.MoveLeft();
         }
 
         private void HandleDialogueComplete()
