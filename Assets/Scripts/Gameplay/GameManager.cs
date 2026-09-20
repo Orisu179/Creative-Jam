@@ -11,7 +11,7 @@ using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
-    private Ingredient? _poisonedIngredient = null;
+    public Ingredient? PoisonedIngredient = null;
     public uint CurLoop { get; private set; }
     public int CustomerCounter { get; private set; }
     public List<Customer> Customers { get; private set; }
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public CreateDrinkState _createDrinkState { get; set; }
     private CustomerInteractState _customerInteractState;
     public DayStartState _dayStartState { get; set; }
-    public LoopFailState _loopFailedState { get; set; }
+    private LoopFailState _loopFailedState;
     public ServeDrinkState _serveDrinkState { get; set; }
 
 
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         _stateMachine = new StateMachine();
         _customerSpriteManager = GetComponentInChildren<CustomerSpriteManager>();
         // var allIngredient = (Ingredient[])Enum.GetValues(typeof(Ingredient));
-        // _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
+        // PoisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
         Customers = new List<Customer>();
         CustomerCounter = 0;
 
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
         _dayStartState = new DayStartState(this, _customerInteractState);
         _loopFailedState = new LoopFailState(this, _dayStartState);
-        _serveDrinkState = new ServeDrinkState(this, _customerSpriteManager);
+        _serveDrinkState = new ServeDrinkState(this, _customerSpriteManager, _loopFailedState, _dayStartState);
 
 
         _stateMachine.Initialize(_initState);
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleDrop(MixingCupArea area, Ingredient ingredient)
     {
-        if (ingredient == _poisonedIngredient)
+        if (ingredient == PoisonedIngredient)
         {
             Debug.Log("This is poisoned!");
             return;
@@ -139,5 +139,10 @@ public class GameManager : MonoBehaviour
     public uint GetMaxLoop()
     {
         return maxLoop;
+    }
+
+    public bool IsLastCustomer()
+    {
+        return CustomerCounter >= Customers.Count - 1;
     }
 }
