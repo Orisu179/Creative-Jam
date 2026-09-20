@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{2D934676-73EA-4702-B574-124B310C9ECA}",
     "Language": "SFX",
-    "Hash": "{D2560AF0-C062-BBE3-307D-9CE050141DB6}",
+    "Hash": "{5B58854D-5EF9-1F73-7821-0BD980E3DD3D}",
     "ObjectPath": "Play_LoopZeroPlaylist",
     "ShortName": "Play_LoopZeroPlaylist",
     "Path": "Event/Play_LoopZeroPlaylist.bnk",
@@ -41,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{E41C6D49-60E1-6783-AB71-BD8D31273A3F}"
+  "FileHash": "{9BC913AB-F581-B4E1-5C21-1A6BA3559F6D}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{2033B2C9-49BB-4420-AFAD-88FB3AA950F2}",
     "Language": "SFX",
-    "Hash": "{D7205311-EF1C-6D84-ECA1-7C5FFCBCC260}",
+    "Hash": "{BC709FA1-52EB-5EF7-BEDC-0646FBDC8ADD}",
     "ObjectPath": "Play_Ingredient_9_Syrup_Pickup",
     "ShortName": "Play_Ingredient_9_Syrup_Pickup",
     "Path": "Event/Play_Ingredient_9_Syrup_Pickup.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{84DE47AA-CF07-F00F-8B48-C56842CF27A1}"
+  "FileHash": "{860D96F6-3017-4A7B-EE99-DE79EE73523A}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C4D2A28F-86F0-4E0E-8A26-D454C64A19F0}",
     "Language": "SFX",
-    "Hash": "{0E835F66-6258-12D6-2545-CF6CDF08EA9B}",
+    "Hash": "{408154A7-1058-4AF0-9BD7-1F7C2362B7A2}",
     "ObjectPath": "Play_Ingredient_9_Syrup_Drop",
     "ShortName": "Play_Ingredient_9_Syrup_Drop",
     "Path": "Event/Play_Ingredient_9_Syrup_Drop.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{1B187E1B-6DC5-C9AF-840A-33F5E8F14DB5}"
+  "FileHash": "{C50A49ED-759A-6CE6-866B-FE36DD7124DE}"
  }
 }
