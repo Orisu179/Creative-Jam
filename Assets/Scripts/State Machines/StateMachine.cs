@@ -19,7 +19,5 @@
             CurrentState = newState;
             CurrentState.Enter();
         }
-
-        public void Update() => CurrentState?.Update();
     }
 }

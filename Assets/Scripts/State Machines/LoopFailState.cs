@@ -1,13 +1,13 @@
 ﻿namespace State_Machines
 {
-    public class LoseState : IState
+    public class LoopFailState : IState
     {
-        public void Enter()
+        public LoopFailState(GameManager manager)
         {
-            throw new System.NotImplementedException();
+            
         }
-
-        public void Update()
+        
+        public void Enter()
         {
             throw new System.NotImplementedException();
         }

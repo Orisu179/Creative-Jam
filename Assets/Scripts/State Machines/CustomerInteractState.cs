@@ -2,12 +2,12 @@
 {
     public class CustomerInteractState: IState
     {
-        public void Enter()
+        public CustomerInteractState(GameManager manager)
         {
-            throw new System.NotImplementedException();
+            
         }
-
-        public void Update()
+        
+        public void Enter()
         {
             throw new System.NotImplementedException();
         }

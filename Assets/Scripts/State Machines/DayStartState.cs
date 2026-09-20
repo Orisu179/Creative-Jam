@@ -1,8 +1,8 @@
 ﻿namespace State_Machines
 {
-    public class WinState : IState
+    public class DayStartState : IState
     {
-        public WinState(GameManager manager)
+        public DayStartState(GameManager manager)
         {
             
         }

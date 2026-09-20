@@ -11,17 +11,26 @@ using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
-    // This should be a singleton
     // private Day curDay;
-    public static GameManager Instance { get; private set; }
     private Ingredient? _poisonedIngredient = null;
     private uint _curLoop;
     private int _customerCounter;
     private List<Customer> _customers;
-    private StateMachine _stateMachine;
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
+    
+    // States
+    public StateMachine _stateMachine;
+    public InitState _initState { get; set; }
+    public CreateDrinkState _createDrinkState { get; set; }
+    public CustomerInteractState _customerInteractState { get; set; }
+    public DayStartState _dayStartState { get; set; }
+    public LoopFailState _loopFailedState { get; set; }
+    public ServeDrinkState _serveDrinkState { get; set; }
+    public WinState _winState { get; set; }
+    
+    
 
     private void Start()
     {
@@ -33,8 +42,20 @@ public class GameManager : MonoBehaviour
         _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
         _customers = new List<Customer>();
         GenerateCustomers();
+        
+        
+        _initState = new InitState(this);
+        _createDrinkState = new CreateDrinkState(this);
+        _customerInteractState = new CustomerInteractState(this);
+        _dayStartState = new DayStartState(this);
+        _loopFailedState = new LoopFailState(this);
+        _serveDrinkState = new ServeDrinkState(this);
+        _winState = new WinState(this);
+        
+        
+        _stateMachine.Initialize(_initState);
 
-        MixingCupArea.OnAnyItemDropped += HandleDrop;
+        // MixingCupArea.OnAnyItemDropped += HandleDrop;
     }
 
     public void NextLoop()
@@ -42,7 +63,7 @@ public class GameManager : MonoBehaviour
         if (_curLoop >= maxLoop)
         {
             // game overscreen
-            _stateMachine.ChangeState(new LoseState());
+            _stateMachine.ChangeState(new GameOverState(this));
         }
         // Restart
         _curLoop++;

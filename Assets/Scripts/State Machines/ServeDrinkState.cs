@@ -2,12 +2,13 @@
 {
     public class ServeDrinkState : IState
     {
-        public void Enter()
+        private GameManager _manager; 
+        public ServeDrinkState(GameManager manager)
         {
-            throw new System.NotImplementedException();
+            _manager = manager;
         }
-
-        public void Update()
+        
+        public void Enter()
         {
             throw new System.NotImplementedException();
         }

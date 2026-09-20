@@ -16,15 +16,15 @@ public class Day : MonoBehaviour
         Debug.Log("--- STARTING SATISFACTION SCORE TESTS ---");
         GameManager test = new GameManager();
 
-        Customer testCustomer = new Customer("",placeholder);
+        // Customer testCustomer = new Customer();
         Debug.Log("Customer PREFERENCES");
-        foreach (var (key, value) in testCustomer.Preferences)
-        {
-            Debug.Log($"Key: {key}, Value: {value}");
-        }
-
-
-        Debug.Log("--- SATISFACTION TESTS COMPLETE ---");
+        // foreach (var (key, value) in testCustomer.Preferences)
+        // {
+        //     Debug.Log($"Key: {key}, Value: {value}");
+        // }
+        //
+        //
+        // Debug.Log("--- SATISFACTION TESTS COMPLETE ---");
     }
 
     

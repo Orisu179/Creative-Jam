@@ -2,12 +2,11 @@
 {
     public class InitState : IState
     {
-        public void Enter()
+        public InitState(GameManager manager)
         {
-            throw new System.NotImplementedException();
+            
         }
-
-        public void Update()
+        public void Enter()
         {
             throw new System.NotImplementedException();
         }

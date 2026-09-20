@@ -64,10 +64,5 @@ public class DialogueGenerator
 
         return result;
     }
-
-    public static string GenerateDialogue(Customer customer)
-    {
-        
-    }
     
 }
