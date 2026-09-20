@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
+    [SerializeField] private CreateDrink createDrink;
 
     // States
     public StateMachine _stateMachine;
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
         _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
         _dayStartState = new DayStartState(this, _customerInteractState);
         _loopFailedState = new LoopFailState(this, _dayStartState, new GameOverState(this));
-        _serveDrinkState = new ServeDrinkState(this);
+        _serveDrinkState = new ServeDrinkState(this,_customerSpriteManager);
         _winState = new WinState(this);
 
 

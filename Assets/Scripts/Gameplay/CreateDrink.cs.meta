@@ -1,2 +1,24 @@
 fileFormatVersion: 2
 guid: 658ca75db58c4c54d806b5c78bdb96f2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cupSprite: {instanceID: 0}
+  - mixingCupArea: {instanceID: 0}
+  - INVALIDSprite: {fileID: 21300000, guid: a988dbbd89b6a534ab4ff15da02148f6, type: 3}
+  - POUF_SODALICIOUSSprite: {fileID: 21300000, guid: 5db7d9ef8493dfe429dcc22a9fc2bb59, type: 3}
+  - WHIMS_TEASprite: {fileID: 21300000, guid: 53525c5071ebc954f88577241f356baf, type: 3}
+  - HOT_LATTESprite: {fileID: 21300000, guid: 11edbd296a6643644869e6f0100c13e9, type: 3}
+  - OVER_THE_STARS_SODASprite: {fileID: 21300000, guid: c0a95ef709f5773429805fcd610f617f, type: 3}
+  - UNDER_THE_ABYSS_MATCHASprite: {fileID: 21300000, guid: 5b0a6ba3ce898a34aac15f306e0a0071, type: 3}
+  - LYCHEE_MILK_TEASprite: {fileID: 21300000, guid: b6ff3d6438e9bd04f9a6366a24bd6fad, type: 3}
+  - LATTE_BLEUSprite: {fileID: 21300000, guid: 9fa632ec8da4e2249afe685caf6be40c, type: 3}
+  - CREME_BRULEE_MILK_TEASprite: {fileID: 21300000, guid: 61dd4295b105a1942a9bc38193374cb2, type: 3}
+  - ICED_SODA_AMERICANOSprite: {fileID: 21300000, guid: bac0885067b6be44cb5147fb8708d698, type: 3}
+  - STRAWBERRY_ADESprite: {fileID: 21300000, guid: 828496cb505be0d4a9cca61f9471a250, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

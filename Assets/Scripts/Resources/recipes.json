@@ -1,52 +1,44 @@
 {
   "recipes": [
     {
-      "drink": "blueLatte",
-      "ingredients": ["Milk", "Ice", "Expresso", "Tea"]
+      "drink": "POUF_SODALICIOUS",
+      "ingredients": ["SODA", "SODA", "SODA", "MILK", "ICE"]
     },
     {
-      "drink": "icedAmericano",
-      "ingredients": ["Milk", "Milk", "Milk", "Milk"]
+      "drink": "WHIMS_TEA",
+      "ingredients": ["TEA", "TEA", "MAGIC_FLOWER", "MAGIC_FLOWER", "FRUIT_SYRUP"]
     },
     {
-      "drink": "magicMatcha",
-      "ingredients": ["Expresso", "Tea", "Sugar", "Sprite"]
+      "drink": "HOT_LATTE",
+      "ingredients": ["COFFEE", "COFFEE", "COFFEE", "MILK", "MILK", "SUGAR"]
     },
     {
-      "drink": "strawberryLemonade",
-      "ingredients": ["Milk", "Sugar", "Milk", "Sugar"]
+      "drink": "OVER_THE_STARS_SODA",
+      "ingredients": ["MAGIC_FLOWER", "MAGIC_FLOWER", "ICE", "SODA", "SODA"]
     },
     {
-      "drink": "hotLatte",
-      "ingredients": ["Milk", "Milk", "Expresso", "Expresso"]
+      "drink": "UNDER_THE_ABYSS_MATCHA",
+      "ingredients": ["TEA", "TEA", "TEA", "MILK", "MILK", "MAGIC_FLOWER"]
     },
     {
-      "drink": "dragonfruitTea",
-      "ingredients": ["Sprite", "FruitMix", "MagicalFlower", "FruitSyrup"]
+      "drink": "LYCHEE_MILK_TEA",
+      "ingredients": ["FRUIT", "FRUIT", "MILK", "TEA", "ICE"]
     },
     {
-      "drink": "lycheeMilkTea",
-      "ingredients": ["FruitMix", "MagicalFlower", "FruitSyrup", "Milk"]
+      "drink": "LATTE_BLEU",
+      "ingredients": ["MAGIC_FLOWER", "MAGIC_FLOWER", "ICE", "ICE", "ICE", "MILK", "MILK", "COFFEE"]
     },
     {
-      "drink": "magicalTea",
-      "ingredients": ["Ice"]
+      "drink": "CREME_BRULEE_MILK_TEA",
+      "ingredients": ["SUGAR", "SUGAR", "SUGAR", "TEA", "MILK"]
     },
     {
-      "drink": "cremeBruleeMilkTea",
-      "ingredients": ["Ice", "Ice"]
+      "drink": "ICED_SODA_AMERICANO",
+      "ingredients": ["COFFEE", "COFFEE", "ICE", "ICE", "SODA"]
     },
     {
-      "drink": "rainbowSoda",
-      "ingredients": ["Ice", "Ice", "Ice", "Ice"]
-    },
-    {
-      "drink": "creamSoda",
-      "ingredients": ["Ice", "Ice", "Ice"]
-    },
-    {
-      "drink": "milkshake",
-      "ingredients": ["Milk", "Milk", "Milk", "Sugar"]
+      "drink": "STRAWBERRY_ADE",
+      "ingredients": ["FRUIT", "FRUIT", "FRUIT", "ICE", "SODA"]
     }
   ]
 }

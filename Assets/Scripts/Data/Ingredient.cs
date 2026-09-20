@@ -2,13 +2,13 @@ using UnityEngine;
 
 public enum Ingredient
 {
-   Milk,
-   Ice,
-   Expresso,
-   Tea,
-   Sugar,
-   Sprite,
-   FruitMix,
-   MagicalFlower,
-   FruitSyrup
+   SODA,
+   MILK,
+   ICE,
+   TEA,
+   MAGIC_FLOWER,
+   FRUIT_SYRUP,
+   COFFEE,
+   SUGAR,
+   FRUIT
 }
