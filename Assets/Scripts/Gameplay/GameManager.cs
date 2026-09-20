@@ -93,13 +93,15 @@ public class GameManager : MonoBehaviour
 
         foreach (var cust_pref in d.CurrentCustomer.Preferences)
         {
-
+            Debug.Log($"Customer preference: {cust_pref.Key}, weight: {cust_pref.Value}");
             if (DrinkAttributeDatabase.GetDrinkAttributes(d.CurrentDrink ?? Drink.INVALID).Contains(cust_pref.Key)) // if attributes match
             {
+                Debug.Log($"Matched attribute: {cust_pref.Key}, weight: {cust_pref.Value}");
                 score += cust_pref.Value;
             }
             else
             {
+                Debug.Log($"Missed attribute: {cust_pref.Key}, weight: {cust_pref.Value}");
                 score -= cust_pref.Value;
                 if (cust_pref.Value >= 3) // if miss a major attribute
                 {

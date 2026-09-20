@@ -103,7 +103,7 @@ namespace State_Machines
             else
             {
                 // go to win state
-                SceneManager.LoadScene("WinScene");
+                SceneManager.LoadScene("SuccessScene");
             }
         }
     }

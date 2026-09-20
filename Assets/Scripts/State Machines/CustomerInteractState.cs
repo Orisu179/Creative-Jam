@@ -32,7 +32,7 @@ namespace State_Machines
             Debug.Log("Starting chatbox");
             // 3. Toggle the dialogue UI
             TextBoxManager.Instance.SetDialogue(_manager.CurDay.CurrentCustomer.Dialogue, HandleDialogueComplete);
-            await TextBoxManager.Instance.SetDisabled(false, .0f);
+            await TextBoxManager.Instance.SetDisabled(false, 0.5f);
             // Fade in complete
             // That's it, the callback will call transition
         }
