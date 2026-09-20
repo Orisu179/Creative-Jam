@@ -70,6 +70,7 @@ public class CreateDrink : MonoBehaviour
     {
         cupSprite.sprite = drink switch
         {
+            Drink.INVALID => INVALIDSprite,
             Drink.POUF_SODALICIOUS => POUF_SODALICIOUSSprite,
             Drink.WHIMS_TEA => WHIMS_TEASprite,
             Drink.HOT_LATTE => HOT_LATTESprite,
