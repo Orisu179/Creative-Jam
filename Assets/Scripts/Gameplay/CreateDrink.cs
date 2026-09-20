@@ -33,17 +33,7 @@ public class CreateDrink : MonoBehaviour
         drinkManager = new DrinkManager();
     }
 
-    private void OnEnable()
-    {
-        MixingCupArea.OnAnyItemDropped += HandleIngredientDropped;
-    }
-
-    private void OnDisable()
-    {
-        MixingCupArea.OnAnyItemDropped -= HandleIngredientDropped;
-    }
-
-    private void HandleIngredientDropped(
+    public void HandleIngredientDropped(
         MixingCupArea cupArea,
         Ingredient ingredient)
     {
@@ -63,6 +53,9 @@ public class CreateDrink : MonoBehaviour
 
     public void PrepareDrink()
     {
+        Color cupColor = cupSprite.color;
+        cupColor.a = 1f;
+        cupSprite.color = cupColor;
         Drink? result = drinkManager.PrepareDrink();
         ChangeDrinkSprite(result);
         OnDrinkCreated?.Invoke(result);

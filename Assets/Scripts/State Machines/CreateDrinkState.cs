@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Threading.Tasks;
 using DG.Tweening;
+using Gameplay;
 
 namespace State_Machines
 {
@@ -27,14 +28,14 @@ namespace State_Machines
             Tween fadeIn = _brewingSpriteManager.FadeIn();
             await fadeIn.AsyncWaitForCompletion();
 
-            // TODO: Add drink UI sprite fade in and await
-
             // 2. Enable ingredients listeners
             _createDrink.OnDrinkCreated = HandleDrinkCreated;
             // 3. Enable the menu button
 
             // enable button to open/close menu
             _manager.DrinkMenu.EnableButton();
+
+            MixingCupArea.OnAnyItemDropped += _createDrink.HandleIngredientDropped;
 
             // Test create drink
             _createDrink.drinkManager.ResetMix();
@@ -47,6 +48,7 @@ namespace State_Machines
             // close and disable menu
             _manager.DrinkMenu.CloseAndDisable();
 
+            MixingCupArea.OnAnyItemDropped -= _createDrink.HandleIngredientDropped;
             // TODO: Disable ingredients listeners
             // Ease out the create drink UI
             Tween fadeOut = _brewingSpriteManager.FadeOut();

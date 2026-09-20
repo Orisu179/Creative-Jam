@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 7a26605e324731b409a16fa98f90becb
+guid: 907cc0912b43f8f409504040321f27f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5583877370679175172
-    second: IMG_2713_0
-  - first:
-      213: -766976912264104819
-    second: IMG_2713_1
+      213: 5958804951127212771
+    second: tea_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -99,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_2713_0
+      name: tea_0
       rect:
         serializedVersion: 2
-        x: 208
-        y: 50
-        width: 512
-        height: 517
+        x: 239
+        y: 137
+        width: 522
+        height: 606
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 408acac42eaed7d40800000000000000
-      internalID: 5583877370679175172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_2713_1
-      rect:
-        serializedVersion: 2
-        x: 902
-        y: 391
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d847299df862b55f0800000000000000
-      internalID: -766976912264104819
+      spriteID: 3e2c6cd288de1b250800000000000000
+      internalID: 5958804951127212771
       vertices: []
       indices: 
       edges: []
@@ -163,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_2713_0: 5583877370679175172
-      IMG_2713_1: -766976912264104819
+      tea_0: 5958804951127212771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
