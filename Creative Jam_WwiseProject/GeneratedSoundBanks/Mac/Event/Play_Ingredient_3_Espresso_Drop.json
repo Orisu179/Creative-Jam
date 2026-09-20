@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1ADD5780-AFA5-4138-B90B-A9C6EB8AC93E}",
     "Language": "SFX",
-    "Hash": "{5D3C764C-386A-8452-88D4-195E92FCD24E}",
+    "Hash": "{D527EBE6-309A-5066-F3B8-9CCEEBC7F520}",
     "ObjectPath": "Play_Ingredient_3_Espresso_Drop",
     "ShortName": "Play_Ingredient_3_Espresso_Drop",
     "Path": "Event/Play_Ingredient_3_Espresso_Drop.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{90761A82-392E-4FBF-8854-F03F33C904B7}"
+  "FileHash": "{A7B27A7E-55FB-A75F-57A5-0096D7484E43}"
  }
 }

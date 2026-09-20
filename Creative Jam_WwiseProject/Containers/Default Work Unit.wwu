@@ -26,6 +26,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_1_Milk_Drop" ID="{10ABD65C-6D54-4283-9636-16D16DC65132}" ShortID="1008543653">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -48,6 +55,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_1_Milk_Pickup" ID="{1502B33C-B408-418F-903E-89D764435C1E}" ShortID="998020956">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -70,6 +84,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_2_Ice_Drop" ID="{4C791854-DCA6-4127-ABFE-0FDDA60D71AE}" ShortID="987743844">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -92,6 +113,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_2_Ice_Pickup" ID="{EC80F0BC-0DFB-4A5D-AD30-623DB0C423F8}" ShortID="295689733">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -114,6 +142,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_3_Espresso_Drop" ID="{43855DD1-DE02-4543-B5DA-17CAC9BE86B0}" ShortID="114253259">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -136,6 +171,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_3_Espresso_Pickup" ID="{82D9087C-6D60-4B69-8E04-C047AF00B84C}" ShortID="141548553">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -180,6 +222,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_4_Tea_Pickup" ID="{B5D959C4-1087-4758-B73A-CF602100E80E}" ShortID="439066877">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -202,6 +251,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_5_Sugar_Drop" ID="{340187EE-99FC-46FA-9CFA-4D1669FA6059}" ShortID="93213397">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -224,6 +280,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_5_Sugar_Pickup" ID="{721AF7F0-CCBF-4DDF-B75F-5E55DC12C828}" ShortID="388022301">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -246,6 +309,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_6_Sprite_Drop" ID="{2FC7D184-EDB8-4167-A68D-71EDB110BBE8}" ShortID="57172358">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -268,6 +338,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_6_Sprite_Pickup" ID="{A2858CFA-199C-43AE-AF74-043F2116563C}" ShortID="606878639">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -312,6 +389,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_7_Fruit_Pickup" ID="{15735A56-7E8D-4E64-A6C8-3257CDBDE1B8}" ShortID="434306020">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -334,6 +418,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_8_Flower_Drop" ID="{AE255298-4B75-46C8-A0D5-D78DD56DE608}" ShortID="380999101">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -356,6 +447,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_8_Flower_Pickup" ID="{FB218FE1-1635-464B-A448-D686A6DC1F72}" ShortID="841685906">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -378,6 +476,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_9_Syrup_Drop" ID="{545DC1CC-76E0-47D6-9F77-13D4AB4F173D}" ShortID="911475364">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -400,6 +505,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Ingredient_9_Syrup_Pickup" ID="{4F062144-7F70-4C5D-B1AA-ECD3F351C0A9}" ShortID="139660034">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -422,6 +534,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="MenuButton" ID="{9C67506D-B929-4DEE-85E9-C0D915633FDA}" ShortID="1042569045">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F1573CF8-EAA2-484F-8953-FCE0D6B0FBEA}"/>
@@ -534,6 +653,12 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="TimeTravel" ID="{555B00D8-D0DE-48E5-A2BD-85F3C72B81AB}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.95319"/>
+								<Property Name="LoopBegin" Type="Real64" Value="4.00988"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="3.90625"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>TimeTravel.wav</AudioFile>
 							<MediaIDList>

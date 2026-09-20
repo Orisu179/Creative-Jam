@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3AF6ABB5-8536-4043-B3CD-B08C3C7E55C5}",
     "Language": "SFX",
-    "Hash": "{8511BABE-B952-5ED9-62A4-3211A9E824C9}",
+    "Hash": "{F19C3D03-17C5-4107-073C-EB149495DF97}",
     "ObjectPath": "Play_Ingredient_8_Flower_Pickup",
     "ShortName": "Play_Ingredient_8_Flower_Pickup",
     "Path": "Event/Play_Ingredient_8_Flower_Pickup.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{DE79B0D4-67B8-F2E3-EDAD-0E97A1B88CA5}"
+  "FileHash": "{8B0CA5FB-203C-4DF6-1D0D-E3A6C879F659}"
  }
 }

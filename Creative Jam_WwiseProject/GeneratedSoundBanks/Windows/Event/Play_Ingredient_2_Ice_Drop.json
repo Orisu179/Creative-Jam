@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{6F838A1E-32F3-40D6-98EB-3583ECFB9AF9}",
     "Language": "SFX",
-    "Hash": "{4F83330E-04F1-0D68-5BA5-15485A3133BF}",
+    "Hash": "{6EB84DF5-FF37-2B0B-6C7A-B5DB5C3240CE}",
     "ObjectPath": "Play_Ingredient_2_Ice_Drop",
     "ShortName": "Play_Ingredient_2_Ice_Drop",
     "Path": "Event/Play_Ingredient_2_Ice_Drop.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{4ECD49CC-9344-1DE7-7472-4704ACDA824D}"
+  "FileHash": "{A6B61E88-E74B-2FCF-3585-42A6FA1FB312}"
  }
 }

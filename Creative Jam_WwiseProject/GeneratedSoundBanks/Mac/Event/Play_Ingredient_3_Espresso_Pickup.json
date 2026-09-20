@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{692C3708-EA09-4EA5-8ECD-7F2E112C902A}",
     "Language": "SFX",
-    "Hash": "{4F3718D6-036C-07EE-9173-6918685D4E10}",
+    "Hash": "{8B81E7C5-7530-7F98-0A77-806971E02BA2}",
     "ObjectPath": "Play_Ingredient_3_Espresso_Pickup",
     "ShortName": "Play_Ingredient_3_Espresso_Pickup",
     "Path": "Event/Play_Ingredient_3_Espresso_Pickup.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{697D2019-458D-4937-0D4E-9847F05AB63D}"
+  "FileHash": "{7DEDC01B-6048-EFE9-7F51-54EDD63DA98C}"
  }
 }

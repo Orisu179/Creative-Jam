@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AB7C02BB-F136-4490-8D96-856E5D4D8FEF}",
     "Language": "SFX",
-    "Hash": "{A3F710B1-BB18-4261-D86A-42CE6F8623F9}",
+    "Hash": "{75FC6C6D-9B65-ADB9-A5F8-649880630422}",
     "ObjectPath": "Play_Ingredient_6_Sprite_Drop",
     "ShortName": "Play_Ingredient_6_Sprite_Drop",
     "Path": "Event/Play_Ingredient_6_Sprite_Drop.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{AC59BA1B-3130-2DDD-14E7-72B01A27326F}"
+  "FileHash": "{1E900EE5-596D-3A49-CD6D-0819E45663DF}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A882486C-C7B3-4E6F-94D2-B25F1FDAF41B}",
     "Language": "SFX",
-    "Hash": "{35D65CC6-84D9-9524-2926-455699B142EF}",
+    "Hash": "{4CAA2EB6-C11F-529B-804B-B1EECE13A1D0}",
     "ObjectPath": "Play_Ingredient_2_Ice_Pickup",
     "ShortName": "Play_Ingredient_2_Ice_Pickup",
     "Path": "Event/Play_Ingredient_2_Ice_Pickup.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{ED30EFB0-713F-7675-3D63-08372BE9AECB}"
+  "FileHash": "{9292D124-252C-F210-8915-505870AA4422}"
  }
 }

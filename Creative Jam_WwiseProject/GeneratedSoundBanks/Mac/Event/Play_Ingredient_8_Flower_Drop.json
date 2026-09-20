@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{54EB6223-D43C-4E17-AC5B-54921268AF81}",
     "Language": "SFX",
-    "Hash": "{492D0D51-1BBD-B1B8-374F-CBFD4EB565B3}",
+    "Hash": "{090B9F19-3748-6350-3F19-131E592DE9DF}",
     "ObjectPath": "Play_Ingredient_8_Flower_Drop",
     "ShortName": "Play_Ingredient_8_Flower_Drop",
     "Path": "Event/Play_Ingredient_8_Flower_Drop.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{719E7990-9AC1-389B-F362-81EE1836A0AF}"
+  "FileHash": "{E3210959-9E04-B51D-3979-58D324F0ED9B}"
  }
 }

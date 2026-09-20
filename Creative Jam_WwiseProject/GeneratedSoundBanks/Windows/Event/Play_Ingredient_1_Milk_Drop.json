@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{214EAC21-0BF4-4245-80AF-E80B7E1CBB1E}",
     "Language": "SFX",
-    "Hash": "{9B539F1D-774C-16FA-E089-128A01AEA5E7}",
+    "Hash": "{A4F9230A-BDB6-9D9E-3F6B-A8748B839DF3}",
     "ObjectPath": "Play_Ingredient_1_Milk_Drop",
     "ShortName": "Play_Ingredient_1_Milk_Drop",
     "Path": "Event/Play_Ingredient_1_Milk_Drop.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{0B371C6C-6C8B-6AC2-6526-0EC333B526D1}"
+  "FileHash": "{09B4C182-893B-F3E7-7911-1A93DC580CF2}"
  }
 }

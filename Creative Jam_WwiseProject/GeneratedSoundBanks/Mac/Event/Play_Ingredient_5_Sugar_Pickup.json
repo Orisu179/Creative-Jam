@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{B2ED2869-0062-4745-8B12-D00216F58381}",
     "Language": "SFX",
-    "Hash": "{57FE213C-5497-7C9D-2013-718E5189D1DC}",
+    "Hash": "{4DE1DBFD-3566-97CC-120E-9A1FD31CC258}",
     "ObjectPath": "Play_Ingredient_5_Sugar_Pickup",
     "ShortName": "Play_Ingredient_5_Sugar_Pickup",
     "Path": "Event/Play_Ingredient_5_Sugar_Pickup.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{CFC06396-9A09-8810-C5D5-3C8396646F23}"
+  "FileHash": "{7245CA7B-CA87-8BE6-32AF-DC2F82D02AF6}"
  }
 }

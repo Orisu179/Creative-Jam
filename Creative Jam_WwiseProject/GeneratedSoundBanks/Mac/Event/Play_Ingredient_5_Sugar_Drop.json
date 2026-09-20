@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{65AADE09-CB7E-4C08-9419-81E520E9C438}",
     "Language": "SFX",
-    "Hash": "{80977A9C-FC78-DD4F-3A30-3FC9AFCDD2CE}",
+    "Hash": "{8448C2DE-72D7-BD6C-6B0E-EC162A1ACCFA}",
     "ObjectPath": "Play_Ingredient_5_Sugar_Drop",
     "ShortName": "Play_Ingredient_5_Sugar_Drop",
     "Path": "Event/Play_Ingredient_5_Sugar_Drop.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{0E7CC4F2-1F9B-7C62-C5F2-F33071D85D7E}"
+  "FileHash": "{45876BD5-8318-44C6-9A50-3F0161499724}"
  }
 }

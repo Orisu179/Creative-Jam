@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{6BABB6AD-F8F6-4290-978E-5C4A2569BC77}",
     "Language": "SFX",
-    "Hash": "{3BF9B54A-084D-CF1C-C07C-5346E13A1306}",
+    "Hash": "{F4611B7F-9829-9ECE-E0A5-3BA9EBCE46CD}",
     "ObjectPath": "Play_Ingredient_7_Fruit_Pickup",
     "ShortName": "Play_Ingredient_7_Fruit_Pickup",
     "Path": "Event/Play_Ingredient_7_Fruit_Pickup.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{C7144185-B62F-1727-35E3-3E99375DAB42}"
+  "FileHash": "{B04F3361-7232-9585-130E-8257E159AF74}"
  }
 }
