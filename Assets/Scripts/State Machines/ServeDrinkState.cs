@@ -50,7 +50,7 @@ namespace State_Machines
         }
 
         // handle callback from settext - ie. manager . next state
-        private async Task HandleDialogueComplete()
+        private void HandleDialogueComplete()
         {
             if (_manager.CurDay.SatisfactionLevel < -1000)
             {
