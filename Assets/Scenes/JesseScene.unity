@@ -3909,8 +3909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   placeholder: {fileID: 708934652261806618, guid: b44a8fc783d9af148a804e3deb984ab8, type: 3}
-  maxLoop: 2
-  customerSize: 4
+  maxLoop: 3
+  customerSize: 10
   createDrink: {fileID: 616334158}
   drinkMenu: {fileID: 953192441}
   brewingSpriteManager: {fileID: 1956850154}
