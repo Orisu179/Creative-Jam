@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2398522065",
+    "Type": "Event",
+    "GUID": "{32739572-BB54-4686-907C-0FEAD75AF291}",
+    "Language": "SFX",
+    "Hash": "{4928234E-F9CB-C5F2-6D30-3F3AB0CEDACE}",
+    "ObjectPath": "Play_TimeTravel",
+    "ShortName": "Play_TimeTravel",
+    "Path": "Event/Play_TimeTravel.bnk",
+    "Media": [
+     {
+      "Id": "258879552",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "TimeTravel.wav",
+      "Path": "Media/258879552.wem",
+      "CachePath": "8E/{8EAAB8FB-3D47-FFE6-8764-793F12B06E9C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2398522065",
+      "Name": "Play_TimeTravel",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_TimeTravel",
+      "GUID": "{32739572-BB54-4686-907C-0FEAD75AF291}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.9843",
+      "DurationMax": "2.9843",
+      "MediaRefs": [
+       {
+        "Id": "258879552"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{740CE656-63CC-522E-969D-4D80F15960B9}"
+ }
+}

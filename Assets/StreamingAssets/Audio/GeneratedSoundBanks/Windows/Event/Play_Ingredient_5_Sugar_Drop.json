@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3705951116",
+    "Type": "Event",
+    "GUID": "{65AADE09-CB7E-4C08-9419-81E520E9C438}",
+    "Language": "SFX",
+    "Hash": "{5E16C58A-732D-B85A-6F11-F947BA0F8428}",
+    "ObjectPath": "Play_Ingredient_5_Sugar_Drop",
+    "ShortName": "Play_Ingredient_5_Sugar_Drop",
+    "Path": "Event/Play_Ingredient_5_Sugar_Drop.bnk",
+    "Media": [
+     {
+      "Id": "744729348",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_5_Sugar_Drop.wav",
+      "Path": "Media/744729348.wem",
+      "CachePath": "6F/{6F4FAA36-0543-B874-E0B5-AD6CD26BCE72}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3705951116",
+      "Name": "Play_Ingredient_5_Sugar_Drop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_5_Sugar_Drop",
+      "GUID": "{65AADE09-CB7E-4C08-9419-81E520E9C438}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.69",
+      "DurationMax": "0.69",
+      "MediaRefs": [
+       {
+        "Id": "744729348"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7FC75512-963D-1241-A534-9E3FFECB8A82}"
+ }
+}

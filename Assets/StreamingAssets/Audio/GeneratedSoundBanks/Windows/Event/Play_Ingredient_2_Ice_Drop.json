@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "965911504",
+    "Type": "Event",
+    "GUID": "{6F838A1E-32F3-40D6-98EB-3583ECFB9AF9}",
+    "Language": "SFX",
+    "Hash": "{D5F336CF-095D-AAE1-B921-4113ECD17A36}",
+    "ObjectPath": "Play_Ingredient_2_Ice_Drop",
+    "ShortName": "Play_Ingredient_2_Ice_Drop",
+    "Path": "Event/Play_Ingredient_2_Ice_Drop.bnk",
+    "Media": [
+     {
+      "Id": "747089225",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_2_Ice_Drop.wav",
+      "Path": "Media/747089225.wem",
+      "CachePath": "AD/{AD00BA9C-406D-CDA6-0D3F-8666A3F0C87C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "965911504",
+      "Name": "Play_Ingredient_2_Ice_Drop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_2_Ice_Drop",
+      "GUID": "{6F838A1E-32F3-40D6-98EB-3583ECFB9AF9}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1499791",
+      "DurationMax": "1.1499791",
+      "MediaRefs": [
+       {
+        "Id": "747089225"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{96F3006B-1A24-1298-DA7A-4EAF962E992D}"
+ }
+}

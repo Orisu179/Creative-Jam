@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1175649507",
+    "Type": "Event",
+    "GUID": "{692C3708-EA09-4EA5-8ECD-7F2E112C902A}",
+    "Language": "SFX",
+    "Hash": "{F7FD670C-BB7D-DC97-B23A-675A224EAF18}",
+    "ObjectPath": "Play_Ingredient_3_Espresso_Pickup",
+    "ShortName": "Play_Ingredient_3_Espresso_Pickup",
+    "Path": "Event/Play_Ingredient_3_Espresso_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "1017895428",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_3_Espresso_Pickup.wav",
+      "Path": "Media/1017895428.wem",
+      "CachePath": "BA/{BAA31185-AFA1-87E4-3ECC-437FA827F960}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1175649507",
+      "Name": "Play_Ingredient_3_Espresso_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_3_Espresso_Pickup",
+      "GUID": "{692C3708-EA09-4EA5-8ECD-7F2E112C902A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.92",
+      "DurationMax": "0.92",
+      "MediaRefs": [
+       {
+        "Id": "1017895428"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{811405EE-4CBE-D992-4680-ABB4C1BA1DF3}"
+ }
+}

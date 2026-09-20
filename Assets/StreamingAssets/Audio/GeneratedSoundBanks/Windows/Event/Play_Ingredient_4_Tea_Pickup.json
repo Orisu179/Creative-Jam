@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1127946520",
+    "Type": "Event",
+    "GUID": "{549B8D02-DC74-4C3E-8F94-B2DF8F186096}",
+    "Language": "SFX",
+    "Hash": "{0EC44EBD-4D3A-3C9B-F0D9-5608C4A1FD0C}",
+    "ObjectPath": "Play_Ingredient_4_Tea_Pickup",
+    "ShortName": "Play_Ingredient_4_Tea_Pickup",
+    "Path": "Event/Play_Ingredient_4_Tea_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "972739731",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_4_Tea_Pickup.wav",
+      "Path": "Media/972739731.wem",
+      "CachePath": "E6/{E6AC9F6D-1C12-BF43-B5C5-03FA511EF556}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1127946520",
+      "Name": "Play_Ingredient_4_Tea_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_4_Tea_Pickup",
+      "GUID": "{549B8D02-DC74-4C3E-8F94-B2DF8F186096}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.078125",
+      "DurationMax": "1.078125",
+      "MediaRefs": [
+       {
+        "Id": "972739731"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{98B7829E-9B4D-70AA-048B-1D8917D10BFC}"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3061592398",
+    "Type": "Event",
+    "GUID": "{366AD80A-DFA3-4EDA-A333-220FBB438E6F}",
+    "Language": "SFX",
+    "Hash": "{3FF80C53-BAF1-BBEC-8730-19D3D64A7F1D}",
+    "ObjectPath": "Stop_LoopZeroPlaylist",
+    "ShortName": "Stop_LoopZeroPlaylist",
+    "Path": "Event/Stop_LoopZeroPlaylist.bnk",
+    "Events": [
+     {
+      "Id": "3061592398",
+      "Name": "Stop_LoopZeroPlaylist",
+      "ObjectPath": "\\Events\\Music\\Stop_LoopZeroPlaylist",
+      "GUID": "{366AD80A-DFA3-4EDA-A333-220FBB438E6F}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CE22BDA6-4B17-C0F3-DEBF-429CC18034DC}"
+ }
+}

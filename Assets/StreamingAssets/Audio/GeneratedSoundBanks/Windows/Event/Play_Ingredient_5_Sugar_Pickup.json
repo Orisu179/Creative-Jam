@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1278858207",
+    "Type": "Event",
+    "GUID": "{B2ED2869-0062-4745-8B12-D00216F58381}",
+    "Language": "SFX",
+    "Hash": "{57FE213C-5497-7C9D-2013-718E5189D1DC}",
+    "ObjectPath": "Play_Ingredient_5_Sugar_Pickup",
+    "ShortName": "Play_Ingredient_5_Sugar_Pickup",
+    "Path": "Event/Play_Ingredient_5_Sugar_Pickup.bnk",
+    "Media": [
+     {
+      "Id": "628103514",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Ingredient_5_Sugar_Pickup.wav",
+      "Path": "Media/628103514.wem",
+      "CachePath": "3C/{3C9C0803-8F85-6EF8-E3A6-C975A210AC2E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1278858207",
+      "Name": "Play_Ingredient_5_Sugar_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ingredient_5_Sugar_Pickup",
+      "GUID": "{B2ED2869-0062-4745-8B12-D00216F58381}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.69",
+      "DurationMax": "0.69",
+      "MediaRefs": [
+       {
+        "Id": "628103514"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5D28F73C-2D98-93F5-61E2-E61F42ABF315}"
+ }
+}

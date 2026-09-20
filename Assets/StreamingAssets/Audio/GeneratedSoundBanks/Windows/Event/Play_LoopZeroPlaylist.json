@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1246549400",
+    "Type": "Event",
+    "GUID": "{2D934676-73EA-4702-B574-124B310C9ECA}",
+    "Language": "SFX",
+    "Hash": "{5B58854D-5EF9-1F73-7821-0BD980E3DD3D}",
+    "ObjectPath": "Play_LoopZeroPlaylist",
+    "ShortName": "Play_LoopZeroPlaylist",
+    "Path": "Event/Play_LoopZeroPlaylist.bnk",
+    "Media": [
+     {
+      "Id": "850059652",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "LoopZero_92bpm.wav",
+      "Path": "Media/850059652.wem",
+      "CachePath": "74/{7429F5A2-2B51-542F-07DE-3CA3F0A14D74}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1246549400",
+      "Name": "Play_LoopZeroPlaylist",
+      "ObjectPath": "\\Events\\Music\\Play_LoopZeroPlaylist",
+      "GUID": "{2D934676-73EA-4702-B574-124B310C9ECA}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "850059652"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5319B008-F33B-5620-E32C-24B8E3122CE7}"
+ }
+}
