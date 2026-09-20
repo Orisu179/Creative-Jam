@@ -8,6 +8,8 @@ using State_Machines;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using DG.Tweening;
+using System.ComponentModel.Design;
+using UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CreateDrink createDrink;
     [SerializeField] private DrinkMenuController drinkMenu;
     [SerializeField] private BrewingSpriteManager brewingSpriteManager;
+    [SerializeField] private FailLoopMenu failLoopMenu;
     public DrinkMenuController DrinkMenu => drinkMenu;
 
     // States
@@ -57,6 +60,8 @@ public class GameManager : MonoBehaviour
 
 
         _stateMachine.Initialize(_initState);
+
+        // MixingCupArea.OnAnyItemDropped += HandleDrop;
     }
 
     // Used in Init State
@@ -70,6 +75,16 @@ public class GameManager : MonoBehaviour
 
             Customers.Add(curCustomer);
         }
+    }
+
+    private void HandleDrop(MixingCupArea area, Ingredient ingredient)
+    {
+        if (ingredient == PoisonedIngredient)
+        {
+            Debug.Log("This is poisoned!");
+            return;
+        }
+        Debug.Log($"The ingredient is: {ingredient.ToString()}");
     }
 
     public int CalculateScore(Day d)
@@ -160,5 +175,15 @@ public class GameManager : MonoBehaviour
     public void AddDrink(Drink? drink)
     {
         CurDay.OrderList.Add(drink ?? Drink.INVALID);
+    }
+
+    public void SetFailMenuText(int remaining_days)
+    {
+        failLoopMenu.SetRemainingLoop(remaining_days);
+    }
+
+    public void SetFailMenuList(List<Drink> drinks)
+    {
+        failLoopMenu.SetDrinks(drinks);
     }
 }
