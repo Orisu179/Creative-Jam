@@ -11,6 +11,8 @@
         
         public void Enter()
         {
+            GlobalFields.Instance.score = 0.0f;
+            GlobalFields.Instance.State = null;
             _manager.GenerateCustomers();
             _manager.ResetLoop();
             _manager._stateMachine.ChangeState(_manager._dayStartState);
