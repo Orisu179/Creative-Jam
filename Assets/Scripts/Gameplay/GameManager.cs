@@ -50,9 +50,9 @@ public class GameManager : MonoBehaviour
 
 
         _initState = new InitState(this);
-        _createDrinkState = new CreateDrinkState(this,createDrink);        _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
+        _createDrinkState = new CreateDrinkState(this, createDrink); _customerInteractState = new CustomerInteractState(this, _customerSpriteManager, _createDrinkState);
         _dayStartState = new DayStartState(this);
-        _loopFailedState = new LoopFailState(this, _loopFailedState, _dayStartState);
+        _loopFailedState = new LoopFailState(this);
         _serveDrinkState = new ServeDrinkState(this);
         _winState = new WinState(this);
 

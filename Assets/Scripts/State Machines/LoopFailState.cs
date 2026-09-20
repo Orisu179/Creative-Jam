@@ -3,7 +3,7 @@
     public class LoopFailState : IState
     {
         private readonly GameManager _manager;
-        public LoopFailState(GameManager manager, IState failState, IState nextState)
+        public LoopFailState(GameManager manager)
         {
             _manager = manager;
         }
