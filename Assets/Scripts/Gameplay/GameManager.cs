@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private uint _curLoop;
     private int _customerCounter;
     private List<Customer> _customers;
+    private CustomerSpriteManager _customerSpriteManager;
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         _curLoop = 0;
 
         _stateMachine = new StateMachine();
+        _customerSpriteManager = GetComponentInChildren<CustomerSpriteManager>();
         var allIngredient = (Ingredient[])Enum.GetValues(typeof(Ingredient));
         _poisonedIngredient = allIngredient[Random.Range(0, allIngredient.Length)];
         _customers = new List<Customer>();
@@ -56,6 +58,15 @@ public class GameManager : MonoBehaviour
         _stateMachine.Initialize(_initState);
 
         // MixingCupArea.OnAnyItemDropped += HandleDrop;
+
+        Sequence customerSequence = DOTween.Sequence();
+        _customerSpriteManager.SetSprite(_customers[0].Species, _customers[0].Accessory);
+        customerSequence.Append(_customerSpriteManager.FadeIn());
+        customerSequence.Append(_customerSpriteManager.FadeOut()).OnComplete(() =>
+        {
+            _customerSpriteManager.SetSprite(_customers[1].Species, _customers[1].Accessory);
+            customerSequence.Append(_customerSpriteManager.FadeIn());
+        });
     }
 
     public void NextLoop()
@@ -67,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
         // Restart
         _curLoop++;
-        
+
     }
 
     private void GenerateCustomers()
