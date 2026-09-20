@@ -12,14 +12,17 @@ public struct Customer
     public OwlSpecies Species { get; private set; }
     public Accessory Accessory { get; private set; }
 
+    public Mood mood;
+
     public Customer(string dialogue, OwlSpecies species, Accessory accessory)
     {
         Preferences = new Dictionary<DrinkAttribute, int>();
         Dialogue = dialogue;
         Species = species;
         Accessory = accessory;
-
+        mood = default;
         GenerateRandomStats();
+        SetMood();
     }
 
     private void GenerateRandomStats(int targetSum = 10)
@@ -60,5 +63,14 @@ public struct Customer
         Preferences[allValues[0]] = values[0];
         Preferences[allValues[1]] = values[1];
         Preferences[allValues[2]] = values[2];
+    }
+
+    private void SetMood()
+    {
+        List<DrinkAttribute> da_descending = Preferences
+            .OrderByDescending(v => v.Value)
+            .Select(v => v.Key)
+            .ToList();
+        mood = DialogueBank.AttributeToMood[da_descending[0]];
     }
 }

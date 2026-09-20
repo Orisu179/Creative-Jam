@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite placeholder;
     [SerializeField] private uint maxLoop;
     [SerializeField] private uint customerSize;
-    [SerializeField] private CreateDrink createDrink;
-
 
     // States
     public StateMachine _stateMachine;
@@ -70,6 +68,7 @@ public class GameManager : MonoBehaviour
             (OwlSpecies species, Accessory accessory) = CustomerSpriteManager.GetRandomOwlSpeciesAndAccessory();
             var curCustomer = new Customer("", species, accessory);
             curCustomer.Dialogue = DialogueGenerator.GenerateDialogue(curCustomer);
+            
             Customers.Add(curCustomer);
         }
     }
