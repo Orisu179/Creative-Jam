@@ -16,7 +16,8 @@ namespace State_Machines
            _manager.ResetCustomer();
            var counter = _manager.CustomerCounter;
            var curCustomer = _manager.Customers[counter];
-           _manager.CurDay = new Day{ currentCustomer = curCustomer, currentDrink = null, SatisfactionLevel =  0, OrderList =  new List<Drink>()};
+           _manager.CurDay = new Day{ CurrentCustomer = curCustomer, CurrentDrink = null, SatisfactionLevel =  0, OrderList =  new List<Drink>()};
+           _manager._stateMachine.ChangeState(_manager._customerInteractState);
         }
 
         public void Exit()

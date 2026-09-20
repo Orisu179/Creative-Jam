@@ -13,6 +13,7 @@
         {
             _manager.GenerateCustomers();
             _manager.ResetLoop();
+            _manager._stateMachine.ChangeState(_manager._dayStartState);
         }
 
         public void Exit()

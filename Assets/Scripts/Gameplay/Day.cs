@@ -7,6 +7,6 @@ public struct Day
 {
     public int SatisfactionLevel;
     public List<Drink> OrderList;
-    public Drink? currentDrink;
-    public Customer currentCustomer;
+    public Drink? CurrentDrink;
+    public Customer CurrentCustomer;
 }
